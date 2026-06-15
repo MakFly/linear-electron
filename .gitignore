@@ -1,32 +1,46 @@
-.DS_Store
-.env
-.env.backup
-.env.production
-.phpactor.json
-.phpunit.result.cache
-/.fleet
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
-/bootstrap/ssr
+# Dependencies
 /node_modules
+/vendor
+
+# Build output
 /public/build
 /public/hot
 /public/storage
-/storage/*.key
-/storage/pail
-/vendor
+/bootstrap/ssr
+
+# Environment & secrets
+.env
+.env.backup
+.env.production
 auth.json
+/storage/*.key
+
+# Laravel runtime
+/storage/pail
+/.phpunit.cache
+.phpunit.result.cache
+.phpunit.result.cache.dist
+
+# Local dev servers / configs
 Homestead.json
 Homestead.yaml
+.phpactor.json
+
+# Logs
 npm-debug.log
 yarn-error.log
 
-# instant-grep index
+# Editors & OS
+.DS_Store
+/.idea
+/.vscode
+/.zed
+/.nova
+/.fleet
+
+# Tooling caches
 .ig/
 
-# local dev screenshots / scratch artifacts
+# Local scratch artifacts (screenshots, MCP captures)
 /*.png
 /.playwright-mcp
