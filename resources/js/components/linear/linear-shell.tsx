@@ -3,8 +3,10 @@ import { IssueSheet } from '@/components/linear/issue-sheet';
 import { LinearSidebar } from '@/components/linear/linear-sidebar';
 import { NewIssueDialog } from '@/components/linear/new-issue-dialog';
 import { ShellContext } from '@/components/linear/shell-context';
-import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
+import { SidebarInset, SidebarProvider, useSidebar } from '@/components/ui/sidebar';
+import { useIsNative } from '@/hooks/use-is-native';
 import { Issue, IssueMetadata, IssueStatus } from '@/lib/issues';
+import { cn } from '@/lib/utils';
 import { History, Play } from 'lucide-react';
 import { CSSProperties, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -68,6 +70,30 @@ function AgentToolbar() {
     );
 }
 
+function MainPanel({ children }: { children: ReactNode }) {
+    const isNative = useIsNative();
+    const { state, isMobile } = useSidebar();
+    // In the native window, when the sidebar is collapsed the panel fills the full width
+    // and its top edge meets the macOS traffic lights. Drop the top inset (margin/rounding
+    // /border) so the header sits flush in the title-bar strip and lines up with them.
+    // In a plain browser there are no traffic lights, so we keep the inset card.
+    const flushTop = isNative && !isMobile && state === 'collapsed';
+
+    return (
+        <div id="mainLayoutContent" className="relative flex min-h-svh flex-1 flex-col overflow-visible bg-[#050505]">
+            <SidebarInset
+                className={cn(
+                    'relative mr-2 mb-2 min-h-0 flex-none overflow-hidden rounded-xl border-[0.5px] border-[#1d1e22] bg-[#0b0b0c] md:peer-data-[variant=inset]:shadow-md',
+                    flushTop ? 'mt-0 h-[calc(100svh-36px)] rounded-t-none border-t-0' : 'mt-2 h-[calc(100svh-44px)]',
+                )}
+            >
+                {children}
+            </SidebarInset>
+            <AgentToolbar />
+        </div>
+    );
+}
+
 const emptyMetadata: IssueMetadata = { labels: [], projects: [], cycles: [] };
 
 export function LinearShell({ issues, metadata = emptyMetadata, children }: LinearShellProps) {
@@ -119,12 +145,7 @@ export function LinearShell({ issues, metadata = emptyMetadata, children }: Line
         <ShellContext.Provider value={shell}>
             <SidebarProvider style={{ '--sidebar-width': '15.25rem' } as CSSProperties}>
                 <LinearSidebar />
-                <div id="mainLayoutContent" className="relative flex min-h-svh flex-1 flex-col overflow-visible bg-[#050505]">
-                    <SidebarInset className="relative mt-2 mr-2 mb-2 h-[calc(100svh-44px)] min-h-0 flex-none overflow-hidden rounded-xl border-[0.5px] border-[#1d1e22] bg-[#0b0b0c] md:peer-data-[variant=inset]:shadow-md">
-                        {children}
-                    </SidebarInset>
-                    <AgentToolbar />
-                </div>
+                <MainPanel>{children}</MainPanel>
                 <NewIssueDialog open={dialogOpen} onOpenChange={setDialogOpen} defaultStatus={dialogStatus} metadata={metadata} />
                 <CommandPalette open={paletteOpen} onOpenChange={setPaletteOpen} issues={issues} onNewIssue={() => openNewIssue('todo')} />
                 <IssueSheet

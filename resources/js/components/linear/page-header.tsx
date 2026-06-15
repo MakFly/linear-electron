@@ -1,5 +1,6 @@
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { SidebarTrigger, useSidebar } from '@/components/ui/sidebar';
+import { useIsNative } from '@/hooks/use-is-native';
 import { cn } from '@/lib/utils';
 import { Bell, Inbox } from 'lucide-react';
 import { ReactNode } from 'react';
@@ -53,14 +54,17 @@ export function NotificationsButton() {
 
 export function PageHeader({ left, right }: { left: ReactNode; right?: ReactNode }) {
     const { t } = useTranslation();
+    const isNative = useIsNative();
     const { state, isMobile } = useSidebar();
-    // When the sidebar is hidden (mobile sheet or collapsed off-canvas) the header
-    // spans the full window width and would slide under the macOS traffic lights,
-    // so we pad the left edge to clear them.
     const sidebarHidden = isMobile || state === 'collapsed';
+    // The macOS traffic lights only exist in the native window. When the sidebar is
+    // hidden there, the header spans the full width and would slide under them, so we
+    // pad the left edge to clear them. In a plain browser there are no traffic lights,
+    // so the header stays flush-left.
+    const clearTrafficLights = isNative && sidebarHidden;
 
     return (
-        <header className={cn('app-drag flex h-11 shrink-0 items-center justify-between pr-5', sidebarHidden ? 'pl-[84px]' : 'pl-3')}>
+        <header className={cn('app-drag flex h-11 shrink-0 items-center justify-between pr-5', clearTrafficLights ? 'pl-[84px]' : 'pl-3')}>
             <div className="app-no-drag flex items-center gap-2 text-[13px]">
                 <SidebarTrigger
                     aria-label={t('header.toggleSidebar')}
