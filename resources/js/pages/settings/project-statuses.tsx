@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
     ConfirmDialog,
     RowMenu,
@@ -9,15 +8,10 @@ import {
     SettingsSection,
     TextInput,
 } from '@/components/linear/settings/kit';
-import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
-import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
+import { cn } from '@/lib/utils';
 import { Head } from '@inertiajs/react';
 import { Plus } from 'lucide-react';
 import { useState } from 'react';
@@ -80,9 +74,7 @@ export default function ProjectStatuses() {
 
     const handleRename = () => {
         if (!renameName.trim()) return;
-        setStatuses((prev) =>
-            prev.map((s) => (s.id === renameId ? { ...s, name: renameName.trim() } : s)),
-        );
+        setStatuses((prev) => prev.map((s) => (s.id === renameId ? { ...s, name: renameName.trim() } : s)));
         setRenameId(null);
         setRenameName('');
     };
@@ -107,12 +99,7 @@ export default function ProjectStatuses() {
                     {statuses.map((status) => (
                         <SettingsRow
                             key={status.id}
-                            iconNode={
-                                <span
-                                    className="size-3 shrink-0 rounded-full"
-                                    style={{ backgroundColor: status.color }}
-                                />
-                            }
+                            iconNode={<span className="size-3 shrink-0 rounded-full" style={{ backgroundColor: status.color }} />}
                             title={status.name}
                             description={t('settings.projectStatuses.projectCount', { count: status.projectCount })}
                             control={
@@ -160,7 +147,7 @@ export default function ProjectStatuses() {
                                         onClick={() => setNewColor(color)}
                                         className={cn(
                                             'size-6 rounded-full transition-all',
-                                            newColor === color && 'ring-2 ring-offset-2 ring-primary',
+                                            newColor === color && 'ring-primary ring-2 ring-offset-2',
                                         )}
                                         style={{ backgroundColor: color }}
                                         aria-label={color}
@@ -181,18 +168,19 @@ export default function ProjectStatuses() {
             </Dialog>
 
             {/* Rename dialog */}
-            <Dialog open={renameId !== null} onOpenChange={(open) => { if (!open) setRenameId(null); }}>
+            <Dialog
+                open={renameId !== null}
+                onOpenChange={(open) => {
+                    if (!open) setRenameId(null);
+                }}
+            >
                 <DialogContent className="max-w-md">
                     <DialogHeader>
                         <DialogTitle className="text-[15px]">{t('settings.projectStatuses.renameTitle')}</DialogTitle>
                     </DialogHeader>
                     <div className="py-2">
                         <SettingsField label={t('settings.projectStatuses.nameLabel')} htmlFor="status-rename">
-                            <TextInput
-                                id="status-rename"
-                                value={renameName}
-                                onChange={(e) => setRenameName(e.target.value)}
-                            />
+                            <TextInput id="status-rename" value={renameName} onChange={(e) => setRenameName(e.target.value)} />
                         </SettingsField>
                     </div>
                     <DialogFooter className="gap-2">
@@ -209,7 +197,9 @@ export default function ProjectStatuses() {
             {/* Delete confirm */}
             <ConfirmDialog
                 open={deleteId !== null}
-                onOpenChange={(open) => { if (!open) setDeleteId(null); }}
+                onOpenChange={(open) => {
+                    if (!open) setDeleteId(null);
+                }}
                 title={t('settings.projectStatuses.deleteTitle')}
                 description={t('settings.projectStatuses.deleteDesc')}
                 confirmLabel={t('settingsCommon.delete')}

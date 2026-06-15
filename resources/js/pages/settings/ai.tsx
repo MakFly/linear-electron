@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
     EmptyState,
     PlanGate,
@@ -9,6 +8,7 @@ import {
     StatusPill,
     ToggleRow,
 } from '@/components/linear/settings/kit';
+import { Button } from '@/components/ui/button';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
 import { Bot, Boxes } from 'lucide-react';
@@ -35,10 +35,7 @@ export default function SettingsAi() {
 
             {/* AI usage & credits */}
             <SettingsSection title={t('settings.aiAgents.sections.usageCredits')}>
-                <PlanGate
-                    plan="business"
-                    description={t('settings.aiAgents.planGate.description')}
-                />
+                <PlanGate plan="business" description={t('settings.aiAgents.planGate.description')} />
             </SettingsSection>
 
             {/* Linear Agent */}
@@ -65,10 +62,7 @@ export default function SettingsAi() {
             {/* Capabilities */}
             <SettingsSection title={t('settings.aiAgents.sections.capabilities')}>
                 <SettingsList>
-                    <SettingsRow
-                        title={t('settings.aiAgents.capabilities.codingSessions')}
-                        control={<StatusPill on={true} />}
-                    />
+                    <SettingsRow title={t('settings.aiAgents.capabilities.codingSessions')} control={<StatusPill on={true} />} />
                     <ToggleRow
                         title={t('settings.aiAgents.capabilities.agentAutomations')}
                         description={t('settings.aiAgents.capabilities.agentAutomationsDesc')}
@@ -92,9 +86,7 @@ export default function SettingsAi() {
 
             {/* Agent integrations */}
             <SettingsSection title={t('settings.aiAgents.sections.agentIntegrations')}>
-                <p className="text-muted-foreground text-[13px] leading-5">
-                    {t('settings.aiAgents.integrations.availabilityNote')}
-                </p>
+                <p className="text-muted-foreground text-[13px] leading-5">{t('settings.aiAgents.integrations.availabilityNote')}</p>
             </SettingsSection>
 
             {/* Installed Agents */}

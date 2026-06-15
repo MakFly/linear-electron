@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
     ConfirmDialog,
     EmptyState,
@@ -10,13 +9,8 @@ import {
     SettingsSection,
     TextInput,
 } from '@/components/linear/settings/kit';
-import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
 import { LayoutTemplate, Plus } from 'lucide-react';
@@ -61,7 +55,7 @@ export default function ProjectTemplates() {
                 description={
                     <>
                         {t('settings.projectTemplates.description')}{' '}
-                        <a href="#" className="text-primary underline-offset-2 hover:underline text-[13px]">
+                        <a href="#" className="text-primary text-[13px] underline-offset-2 hover:underline">
                             {t('settingsCommon.docs')}
                         </a>
                     </>
@@ -152,7 +146,9 @@ export default function ProjectTemplates() {
             {/* Delete confirm */}
             <ConfirmDialog
                 open={deleteId !== null}
-                onOpenChange={(open) => { if (!open) setDeleteId(null); }}
+                onOpenChange={(open) => {
+                    if (!open) setDeleteId(null);
+                }}
                 title={t('settings.projectTemplates.deleteTitle')}
                 description={t('settings.projectTemplates.deleteDesc')}
                 confirmLabel={t('settingsCommon.delete')}

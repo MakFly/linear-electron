@@ -1,11 +1,4 @@
-import {
-    SelectField,
-    SettingsField,
-    SettingsHeader,
-    SettingsList,
-    SettingsSection,
-    ToggleRow,
-} from '@/components/linear/settings/kit';
+import { SelectField, SettingsField, SettingsHeader, SettingsList, SettingsSection, ToggleRow } from '@/components/linear/settings/kit';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
 import { useState } from 'react';
@@ -50,10 +43,7 @@ export default function SettingsPulse() {
                 </SettingsList>
             </SettingsSection>
 
-            <SettingsSection
-                title={t('settings.pulse.summaryNotifications')}
-                description={t('settings.pulse.summaryNotificationsDesc')}
-            >
+            <SettingsSection title={t('settings.pulse.summaryNotifications')} description={t('settings.pulse.summaryNotificationsDesc')}>
                 <SettingsField label={t('settings.pulse.workspaceScheduleLabel')} htmlFor="workspace-schedule">
                     <SelectField
                         value={workspaceSchedule}

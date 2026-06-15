@@ -1,12 +1,4 @@
-import {
-    SettingsHeader,
-    SettingsSection,
-    SettingsList,
-    SettingsRow,
-    ToggleRow,
-    Switch,
-    StatusPill,
-} from '@/components/linear/settings/kit';
+import { SettingsHeader, SettingsList, SettingsRow, SettingsSection, StatusPill, Switch, ToggleRow } from '@/components/linear/settings/kit';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
 import { BellRing, Mail, Monitor, Smartphone } from 'lucide-react';

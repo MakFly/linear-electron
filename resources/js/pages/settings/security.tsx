@@ -1,25 +1,17 @@
-import { Button } from '@/components/ui/button';
 import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
-import {
-    PlanGate,
     PlanBadge,
+    PlanGate,
     SelectField,
+    SettingsField,
     SettingsHeader,
     SettingsList,
     SettingsRow,
     SettingsSection,
-    SettingsField,
-    Switch,
     TextInput,
     ToggleRow,
 } from '@/components/linear/settings/kit';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
@@ -129,10 +121,7 @@ export default function SecuritySettings() {
                         onCheckedChange={setInviteLinks}
                     />
 
-                    <SettingsRow
-                        title={t('settings.security.approvedDomains')}
-                        description={t('settings.security.approvedDomainsDesc')}
-                    />
+                    <SettingsRow title={t('settings.security.approvedDomains')} description={t('settings.security.approvedDomainsDesc')} />
                 </SettingsList>
 
                 {/* Domain list sub-section */}
@@ -147,7 +136,7 @@ export default function SecuritySettings() {
                                         <Button
                                             variant="ghost"
                                             size="sm"
-                                            className="h-7 px-2 text-[13px] text-destructive hover:text-destructive"
+                                            className="text-destructive hover:text-destructive h-7 px-2 text-[13px]"
                                             onClick={() => handleRemoveDomain(domain)}
                                             aria-label={t('settings.security.removeDomain')}
                                         >
@@ -158,12 +147,7 @@ export default function SecuritySettings() {
                             ))}
                         </SettingsList>
                     )}
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        className="mt-2 h-7 px-3 text-[13px]"
-                        onClick={() => setDomainDialogOpen(true)}
-                    >
+                    <Button variant="outline" size="sm" className="mt-2 h-7 px-3 text-[13px]" onClick={() => setDomainDialogOpen(true)}>
                         {t('settings.security.addDomain')}
                     </Button>
                 </div>
@@ -200,10 +184,7 @@ export default function SecuritySettings() {
             </SettingsSection>
 
             {/* ── Workspace management permissions ── */}
-            <SettingsSection
-                title={t('settings.security.sectionPermissions')}
-                description={t('settings.security.permissionsDesc')}
-            >
+            <SettingsSection title={t('settings.security.sectionPermissions')} description={t('settings.security.permissionsDesc')}>
                 <SettingsList>
                     {permissionRows.map(({ key, titleKey }) => (
                         <SettingsRow
@@ -286,18 +267,11 @@ export default function SecuritySettings() {
             <Dialog open={domainDialogOpen} onOpenChange={setDomainDialogOpen}>
                 <DialogContent className="max-w-md">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.security.dialogAddDomain')}
-                        </DialogTitle>
-                        <DialogDescription className="text-[13px]">
-                            {t('settings.security.approvedDomainsDesc')}
-                        </DialogDescription>
+                        <DialogTitle className="text-[15px]">{t('settings.security.dialogAddDomain')}</DialogTitle>
+                        <DialogDescription className="text-[13px]">{t('settings.security.approvedDomainsDesc')}</DialogDescription>
                     </DialogHeader>
                     <div className="py-2">
-                        <SettingsField
-                            label={t('settings.security.domainLabel')}
-                            htmlFor="new-domain"
-                        >
+                        <SettingsField label={t('settings.security.domainLabel')} htmlFor="new-domain">
                             <TextInput
                                 id="new-domain"
                                 value={newDomain}
@@ -320,11 +294,7 @@ export default function SecuritySettings() {
                         >
                             {t('settingsCommon.cancel')}
                         </Button>
-                        <Button
-                            size="sm"
-                            onClick={handleAddDomain}
-                            disabled={!newDomain.trim()}
-                        >
+                        <Button size="sm" onClick={handleAddDomain} disabled={!newDomain.trim()}>
                             {t('settingsCommon.add')}
                         </Button>
                     </DialogFooter>

@@ -9,17 +9,11 @@ import {
     settingsDivider,
     settingsSurface,
 } from '@/components/linear/settings/kit';
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
+import { cn } from '@/lib/utils';
 import { Head } from '@inertiajs/react';
 import { Smile, Upload } from 'lucide-react';
 import { useRef, useState } from 'react';
@@ -45,9 +39,7 @@ export default function SettingsEmojis() {
     const [deleteId, setDeleteId] = useState<string | null>(null);
     const fileRef = useRef<HTMLInputElement>(null);
 
-    const filtered = emojis.filter((e) =>
-        e.name.toLowerCase().includes(search.toLowerCase()),
-    );
+    const filtered = emojis.filter((e) => e.name.toLowerCase().includes(search.toLowerCase()));
 
     function handleUpload() {
         if (!newName.trim()) return;
@@ -66,9 +58,7 @@ export default function SettingsEmojis() {
 
     function handleRename() {
         if (!renameId || !renameName.trim()) return;
-        setEmojis((prev) =>
-            prev.map((e) => (e.id === renameId ? { ...e, name: renameName.trim() } : e)),
-        );
+        setEmojis((prev) => prev.map((e) => (e.id === renameId ? { ...e, name: renameName.trim() } : e)));
         setRenameId(null);
         setRenameName('');
         toast.success({ title: t('settings.emojis.toastRenamed') });
@@ -87,11 +77,7 @@ export default function SettingsEmojis() {
                 title={t('settings.emojis.title')}
                 description={t('settings.emojis.description')}
                 actions={
-                    <Button
-                        size="sm"
-                        className="h-7 px-3 text-[13px]"
-                        onClick={() => setUploadOpen(true)}
-                    >
+                    <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setUploadOpen(true)}>
                         <Upload className="mr-1.5 size-3.5" />
                         {t('settings.emojis.uploadButton')}
                     </Button>
@@ -110,18 +96,10 @@ export default function SettingsEmojis() {
                     <EmptyState
                         icon={Smile}
                         title={t('settings.emojis.emptyTitle')}
-                        description={
-                            emojis.length === 0
-                                ? t('settings.emojis.emptyDesc')
-                                : t('settings.emojis.emptyFilterDesc')
-                        }
+                        description={emojis.length === 0 ? t('settings.emojis.emptyDesc') : t('settings.emojis.emptyFilterDesc')}
                         action={
                             emojis.length === 0 ? (
-                                <Button
-                                    size="sm"
-                                    className="h-7 px-3 text-[13px]"
-                                    onClick={() => setUploadOpen(true)}
-                                >
+                                <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setUploadOpen(true)}>
                                     {t('settings.emojis.uploadButton')}
                                 </Button>
                             ) : undefined
@@ -165,16 +143,12 @@ export default function SettingsEmojis() {
             <Dialog open={uploadOpen} onOpenChange={setUploadOpen}>
                 <DialogContent className="max-w-sm">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.emojis.uploadDialogTitle')}
-                        </DialogTitle>
+                        <DialogTitle className="text-[15px]">{t('settings.emojis.uploadDialogTitle')}</DialogTitle>
                     </DialogHeader>
 
                     <div className="space-y-4 py-1">
                         <div>
-                            <label className="mb-1.5 block text-[13px] font-medium">
-                                {t('settings.emojis.nameLabel')}
-                            </label>
+                            <label className="mb-1.5 block text-[13px] font-medium">{t('settings.emojis.nameLabel')}</label>
                             <TextInput
                                 placeholder={t('settings.emojis.namePlaceholder')}
                                 value={newName}
@@ -184,31 +158,23 @@ export default function SettingsEmojis() {
                         </div>
 
                         <div>
-                            <label className="mb-1.5 block text-[13px] font-medium">
-                                {t('settings.emojis.fileLabel')}
-                            </label>
+                            <label className="mb-1.5 block text-[13px] font-medium">{t('settings.emojis.fileLabel')}</label>
                             <button
                                 type="button"
                                 onClick={() => fileRef.current?.click()}
                                 className="border-border/80 hover:bg-muted/40 flex h-20 w-full cursor-pointer flex-col items-center justify-center gap-1.5 rounded-lg border border-dashed text-[13px] transition-colors"
                             >
                                 <Upload className="text-muted-foreground size-4" />
-                                <span className="text-muted-foreground">
-                                    {fileName || t('settings.emojis.filePlaceholder')}
-                                </span>
+                                <span className="text-muted-foreground">{fileName || t('settings.emojis.filePlaceholder')}</span>
                             </button>
                             <input
                                 ref={fileRef}
                                 type="file"
                                 accept="image/png,image/gif,image/jpeg"
                                 className="hidden"
-                                onChange={(e) =>
-                                    setFileName(e.target.files?.[0]?.name ?? '')
-                                }
+                                onChange={(e) => setFileName(e.target.files?.[0]?.name ?? '')}
                             />
-                            <p className="text-muted-foreground mt-1.5 text-[12px]">
-                                {t('settings.emojis.fileHint')}
-                            </p>
+                            <p className="text-muted-foreground mt-1.5 text-[12px]">{t('settings.emojis.fileHint')}</p>
                         </div>
                     </div>
 
@@ -224,11 +190,7 @@ export default function SettingsEmojis() {
                         >
                             {t('settingsCommon.cancel')}
                         </Button>
-                        <Button
-                            size="sm"
-                            disabled={!newName.trim()}
-                            onClick={handleUpload}
-                        >
+                        <Button size="sm" disabled={!newName.trim()} onClick={handleUpload}>
                             {t('settings.emojis.uploadButton')}
                         </Button>
                     </DialogFooter>
@@ -239,9 +201,7 @@ export default function SettingsEmojis() {
             <Dialog open={renameId !== null} onOpenChange={(o) => !o && setRenameId(null)}>
                 <DialogContent className="max-w-sm">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.emojis.renameDialogTitle')}
-                        </DialogTitle>
+                        <DialogTitle className="text-[15px]">{t('settings.emojis.renameDialogTitle')}</DialogTitle>
                     </DialogHeader>
                     <div className="py-1">
                         <TextInput

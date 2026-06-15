@@ -198,15 +198,7 @@ function FilterValueAvatar({ label, color }: { label: string; color?: string }) 
     );
 }
 
-function SearchableFilterOptions({
-    placeholder,
-    options,
-    emptyLabel,
-}: {
-    placeholder: string;
-    options: FilterMenuOption[];
-    emptyLabel?: string;
-}) {
+function SearchableFilterOptions({ placeholder, options, emptyLabel }: { placeholder: string; options: FilterMenuOption[]; emptyLabel?: string }) {
     const { t } = useTranslation();
     const [query, setQuery] = useState('');
     const resolvedEmptyLabel = emptyLabel ?? t('common.noResults');
@@ -1401,7 +1393,10 @@ function IssuesContent({ view, issues, labels, projects, cycles }: IssuesPagePro
 
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <LinearToolbarButton label={t('issues.displayOptions')} active={layout !== 'list' || grouping !== 'status' || ordering !== 'manual'}>
+                            <LinearToolbarButton
+                                label={t('issues.displayOptions')}
+                                active={layout !== 'list' || grouping !== 'status' || ordering !== 'manual'}
+                            >
                                 <SlidersHorizontal className="size-4" />
                             </LinearToolbarButton>
                         </DropdownMenuTrigger>
@@ -1493,7 +1488,9 @@ function IssuesContent({ view, issues, labels, projects, cycles }: IssuesPagePro
                                 <LinearSwitch checked={showSubIssues} />
                             </DropdownMenuItem>
                             <DropdownMenuSeparator className="-mx-3 my-2" />
-                            <DropdownMenuLabel className="text-foreground px-0 py-1 text-[13px] font-medium">{t('issues.display.listOptions')}</DropdownMenuLabel>
+                            <DropdownMenuLabel className="text-foreground px-0 py-1 text-[13px] font-medium">
+                                {t('issues.display.listOptions')}
+                            </DropdownMenuLabel>
                             <DropdownMenuItem
                                 className="h-8 rounded-lg px-0 text-[13px]"
                                 onSelect={(event) => {

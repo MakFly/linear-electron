@@ -1,11 +1,4 @@
-import {
-    SelectField,
-    SettingsHeader,
-    SettingsList,
-    SettingsRow,
-    SettingsSection,
-    ToggleRow,
-} from '@/components/linear/settings/kit';
+import { SelectField, SettingsHeader, SettingsList, SettingsRow, SettingsSection, ToggleRow } from '@/components/linear/settings/kit';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { toast } from '@/components/ui/toast';
@@ -66,12 +59,7 @@ export default function SettingsInitiatives() {
                         title={t('settings.initiatives.updateSchedule.label')}
                         description={scheduleLabel}
                         control={
-                            <Button
-                                variant="outline"
-                                size="sm"
-                                className="h-7 px-3 text-[13px]"
-                                onClick={openScheduleDialog}
-                            >
+                            <Button variant="outline" size="sm" className="h-7 px-3 text-[13px]" onClick={openScheduleDialog}>
                                 {t('settingsCommon.edit')}
                             </Button>
                         }
@@ -79,10 +67,7 @@ export default function SettingsInitiatives() {
                 </SettingsList>
             </SettingsSection>
 
-            <SettingsSection
-                title={t('settings.initiatives.sections.slack')}
-                description={t('settings.initiatives.slack.desc')}
-            >
+            <SettingsSection title={t('settings.initiatives.sections.slack')} description={t('settings.initiatives.slack.desc')}>
                 <Button
                     variant="outline"
                     size="sm"
@@ -96,22 +81,11 @@ export default function SettingsInitiatives() {
             <Dialog open={scheduleDialogOpen} onOpenChange={setScheduleDialogOpen}>
                 <DialogContent className="max-w-sm">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.initiatives.updateSchedule.dialogTitle')}
-                        </DialogTitle>
+                        <DialogTitle className="text-[15px]">{t('settings.initiatives.updateSchedule.dialogTitle')}</DialogTitle>
                     </DialogHeader>
-                    <SelectField
-                        value={pendingSchedule}
-                        onValueChange={setPendingSchedule}
-                        options={scheduleOptions}
-                    />
+                    <SelectField value={pendingSchedule} onValueChange={setPendingSchedule} options={scheduleOptions} />
                     <DialogFooter className="mt-2 gap-2">
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="h-7 px-3 text-[13px]"
-                            onClick={() => setScheduleDialogOpen(false)}
-                        >
+                        <Button variant="outline" size="sm" className="h-7 px-3 text-[13px]" onClick={() => setScheduleDialogOpen(false)}>
                             {t('settingsCommon.cancel')}
                         </Button>
                         <Button size="sm" className="h-7 px-3 text-[13px]" onClick={saveSchedule}>

@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
     ConfirmDialog,
     EmptyState,
@@ -9,17 +8,11 @@ import {
     SettingsList,
     SettingsRow,
     SettingsSection,
-    Switch,
     TextInput,
     ToggleRow,
 } from '@/components/linear/settings/kit';
-import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
 import { Plus, Tag, Users } from 'lucide-react';
@@ -56,7 +49,7 @@ const DEFAULT_STATUSES: CustomerStatus[] = [
 ];
 
 function StatusDot({ color }: { color: string }) {
-    return <span className={`size-2.5 rounded-full shrink-0 ${color}`} />;
+    return <span className={`size-2.5 shrink-0 rounded-full ${color}`} />;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -107,10 +100,7 @@ export default function CustomerRequests() {
 
     const handleCreateStatus = () => {
         if (!newStatusName.trim()) return;
-        setStatuses((prev) => [
-            ...prev,
-            { id: nextStatusId++, name: newStatusName.trim(), color: 'bg-gray-400' },
-        ]);
+        setStatuses((prev) => [...prev, { id: nextStatusId++, name: newStatusName.trim(), color: 'bg-gray-400' }]);
         setNewStatusName('');
         setStatusDialogOpen(false);
     };
@@ -200,11 +190,7 @@ export default function CustomerRequests() {
             <SettingsSection
                 title={t('settings.customerRequests.sections.customerStatuses')}
                 actions={
-                    <Button
-                        size="sm"
-                        className="h-7 px-3 text-[13px]"
-                        onClick={() => setStatusDialogOpen(true)}
-                    >
+                    <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setStatusDialogOpen(true)}>
                         <Plus className="mr-1 size-3.5" />
                         {t('settings.customerRequests.statuses.createBtn')}
                     </Button>
@@ -215,11 +201,7 @@ export default function CustomerRequests() {
                         <SettingsRow
                             key={status.id}
                             iconNode={<StatusDot color={status.color} />}
-                            title={
-                                status.id <= 4
-                                    ? t(`settings.customerRequests.statuses.${status.name}`)
-                                    : status.name
-                            }
+                            title={status.id <= 4 ? t(`settings.customerRequests.statuses.${status.name}`) : status.name}
                             control={
                                 <RowMenu
                                     items={[
@@ -246,11 +228,7 @@ export default function CustomerRequests() {
                 title={t('settings.customerRequests.sections.customerTiers')}
                 actions={
                     tiers.length > 0 ? (
-                        <Button
-                            size="sm"
-                            className="h-7 px-3 text-[13px]"
-                            onClick={() => setTierDialogOpen(true)}
-                        >
+                        <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setTierDialogOpen(true)}>
                             <Plus className="mr-1 size-3.5" />
                             {t('settings.customerRequests.tiers.createBtn')}
                         </Button>
@@ -263,11 +241,7 @@ export default function CustomerRequests() {
                         title={t('settings.customerRequests.tiers.emptyTitle')}
                         description={t('settings.customerRequests.tiers.emptyDesc')}
                         action={
-                            <Button
-                                size="sm"
-                                className="h-7 px-3 text-[13px]"
-                                onClick={() => setTierDialogOpen(true)}
-                            >
+                            <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setTierDialogOpen(true)}>
                                 <Plus className="mr-1 size-3.5" />
                                 {t('settings.customerRequests.tiers.createBtn')}
                             </Button>
@@ -276,12 +250,7 @@ export default function CustomerRequests() {
                 ) : (
                     <SettingsList>
                         {tiers.map((tier) => (
-                            <ToggleRow
-                                key={tier.id}
-                                title={tier.name}
-                                checked={false}
-                                onCheckedChange={() => {}}
-                            />
+                            <ToggleRow key={tier.id} title={tier.name} checked={false} onCheckedChange={() => {}} />
                         ))}
                     </SettingsList>
                 )}
@@ -338,11 +307,7 @@ export default function CustomerRequests() {
             <SettingsSection
                 title={t('settings.customerRequests.sections.excludedDomains')}
                 actions={
-                    <Button
-                        size="sm"
-                        className="h-7 px-3 text-[13px]"
-                        onClick={() => setExcludedDialogOpen(true)}
-                    >
+                    <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setExcludedDialogOpen(true)}>
                         <Plus className="mr-1 size-3.5" />
                         {t('settingsCommon.add')}
                     </Button>
@@ -352,11 +317,7 @@ export default function CustomerRequests() {
                     <EmptyState
                         title={t('settings.customerRequests.excludedDomains.emptyTitle')}
                         action={
-                            <Button
-                                size="sm"
-                                className="h-7 px-3 text-[13px]"
-                                onClick={() => setExcludedDialogOpen(true)}
-                            >
+                            <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setExcludedDialogOpen(true)}>
                                 <Plus className="mr-1 size-3.5" />
                                 {t('settings.customerRequests.excludedDomains.addBtn')}
                             </Button>
@@ -365,12 +326,7 @@ export default function CustomerRequests() {
                 ) : (
                     <SettingsList>
                         {excludedDomains.map((domain) => (
-                            <ToggleRow
-                                key={domain}
-                                title={domain}
-                                checked={false}
-                                onCheckedChange={() => {}}
-                            />
+                            <ToggleRow key={domain} title={domain} checked={false} onCheckedChange={() => {}} />
                         ))}
                     </SettingsList>
                 )}
@@ -380,11 +336,7 @@ export default function CustomerRequests() {
             <SettingsSection
                 title={t('settings.customerRequests.sections.genericDomains')}
                 actions={
-                    <Button
-                        size="sm"
-                        className="h-7 px-3 text-[13px]"
-                        onClick={() => setGenericDialogOpen(true)}
-                    >
+                    <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setGenericDialogOpen(true)}>
                         <Plus className="mr-1 size-3.5" />
                         {t('settingsCommon.add')}
                     </Button>
@@ -394,11 +346,7 @@ export default function CustomerRequests() {
                     <EmptyState
                         title={t('settings.customerRequests.genericDomains.emptyTitle')}
                         action={
-                            <Button
-                                size="sm"
-                                className="h-7 px-3 text-[13px]"
-                                onClick={() => setGenericDialogOpen(true)}
-                            >
+                            <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setGenericDialogOpen(true)}>
                                 <Plus className="mr-1 size-3.5" />
                                 {t('settings.customerRequests.genericDomains.addBtn')}
                             </Button>
@@ -407,12 +355,7 @@ export default function CustomerRequests() {
                 ) : (
                     <SettingsList>
                         {genericDomains.map((domain) => (
-                            <ToggleRow
-                                key={domain}
-                                title={domain}
-                                checked={false}
-                                onCheckedChange={() => {}}
-                            />
+                            <ToggleRow key={domain} title={domain} checked={false} onCheckedChange={() => {}} />
                         ))}
                     </SettingsList>
                 )}
@@ -426,9 +369,7 @@ export default function CustomerRequests() {
             <Dialog open={statusDialogOpen} onOpenChange={setStatusDialogOpen}>
                 <DialogContent className="max-w-md">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.customerRequests.statuses.dialogTitle')}
-                        </DialogTitle>
+                        <DialogTitle className="text-[15px]">{t('settings.customerRequests.statuses.dialogTitle')}</DialogTitle>
                     </DialogHeader>
                     <div className="py-2">
                         <TextInput
@@ -465,9 +406,7 @@ export default function CustomerRequests() {
             <Dialog open={tierDialogOpen} onOpenChange={setTierDialogOpen}>
                 <DialogContent className="max-w-md">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.customerRequests.tiers.dialogTitle')}
-                        </DialogTitle>
+                        <DialogTitle className="text-[15px]">{t('settings.customerRequests.tiers.dialogTitle')}</DialogTitle>
                     </DialogHeader>
                     <div className="py-2">
                         <TextInput
@@ -492,9 +431,7 @@ export default function CustomerRequests() {
             <Dialog open={excludedDialogOpen} onOpenChange={setExcludedDialogOpen}>
                 <DialogContent className="max-w-md">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.customerRequests.excludedDomains.dialogTitle')}
-                        </DialogTitle>
+                        <DialogTitle className="text-[15px]">{t('settings.customerRequests.excludedDomains.dialogTitle')}</DialogTitle>
                     </DialogHeader>
                     <div className="py-2">
                         <TextInput
@@ -519,9 +456,7 @@ export default function CustomerRequests() {
             <Dialog open={genericDialogOpen} onOpenChange={setGenericDialogOpen}>
                 <DialogContent className="max-w-md">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.customerRequests.genericDomains.dialogTitle')}
-                        </DialogTitle>
+                        <DialogTitle className="text-[15px]">{t('settings.customerRequests.genericDomains.dialogTitle')}</DialogTitle>
                     </DialogHeader>
                     <div className="py-2">
                         <TextInput

@@ -1,19 +1,6 @@
+import { SelectField, SettingsField, SettingsHeader, SettingsList, SettingsRow, SettingsSection } from '@/components/linear/settings/kit';
 import { Button } from '@/components/ui/button';
-import {
-    SelectField,
-    SettingsField,
-    SettingsHeader,
-    SettingsList,
-    SettingsRow,
-    SettingsSection,
-} from '@/components/linear/settings/kit';
-import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
@@ -61,7 +48,7 @@ export default function ProjectUpdates() {
                 description={
                     <>
                         {t('settings.projectUpdates.description')}{' '}
-                        <a href="#" className="text-primary underline-offset-2 hover:underline text-[13px]">
+                        <a href="#" className="text-primary text-[13px] underline-offset-2 hover:underline">
                             {t('settingsCommon.docs')}
                         </a>
                     </>
@@ -69,22 +56,14 @@ export default function ProjectUpdates() {
             />
 
             {/* Update schedule */}
-            <SettingsSection
-                title={t('settings.projectUpdates.scheduleTitle')}
-                description={t('settings.projectUpdates.scheduleDesc')}
-            >
+            <SettingsSection title={t('settings.projectUpdates.scheduleTitle')} description={t('settings.projectUpdates.scheduleDesc')}>
                 <SettingsList>
                     <SettingsRow
                         icon={Bell}
                         title={t('settings.projectUpdates.currentSchedule')}
                         description={scheduleLabel}
                         control={
-                            <Button
-                                variant="outline"
-                                size="sm"
-                                className="h-7 px-3 text-[13px]"
-                                onClick={openScheduleDialog}
-                            >
+                            <Button variant="outline" size="sm" className="h-7 px-3 text-[13px]" onClick={openScheduleDialog}>
                                 <Edit2 className="mr-1 size-3" />
                                 {t('settingsCommon.edit')}
                             </Button>
@@ -94,16 +73,8 @@ export default function ProjectUpdates() {
             </SettingsSection>
 
             {/* Slack notifications */}
-            <SettingsSection
-                title={t('settings.projectUpdates.slackTitle')}
-                description={t('settings.projectUpdates.slackDesc')}
-            >
-                <Button
-                    variant="outline"
-                    size="sm"
-                    className="h-7 px-3 text-[13px]"
-                    onClick={handleConnectSlack}
-                >
+            <SettingsSection title={t('settings.projectUpdates.slackTitle')} description={t('settings.projectUpdates.slackDesc')}>
+                <Button variant="outline" size="sm" className="h-7 px-3 text-[13px]" onClick={handleConnectSlack}>
                     <Slack className="mr-1.5 size-3.5" />
                     {t('settings.projectUpdates.slackConnect')}
                 </Button>

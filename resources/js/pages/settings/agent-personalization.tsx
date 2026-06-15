@@ -1,23 +1,9 @@
-import {
-    EmptyState,
-    PlanBadge,
-    SettingsField,
-    SettingsHeader,
-    SettingsSection,
-    settingsSurface,
-} from '@/components/linear/settings/kit';
-import { cn } from '@/lib/utils';
+import { EmptyState, PlanBadge, SettingsField, SettingsHeader, SettingsSection, settingsSurface } from '@/components/linear/settings/kit';
 import { Button } from '@/components/ui/button';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
+import { cn } from '@/lib/utils';
 import { Head } from '@inertiajs/react';
 import { Wand2 } from 'lucide-react';
 import { useState } from 'react';
@@ -76,11 +62,7 @@ export default function SettingsAgentPersonalization() {
                 title={t('settings.agentPersonalizationPage.skills.title')}
                 description={t('settings.agentPersonalizationPage.skills.description')}
                 actions={
-                    <Button
-                        size="sm"
-                        className="h-7 px-3 text-[13px]"
-                        onClick={() => setSkillDialogOpen(true)}
-                    >
+                    <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setSkillDialogOpen(true)}>
                         {t('settings.agentPersonalizationPage.skills.createSkill')}
                     </Button>
                 }
@@ -90,11 +72,7 @@ export default function SettingsAgentPersonalization() {
                     title={t('settings.agentPersonalizationPage.skills.emptyTitle')}
                     description={t('settings.agentPersonalizationPage.skills.emptyDescription')}
                     action={
-                        <Button
-                            size="sm"
-                            className="h-7 px-3 text-[13px]"
-                            onClick={() => setSkillDialogOpen(true)}
-                        >
+                        <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setSkillDialogOpen(true)}>
                             {t('settings.agentPersonalizationPage.skills.createSkill')}
                         </Button>
                     }
@@ -108,9 +86,7 @@ export default function SettingsAgentPersonalization() {
             >
                 <div className={cn(settingsSurface, 'p-4')}>
                     <div className="mb-2 flex items-center gap-2">
-                        <h3 className="text-[13px] font-medium">
-                            {t('settings.agentPersonalizationPage.mcpServers.planTitle')}
-                        </h3>
+                        <h3 className="text-[13px] font-medium">{t('settings.agentPersonalizationPage.mcpServers.planTitle')}</h3>
                         <PlanBadge plan="business" />
                     </div>
                     <p className="text-muted-foreground mb-3 max-w-lg text-[13px] leading-5">
@@ -129,9 +105,7 @@ export default function SettingsAgentPersonalization() {
                     >
                         {t('settingsCommon.configure')}
                     </Button>
-                    <span className="text-muted-foreground ml-3 text-[12px]">
-                        {t('settings.agentPersonalizationPage.mcpServers.workspaceOnly')}
-                    </span>
+                    <span className="text-muted-foreground ml-3 text-[12px]">{t('settings.agentPersonalizationPage.mcpServers.workspaceOnly')}</span>
                 </div>
             </SettingsSection>
 
@@ -139,18 +113,13 @@ export default function SettingsAgentPersonalization() {
             <Dialog open={skillDialogOpen} onOpenChange={setSkillDialogOpen}>
                 <DialogContent className="max-w-md">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.agentPersonalizationPage.skills.dialogTitle')}
-                        </DialogTitle>
+                        <DialogTitle className="text-[15px]">{t('settings.agentPersonalizationPage.skills.dialogTitle')}</DialogTitle>
                         <DialogDescription className="text-[13px]">
                             {t('settings.agentPersonalizationPage.skills.dialogDescription')}
                         </DialogDescription>
                     </DialogHeader>
                     <div className="space-y-4 py-1">
-                        <SettingsField
-                            label={t('settings.agentPersonalizationPage.skills.nameLabel')}
-                            htmlFor="skill-name"
-                        >
+                        <SettingsField label={t('settings.agentPersonalizationPage.skills.nameLabel')} htmlFor="skill-name">
                             <input
                                 id="skill-name"
                                 className="border-border focus:ring-ring h-8 w-full rounded-md border bg-transparent px-2.5 text-[13px] focus:ring-1 focus:outline-none"
@@ -159,10 +128,7 @@ export default function SettingsAgentPersonalization() {
                                 placeholder={t('settings.agentPersonalizationPage.skills.namePlaceholder')}
                             />
                         </SettingsField>
-                        <SettingsField
-                            label={t('settings.agentPersonalizationPage.skills.descriptionLabel')}
-                            htmlFor="skill-description"
-                        >
+                        <SettingsField label={t('settings.agentPersonalizationPage.skills.descriptionLabel')} htmlFor="skill-description">
                             <input
                                 id="skill-description"
                                 className="border-border focus:ring-ring h-8 w-full rounded-md border bg-transparent px-2.5 text-[13px] focus:ring-1 focus:outline-none"

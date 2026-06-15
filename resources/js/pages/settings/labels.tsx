@@ -78,7 +78,9 @@ export default function SettingsLabels({ labels }: { labels: LabelWithCount[] })
                     <div key={label.id} className="border-border/70 flex h-[46px] items-center gap-3 border-b px-4 last:border-b-0">
                         <span className="size-2.5 rounded-full" style={{ backgroundColor: label.color }} />
                         <span className="text-[13px] font-medium">{label.name}</span>
-                        <span className="text-muted-foreground ml-auto text-[12px]">{t('settings.labels.issuesCount', { count: label.issues_count })}</span>
+                        <span className="text-muted-foreground ml-auto text-[12px]">
+                            {t('settings.labels.issuesCount', { count: label.issues_count })}
+                        </span>
                         <button
                             aria-label={t('settings.labels.deleteLabel', { name: label.name })}
                             onClick={() =>

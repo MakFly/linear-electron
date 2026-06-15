@@ -1,10 +1,4 @@
-import {
-    FieldCard,
-    FieldRow,
-    SelectField,
-    SettingsHeader,
-    TextInput,
-} from '@/components/linear/settings/kit';
+import { FieldCard, FieldRow, SelectField, SettingsHeader, TextInput } from '@/components/linear/settings/kit';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
@@ -69,7 +63,14 @@ export default function SettingsCreateTeam() {
                     <TextInput
                         id="team-identifier"
                         value={identifier}
-                        onChange={(e) => setIdentifier(e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 5))}
+                        onChange={(e) =>
+                            setIdentifier(
+                                e.target.value
+                                    .toUpperCase()
+                                    .replace(/[^A-Z0-9]/g, '')
+                                    .slice(0, 5),
+                            )
+                        }
                         placeholder="ENG"
                         className="w-full sm:w-[120px]"
                     />
@@ -101,12 +102,7 @@ export default function SettingsCreateTeam() {
             </FieldCard>
 
             <div className="mt-4">
-                <Button
-                    size="sm"
-                    className="h-7 px-3 text-[13px]"
-                    onClick={handleCreate}
-                    disabled={!teamName.trim()}
-                >
+                <Button size="sm" className="h-7 px-3 text-[13px]" onClick={handleCreate} disabled={!teamName.trim()}>
                     {t('settings.createTeam.createButton')}
                 </Button>
             </div>

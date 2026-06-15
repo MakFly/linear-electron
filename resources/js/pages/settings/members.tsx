@@ -8,18 +8,11 @@ import {
     StatusPill,
     settingsDivider,
 } from '@/components/linear/settings/kit';
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
+import { cn } from '@/lib/utils';
 import { Head } from '@inertiajs/react';
 import { Download, UserPlus, Users } from 'lucide-react';
 import { useState } from 'react';
@@ -139,12 +132,7 @@ export default function SettingsMembers() {
                 description={t('settings.members.description')}
                 actions={
                     <div className="flex items-center gap-2">
-                        <SelectField
-                            value={statusFilter}
-                            onValueChange={setStatusFilter}
-                            options={statusOptions}
-                            triggerClassName="w-[140px]"
-                        />
+                        <SelectField value={statusFilter} onValueChange={setStatusFilter} options={statusOptions} triggerClassName="w-[140px]" />
                         <SearchInput
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
@@ -160,11 +148,7 @@ export default function SettingsMembers() {
                             <Download className="mr-1.5 size-3.5" />
                             {t('settings.members.exportCsv')}
                         </Button>
-                        <Button
-                            size="sm"
-                            className="h-7 px-3 text-[13px]"
-                            onClick={() => setInviteOpen(true)}
-                        >
+                        <Button size="sm" className="h-7 px-3 text-[13px]" onClick={() => setInviteOpen(true)}>
                             <UserPlus className="mr-1.5 size-3.5" />
                             {t('settings.members.invite')}
                         </Button>
@@ -173,7 +157,12 @@ export default function SettingsMembers() {
             />
 
             {/* Table header */}
-            <div className={cn(settingsDivider, 'bg-muted/30 mb-0 grid grid-cols-[2fr_2fr_1fr_1fr_1fr_40px] items-center gap-3 rounded-t-[11px] px-4 py-2 text-[12px] text-muted-foreground border')}>
+            <div
+                className={cn(
+                    settingsDivider,
+                    'bg-muted/30 text-muted-foreground mb-0 grid grid-cols-[2fr_2fr_1fr_1fr_1fr_40px] items-center gap-3 rounded-t-[11px] border px-4 py-2 text-[12px]',
+                )}
+            >
                 <span>{t('settings.members.columnName')}</span>
                 <span>{t('settings.members.columnEmail')}</span>
                 <span>{t('settings.members.columnStatus')}</span>
@@ -194,11 +183,14 @@ export default function SettingsMembers() {
                     {filtered.map((member) => (
                         <div
                             key={member.id}
-                            className={cn(settingsDivider, 'grid grid-cols-[2fr_2fr_1fr_1fr_1fr_40px] items-center gap-3 px-4 min-h-[46px] border-b last:border-b-0 text-[13px]')}
+                            className={cn(
+                                settingsDivider,
+                                'grid min-h-[46px] grid-cols-[2fr_2fr_1fr_1fr_1fr_40px] items-center gap-3 border-b px-4 text-[13px] last:border-b-0',
+                            )}
                         >
                             {/* Name */}
-                            <div className="flex items-center gap-2.5 min-w-0">
-                                <span className="bg-muted size-7 rounded-full text-[11px] font-medium flex items-center justify-center shrink-0">
+                            <div className="flex min-w-0 items-center gap-2.5">
+                                <span className="bg-muted flex size-7 shrink-0 items-center justify-center rounded-full text-[11px] font-medium">
                                     {getInitials(member.name)}
                                 </span>
                                 <span className="truncate font-medium">{member.name}</span>
@@ -209,14 +201,10 @@ export default function SettingsMembers() {
 
                             {/* Status */}
                             <div>
-                                {member.status === 'Active' && (
-                                    <StatusPill on={true} onLabel={t('settings.members.statusPillActive')} />
-                                )}
-                                {member.status === 'Invited' && (
-                                    <StatusPill on={false} offLabel={t('settings.members.statusPillInvited')} />
-                                )}
+                                {member.status === 'Active' && <StatusPill on={true} onLabel={t('settings.members.statusPillActive')} />}
+                                {member.status === 'Invited' && <StatusPill on={false} offLabel={t('settings.members.statusPillInvited')} />}
                                 {member.status === 'Suspended' && (
-                                    <span className="inline-flex items-center text-[11px] text-destructive bg-destructive/10 px-1.5 py-0.5 rounded">
+                                    <span className="text-destructive bg-destructive/10 inline-flex items-center rounded px-1.5 py-0.5 text-[11px]">
                                         {t('settings.members.statusPillSuspended')}
                                     </span>
                                 )}
@@ -284,9 +272,7 @@ export default function SettingsMembers() {
                 <DialogContent className="max-w-md">
                     <DialogHeader>
                         <DialogTitle className="text-[15px]">{t('settings.members.dialogTitle')}</DialogTitle>
-                        <DialogDescription className="sr-only">
-                            {t('settings.members.dialogTitle')}
-                        </DialogDescription>
+                        <DialogDescription className="sr-only">{t('settings.members.dialogTitle')}</DialogDescription>
                     </DialogHeader>
 
                     <div className="flex flex-col gap-4 py-2">
@@ -308,11 +294,7 @@ export default function SettingsMembers() {
                             <label htmlFor="invite-role" className="text-[13px] font-medium">
                                 {t('settings.members.roleLabel')}
                             </label>
-                            <SelectField
-                                value={inviteRole}
-                                onValueChange={(v) => setInviteRole(v as MemberRole)}
-                                options={roleOptions}
-                            />
+                            <SelectField value={inviteRole} onValueChange={(v) => setInviteRole(v as MemberRole)} options={roleOptions} />
                         </div>
                     </div>
 

@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\SocialAuthController;
-use App\Http\Controllers\Settings\PreferencesController;
 use App\Http\Controllers\IssueController;
+use App\Http\Controllers\Settings\PreferencesController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {

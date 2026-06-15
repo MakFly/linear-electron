@@ -1,24 +1,18 @@
 import {
     EmptyState,
+    SelectField,
     SettingsField,
     SettingsHeader,
     SettingsSection,
-    SelectField,
     TextInput,
     settingsDivider,
     settingsSurface,
 } from '@/components/linear/settings/kit';
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
+import { cn } from '@/lib/utils';
 import { Head } from '@inertiajs/react';
 import { BookOpen, Key, PlugZap, Webhook } from 'lucide-react';
 import { useState } from 'react';
@@ -110,7 +104,7 @@ export default function SettingsApi() {
                 <div className="flex flex-col gap-1">
                     <button
                         type="button"
-                        className="text-primary hover:underline w-fit text-[13px] flex items-center gap-1.5"
+                        className="text-primary flex w-fit items-center gap-1.5 text-[13px] hover:underline"
                         onClick={() => toast.info({ title: t('settings.api.docsLink') })}
                     >
                         <BookOpen className="size-3.5" />
@@ -118,7 +112,7 @@ export default function SettingsApi() {
                     </button>
                     <button
                         type="button"
-                        className="text-primary hover:underline w-fit text-[13px] flex items-center gap-1.5"
+                        className="text-primary flex w-fit items-center gap-1.5 text-[13px] hover:underline"
                         onClick={() => toast.info({ title: t('settings.api.slackToast') })}
                     >
                         <PlugZap className="size-3.5" />
@@ -138,18 +132,17 @@ export default function SettingsApi() {
                 }
             >
                 {oauthApps.length === 0 ? (
-                    <EmptyState
-                        icon={PlugZap}
-                        title={t('settings.api.oauthEmptyTitle')}
-                        description={t('settings.api.oauthEmptyDescription')}
-                    />
+                    <EmptyState icon={PlugZap} title={t('settings.api.oauthEmptyTitle')} description={t('settings.api.oauthEmptyDescription')} />
                 ) : (
                     <div className={cn(settingsSurface, 'overflow-hidden')}>
                         {oauthApps.map((app) => (
-                            <div key={app.id} className={cn(settingsDivider, 'flex min-h-[46px] items-center gap-3 border-b px-4 py-2 last:border-b-0')}>
-                                <div className="flex-1 min-w-0">
+                            <div
+                                key={app.id}
+                                className={cn(settingsDivider, 'flex min-h-[46px] items-center gap-3 border-b px-4 py-2 last:border-b-0')}
+                            >
+                                <div className="min-w-0 flex-1">
                                     <div className="truncate text-[13px] font-medium">{app.name}</div>
-                                    <div className="text-muted-foreground text-[12px] truncate">{app.redirectUrl}</div>
+                                    <div className="text-muted-foreground truncate text-[12px]">{app.redirectUrl}</div>
                                 </div>
                             </div>
                         ))}
@@ -168,17 +161,16 @@ export default function SettingsApi() {
                 }
             >
                 {webhooks.length === 0 ? (
-                    <EmptyState
-                        icon={Webhook}
-                        title={t('settings.api.webhookEmptyTitle')}
-                        description={t('settings.api.webhookEmptyDescription')}
-                    />
+                    <EmptyState icon={Webhook} title={t('settings.api.webhookEmptyTitle')} description={t('settings.api.webhookEmptyDescription')} />
                 ) : (
                     <div className={cn(settingsSurface, 'overflow-hidden')}>
                         {webhooks.map((wh) => (
-                            <div key={wh.id} className={cn(settingsDivider, 'flex min-h-[46px] items-center gap-3 border-b px-4 py-2 last:border-b-0')}>
+                            <div
+                                key={wh.id}
+                                className={cn(settingsDivider, 'flex min-h-[46px] items-center gap-3 border-b px-4 py-2 last:border-b-0')}
+                            >
                                 <Webhook className="text-muted-foreground size-4 shrink-0" />
-                                <div className="flex-1 min-w-0">
+                                <div className="min-w-0 flex-1">
                                     <div className="truncate text-[13px] font-medium">{wh.url}</div>
                                     <div className="text-muted-foreground text-[12px]">{wh.events.join(', ')}</div>
                                 </div>
@@ -199,17 +191,16 @@ export default function SettingsApi() {
                 }
             >
                 {apiKeys.length === 0 ? (
-                    <EmptyState
-                        icon={Key}
-                        title={t('settings.api.apiKeyEmptyTitle')}
-                        description={t('settings.api.apiKeyEmptyDescription')}
-                    />
+                    <EmptyState icon={Key} title={t('settings.api.apiKeyEmptyTitle')} description={t('settings.api.apiKeyEmptyDescription')} />
                 ) : (
                     <div className={cn(settingsSurface, 'overflow-hidden')}>
                         {apiKeys.map((key) => (
-                            <div key={key.id} className={cn(settingsDivider, 'flex min-h-[46px] items-center gap-3 border-b px-4 py-2 last:border-b-0')}>
+                            <div
+                                key={key.id}
+                                className={cn(settingsDivider, 'flex min-h-[46px] items-center gap-3 border-b px-4 py-2 last:border-b-0')}
+                            >
                                 <Key className="text-muted-foreground size-4 shrink-0" />
-                                <div className="flex-1 min-w-0">
+                                <div className="min-w-0 flex-1">
                                     <div className="truncate text-[13px] font-medium">{key.name}</div>
                                 </div>
                             </div>
@@ -218,10 +209,7 @@ export default function SettingsApi() {
                 )}
 
                 <div className="mt-6">
-                    <SettingsField
-                        label={t('settings.api.apiKeyPermissionLabel')}
-                        description={t('settings.api.apiKeyPermissionDescription')}
-                    >
+                    <SettingsField label={t('settings.api.apiKeyPermissionLabel')} description={t('settings.api.apiKeyPermissionDescription')}>
                         <SelectField
                             value={apiKeyPermission}
                             onValueChange={setApiKeyPermission}
@@ -287,7 +275,7 @@ export default function SettingsApi() {
                         </SettingsField>
                         <SettingsField label={t('settings.api.webhookEventsLabel')}>
                             <div className="space-y-2">
-                                <label className="flex items-center gap-2 text-[13px] cursor-pointer">
+                                <label className="flex cursor-pointer items-center gap-2 text-[13px]">
                                     <input
                                         type="checkbox"
                                         checked={webhookEventIssue}
@@ -296,7 +284,7 @@ export default function SettingsApi() {
                                     />
                                     {t('settings.api.webhookEventIssue')}
                                 </label>
-                                <label className="flex items-center gap-2 text-[13px] cursor-pointer">
+                                <label className="flex cursor-pointer items-center gap-2 text-[13px]">
                                     <input
                                         type="checkbox"
                                         checked={webhookEventComment}
@@ -305,7 +293,7 @@ export default function SettingsApi() {
                                     />
                                     {t('settings.api.webhookEventComment')}
                                 </label>
-                                <label className="flex items-center gap-2 text-[13px] cursor-pointer">
+                                <label className="flex cursor-pointer items-center gap-2 text-[13px]">
                                     <input
                                         type="checkbox"
                                         checked={webhookEventProject}

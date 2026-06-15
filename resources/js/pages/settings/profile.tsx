@@ -1,11 +1,5 @@
+import { ConfirmDialog, FieldCard, FieldRow, SettingsHeader, TextInput } from '@/components/linear/settings/kit';
 import { Button } from '@/components/ui/button';
-import {
-    ConfirmDialog,
-    FieldCard,
-    FieldRow,
-    SettingsHeader,
-    TextInput,
-} from '@/components/linear/settings/kit';
 import { toast } from '@/components/ui/toast';
 import { useInitials } from '@/hooks/use-initials';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
@@ -90,7 +84,12 @@ export default function SettingsProfile() {
 
                     {/* Username */}
                     <FieldRow label={t('settings.profilePage.username')} htmlFor="username">
-                        <TextInput id="username" value={data.username} onChange={(e) => setData('username', e.target.value)} className="w-full sm:w-[240px]" />
+                        <TextInput
+                            id="username"
+                            value={data.username}
+                            onChange={(e) => setData('username', e.target.value)}
+                            className="w-full sm:w-[240px]"
+                        />
                     </FieldRow>
                 </FieldCard>
 

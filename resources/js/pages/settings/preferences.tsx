@@ -3,10 +3,10 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
+import i18n from '@/lib/i18n';
 import { defaultPreferences, storePreferences } from '@/lib/preferences';
 import { cn } from '@/lib/utils';
 import { type LinearPreferences } from '@/types';
-import i18n from '@/lib/i18n';
 import { Head, router } from '@inertiajs/react';
 import { type ReactNode, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,11 +1,4 @@
-import {
-    SelectField,
-    SettingsField,
-    SettingsHeader,
-    SettingsList,
-    SettingsRow,
-    SettingsSection,
-} from '@/components/linear/settings/kit';
+import { SelectField, SettingsField, SettingsHeader, SettingsList, SettingsRow, SettingsSection } from '@/components/linear/settings/kit';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
@@ -36,19 +29,12 @@ export default function SettingsImportExport() {
             />
 
             {/* Import */}
-            <SettingsSection
-                title={t('settings.importExport.importSection')}
-                description={t('settings.importExport.importDescription')}
-            >
+            <SettingsSection title={t('settings.importExport.importSection')} description={t('settings.importExport.importDescription')}>
                 <SettingsList>
                     {PROVIDERS.map((provider) => (
                         <SettingsRow
                             key={provider.key}
-                            iconNode={
-                                <span className="text-[18px] leading-none select-none w-5 text-center shrink-0">
-                                    {provider.icon}
-                                </span>
-                            }
+                            iconNode={<span className="w-5 shrink-0 text-center text-[18px] leading-none select-none">{provider.icon}</span>}
                             title={provider.name}
                             control={
                                 <Button
@@ -70,13 +56,10 @@ export default function SettingsImportExport() {
             </SettingsSection>
 
             {/* CLI import */}
-            <SettingsSection
-                title={t('settings.importExport.cliImport')}
-                description={t('settings.importExport.cliImportDescription')}
-            >
+            <SettingsSection title={t('settings.importExport.cliImport')} description={t('settings.importExport.cliImportDescription')}>
                 <button
                     type="button"
-                    className="text-primary hover:underline w-fit text-[13px] flex items-center gap-1.5"
+                    className="text-primary flex w-fit items-center gap-1.5 text-[13px] hover:underline"
                     onClick={() => toast.info({ title: t('settings.importExport.cliImportToast') })}
                 >
                     <Terminal className="size-3.5" />
@@ -85,10 +68,7 @@ export default function SettingsImportExport() {
             </SettingsSection>
 
             {/* Export */}
-            <SettingsSection
-                title={t('settings.importExport.exportSection')}
-                description={t('settings.importExport.exportDescription')}
-            >
+            <SettingsSection title={t('settings.importExport.exportSection')} description={t('settings.importExport.exportDescription')}>
                 <div className="max-w-xs space-y-4">
                     <SettingsField label={t('settings.importExport.includePrivateTeams')}>
                         <SelectField
@@ -102,7 +82,7 @@ export default function SettingsImportExport() {
                     </SettingsField>
                     <Button
                         size="sm"
-                        className="h-7 px-3 text-[13px] flex items-center gap-1.5"
+                        className="flex h-7 items-center gap-1.5 px-3 text-[13px]"
                         onClick={() => toast.success({ title: t('settings.importExport.exportToast') })}
                     >
                         <Download className="size-3.5" />

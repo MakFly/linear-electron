@@ -1,8 +1,4 @@
-import {
-    PlanGate,
-    SettingsHeader,
-    SettingsSection,
-} from '@/components/linear/settings/kit';
+import { PlanGate, SettingsHeader, SettingsSection } from '@/components/linear/settings/kit';
 import { Button } from '@/components/ui/button';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';

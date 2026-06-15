@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
     ConfirmDialog,
     EmptyState,
@@ -11,16 +10,11 @@ import {
     settingsDivider,
     settingsSurface,
 } from '@/components/linear/settings/kit';
-import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { toast } from '@/components/ui/toast';
-import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
+import { cn } from '@/lib/utils';
 import { Head } from '@inertiajs/react';
 import { Users } from 'lucide-react';
 import { useState } from 'react';
@@ -42,7 +36,17 @@ const SEED_TEAMS: Team[] = [
     { id: 1, name: 'Devaubree', identifier: 'DEV', color: '#5E6AD2', visibility: 'Public', members: 8, issues: 34, created: 'Jan 2024' },
     { id: 2, name: 'Design', identifier: 'DSG', color: '#10B981', visibility: 'Public', members: 3, issues: 12, created: 'Feb 2024' },
     { id: 3, name: 'Product', identifier: 'PRD', color: '#F59E0B', visibility: 'Private', members: 5, issues: 21, created: 'Mar 2024' },
-    { id: 4, name: 'Infrastructure', identifier: 'INF', color: '#EF4444', visibility: 'Private', members: 2, issues: 7, created: 'Apr 2024', archived: true },
+    {
+        id: 4,
+        name: 'Infrastructure',
+        identifier: 'INF',
+        color: '#EF4444',
+        visibility: 'Private',
+        members: 2,
+        issues: 7,
+        created: 'Apr 2024',
+        archived: true,
+    },
 ];
 
 let nextId = 100;
@@ -59,14 +63,8 @@ export default function SettingsTeams() {
     const [deleteTeamId, setDeleteTeamId] = useState<number | null>(null);
 
     const filteredTeams = teams.filter((team) => {
-        const matchesStatus =
-            statusFilter === 'all'
-                ? true
-                : statusFilter === 'archived'
-                  ? team.archived === true
-                  : !team.archived;
-        const matchesSearch =
-            search.trim() === '' || team.name.toLowerCase().includes(search.toLowerCase());
+        const matchesStatus = statusFilter === 'all' ? true : statusFilter === 'archived' ? team.archived === true : !team.archived;
+        const matchesSearch = search.trim() === '' || team.name.toLowerCase().includes(search.toLowerCase());
         return matchesStatus && matchesSearch;
     });
 
@@ -108,12 +106,7 @@ export default function SettingsTeams() {
                 description={t('settings.teams.description')}
                 actions={
                     <>
-                        <SelectField
-                            value={statusFilter}
-                            onValueChange={setStatusFilter}
-                            options={statusOptions}
-                            triggerClassName="w-32"
-                        />
+                        <SelectField value={statusFilter} onValueChange={setStatusFilter} options={statusOptions} triggerClassName="w-32" />
                         <SearchInput
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
@@ -129,15 +122,16 @@ export default function SettingsTeams() {
 
             <SettingsSection>
                 {filteredTeams.length === 0 ? (
-                    <EmptyState
-                        icon={Users}
-                        title={t('settings.teams.emptyTitle')}
-                        description={t('settings.teams.emptyDesc')}
-                    />
+                    <EmptyState icon={Users} title={t('settings.teams.emptyTitle')} description={t('settings.teams.emptyDesc')} />
                 ) : (
                     <div className={cn(settingsSurface, 'overflow-hidden')}>
                         {/* Header row */}
-                        <div className={cn(settingsDivider, 'bg-muted/30 grid grid-cols-[2fr_1fr_80px_80px_120px_40px] items-center gap-3 border-b px-4 py-2 text-[12px] text-muted-foreground')}>
+                        <div
+                            className={cn(
+                                settingsDivider,
+                                'bg-muted/30 text-muted-foreground grid grid-cols-[2fr_1fr_80px_80px_120px_40px] items-center gap-3 border-b px-4 py-2 text-[12px]',
+                            )}
+                        >
                             <span>{t('settings.teams.columnName')}</span>
                             <span>{t('settings.teams.columnVisibility')}</span>
                             <span>{t('settings.teams.columnMembers')}</span>
@@ -149,24 +143,22 @@ export default function SettingsTeams() {
                         {filteredTeams.map((team) => (
                             <div
                                 key={team.id}
-                                className={cn(settingsDivider, 'grid grid-cols-[2fr_1fr_80px_80px_120px_40px] min-h-[46px] items-center gap-3 border-b px-4 last:border-b-0 text-[13px]')}
+                                className={cn(
+                                    settingsDivider,
+                                    'grid min-h-[46px] grid-cols-[2fr_1fr_80px_80px_120px_40px] items-center gap-3 border-b px-4 text-[13px] last:border-b-0',
+                                )}
                             >
                                 {/* Name */}
                                 <div className="flex min-w-0 items-center gap-2">
-                                    <span
-                                        className="size-4 shrink-0 rounded-sm"
-                                        style={{ backgroundColor: team.color }}
-                                    />
+                                    <span className="size-4 shrink-0 rounded-sm" style={{ backgroundColor: team.color }} />
                                     <span className="truncate font-medium">{team.name}</span>
-                                    <span className="shrink-0 rounded bg-muted px-1.5 py-0.5 font-mono text-[11px] text-muted-foreground">
+                                    <span className="bg-muted text-muted-foreground shrink-0 rounded px-1.5 py-0.5 font-mono text-[11px]">
                                         {team.identifier}
                                     </span>
                                 </div>
                                 {/* Visibility */}
                                 <span className="text-muted-foreground">
-                                    {team.visibility === 'Public'
-                                        ? t('settings.teams.visibilityPublic')
-                                        : t('settings.teams.visibilityPrivate')}
+                                    {team.visibility === 'Public' ? t('settings.teams.visibilityPublic') : t('settings.teams.visibilityPrivate')}
                                 </span>
                                 {/* Members */}
                                 <span className="text-muted-foreground">{team.members}</span>
@@ -201,20 +193,11 @@ export default function SettingsTeams() {
                     </DialogHeader>
                     <div className="space-y-4 py-1">
                         <div>
-                            <label className="mb-1.5 block text-[13px] font-medium">
-                                {t('settings.teams.teamName')}
-                            </label>
-                            <TextInput
-                                value={newName}
-                                onChange={(e) => setNewName(e.target.value)}
-                                placeholder="e.g. Engineering"
-                                autoFocus
-                            />
+                            <label className="mb-1.5 block text-[13px] font-medium">{t('settings.teams.teamName')}</label>
+                            <TextInput value={newName} onChange={(e) => setNewName(e.target.value)} placeholder="e.g. Engineering" autoFocus />
                         </div>
                         <div>
-                            <label className="mb-1.5 block text-[13px] font-medium">
-                                {t('settings.teams.identifier')}
-                            </label>
+                            <label className="mb-1.5 block text-[13px] font-medium">{t('settings.teams.identifier')}</label>
                             <TextInput
                                 value={newIdentifier}
                                 onChange={(e) => setNewIdentifier(e.target.value)}

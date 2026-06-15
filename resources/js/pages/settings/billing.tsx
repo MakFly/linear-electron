@@ -82,7 +82,7 @@ export default function SettingsBilling() {
                         <span className="text-[13px] font-medium">{t('settings.billing.aiCreditsUsed')}</span>
                     </div>
                     {/* Usage bar */}
-                    <div className="bg-muted h-1.5 w-full rounded-full overflow-hidden mb-2">
+                    <div className="bg-muted mb-2 h-1.5 w-full overflow-hidden rounded-full">
                         <div className="bg-primary h-full rounded-full" style={{ width: '42%' }} />
                     </div>
                     <p className="text-muted-foreground text-[12px] leading-4">{t('settings.billing.aiCreditsDescription')}</p>

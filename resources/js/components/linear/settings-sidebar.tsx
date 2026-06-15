@@ -1,8 +1,6 @@
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { Link, usePage } from '@inertiajs/react';
-import { useLayoutEffect, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import {
     AppWindow,
     Bell,
@@ -36,6 +34,8 @@ import {
     UsersRound,
     type LucideIcon,
 } from 'lucide-react';
+import { useLayoutEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 type SettingsItem = {
     title: string;
@@ -180,10 +180,7 @@ export function SettingsSidebar() {
                                         <Icon className="text-muted-foreground size-4" />
                                         <span className="truncate">{t(item.title)}</span>
                                         {comingSoon ? (
-                                            <Badge
-                                                variant="secondary"
-                                                className="ml-auto h-[17px] shrink-0 px-1.5 text-[10px] font-medium"
-                                            >
+                                            <Badge variant="secondary" className="ml-auto h-[17px] shrink-0 px-1.5 text-[10px] font-medium">
                                                 {t('settings.comingSoon.badge')}
                                             </Badge>
                                         ) : null}

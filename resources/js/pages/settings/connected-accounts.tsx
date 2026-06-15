@@ -1,10 +1,4 @@
-import {
-    SettingsHeader,
-    SettingsSection,
-    SettingsList,
-    SettingsRow,
-    StatusPill,
-} from '@/components/linear/settings/kit';
+import { SettingsHeader, SettingsList, SettingsRow, SettingsSection, StatusPill } from '@/components/linear/settings/kit';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
@@ -73,32 +67,14 @@ export default function SettingsConnectedAccounts() {
                         return (
                             <SettingsRow
                                 key={id}
-                                iconNode={
-                                    <ProviderIcon
-                                        label={iconLabel}
-                                        color={iconColor}
-                                        textColor={iconTextColor}
-                                    />
-                                }
+                                iconNode={<ProviderIcon label={iconLabel} color={iconColor} textColor={iconTextColor} />}
                                 title={t(`settings.connectedAccountsPage.providers.${id}.title`)}
                                 description={t(`settings.connectedAccountsPage.providers.${id}.description`)}
                                 control={
                                     <>
-                                        {connected && (
-                                            <StatusPill
-                                                on={true}
-                                                onLabel={t('settingsCommon.connected')}
-                                            />
-                                        )}
-                                        <Button
-                                            variant="outline"
-                                            size="sm"
-                                            className="h-7 px-3 text-[13px]"
-                                            onClick={() => toggleConnection(id)}
-                                        >
-                                            {connected
-                                                ? t('settingsCommon.disconnect')
-                                                : t('settingsCommon.connect')}
+                                        {connected && <StatusPill on={true} onLabel={t('settingsCommon.connected')} />}
+                                        <Button variant="outline" size="sm" className="h-7 px-3 text-[13px]" onClick={() => toggleConnection(id)}>
+                                            {connected ? t('settingsCommon.disconnect') : t('settingsCommon.connect')}
                                         </Button>
                                     </>
                                 }
@@ -111,9 +87,7 @@ export default function SettingsConnectedAccounts() {
             <SettingsSection>
                 <SettingsList>
                     <SettingsRow
-                        iconNode={
-                            <ProviderIcon label="GH" color="#24292E" />
-                        }
+                        iconNode={<ProviderIcon label="GH" color="#24292E" />}
                         title={t('settings.connectedAccountsPage.workspaceConnection.title')}
                         description={t('settings.connectedAccountsPage.workspaceConnection.description')}
                         onClick={() =>

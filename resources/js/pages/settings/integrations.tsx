@@ -1,10 +1,4 @@
-import {
-    EmptyState,
-    SearchInput,
-    SettingsHeader,
-    SettingsSection,
-    settingsSurface,
-} from '@/components/linear/settings/kit';
+import { EmptyState, SearchInput, SettingsHeader, SettingsSection, settingsSurface } from '@/components/linear/settings/kit';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
@@ -183,21 +177,15 @@ const CATEGORIES: CategoryDef[] = [
     },
     {
         key: 'collaboration',
-        integrations: [
-            { key: 'raycast', color: AVATAR_COLORS.raycast },
-        ],
+        integrations: [{ key: 'raycast', color: AVATAR_COLORS.raycast }],
     },
     {
         key: 'mediaDesign',
-        integrations: [
-            { key: 'figma', color: AVATAR_COLORS.figma },
-        ],
+        integrations: [{ key: 'figma', color: AVATAR_COLORS.figma }],
     },
     {
         key: 'analytics',
-        integrations: [
-            { key: 'datadog', color: AVATAR_COLORS.datadog },
-        ],
+        integrations: [{ key: 'datadog', color: AVATAR_COLORS.datadog }],
     },
     {
         key: 'securityCompliance',
@@ -231,33 +219,19 @@ function IntegrationCard({
     return (
         <div className={cn(settingsSurface, 'flex flex-col gap-2.5 p-3')}>
             <div className="flex items-start gap-2.5">
-                <div
-                    className={cn(
-                        'flex size-8 shrink-0 items-center justify-center rounded-md text-[13px] font-bold',
-                        color,
-                    )}
-                >
-                    {firstLetter}
-                </div>
+                <div className={cn('flex size-8 shrink-0 items-center justify-center rounded-md text-[13px] font-bold', color)}>{firstLetter}</div>
                 <div className="min-w-0 flex-1">
                     <div className="truncate text-[13px] font-semibold">{name}</div>
-                    <div className="text-muted-foreground mt-0.5 line-clamp-2 text-[12px] leading-4">
-                        {description}
-                    </div>
+                    <div className="text-muted-foreground mt-0.5 line-clamp-2 text-[12px] leading-4">{description}</div>
                 </div>
             </div>
             <Button
                 variant={connected ? 'outline' : 'outline'}
                 size="sm"
-                className={cn(
-                    'h-7 w-full px-3 text-[13px]',
-                    connected && 'text-foreground',
-                )}
+                className={cn('h-7 w-full px-3 text-[13px]', connected && 'text-foreground')}
                 onClick={onToggle}
             >
-                {connected
-                    ? t('settings.integrations.open')
-                    : t('settings.integrations.connect')}
+                {connected ? t('settings.integrations.open') : t('settings.integrations.connect')}
             </Button>
         </div>
     );
@@ -318,17 +292,10 @@ export default function SettingsIntegrations() {
             />
 
             {totalVisible === 0 ? (
-                <EmptyState
-                    icon={Puzzle}
-                    title={t('settingsCommon.noResults')}
-                    description={t('settings.integrations.noResults')}
-                />
+                <EmptyState icon={Puzzle} title={t('settingsCommon.noResults')} description={t('settings.integrations.noResults')} />
             ) : (
                 filteredCategories.map((cat) => (
-                    <SettingsSection
-                        key={cat.key}
-                        title={t(`settings.integrations.categories.${cat.key}`)}
-                    >
+                    <SettingsSection key={cat.key} title={t(`settings.integrations.categories.${cat.key}`)}>
                         <div className="grid grid-cols-2 gap-2">
                             {cat.integrations.map((int) => (
                                 <IntegrationCard
@@ -337,10 +304,7 @@ export default function SettingsIntegrations() {
                                     color={int.color}
                                     connected={connected.has(`${cat.key}-${int.key}`)}
                                     onToggle={() =>
-                                        toggleConnection(
-                                            `${cat.key}-${int.key}`,
-                                            t(`settings.integrations.integrations.${int.key}.name`),
-                                        )
+                                        toggleConnection(`${cat.key}-${int.key}`, t(`settings.integrations.integrations.${int.key}.name`))
                                     }
                                 />
                             ))}

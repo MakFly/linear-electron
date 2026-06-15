@@ -31,8 +31,7 @@ export default function SettingsTeamDetail() {
     const [confirmRetire, setConfirmRetire] = useState(false);
     const [confirmDelete, setConfirmDelete] = useState(false);
 
-    const navToast = (section: string) =>
-        toast.info({ title: t('settings.teamDetail.navToast', { section }) });
+    const navToast = (section: string) => toast.info({ title: t('settings.teamDetail.navToast', { section }) });
 
     return (
         <LinearSettingsLayout comingSoon>
@@ -42,7 +41,7 @@ export default function SettingsTeamDetail() {
                 title={
                     <span className="flex items-center gap-3">
                         <span
-                            className="inline-flex size-7 shrink-0 items-center justify-center rounded-md text-white text-[13px] font-bold select-none"
+                            className="inline-flex size-7 shrink-0 items-center justify-center rounded-md text-[13px] font-bold text-white select-none"
                             style={{ backgroundColor: '#6366f1' }}
                         >
                             D
@@ -175,7 +174,7 @@ export default function SettingsTeamDetail() {
                     </SettingsField>
                     <button
                         type="button"
-                        className="text-primary hover:underline w-fit text-[13px] flex items-center gap-1.5"
+                        className="text-primary flex w-fit items-center gap-1.5 text-[13px] hover:underline"
                         onClick={() => toast.info({ title: t('settings.teamDetail.parentTeamDocsToast') })}
                     >
                         <BookOpen className="size-3.5" />
@@ -218,12 +217,7 @@ export default function SettingsTeamDetail() {
                     title={t('settings.teamDetail.deleteTeam')}
                     description={t('settings.teamDetail.deleteTeamDescription')}
                     action={
-                        <Button
-                            variant="destructive"
-                            size="sm"
-                            className="h-7 px-3 text-[13px]"
-                            onClick={() => setConfirmDelete(true)}
-                        >
+                        <Button variant="destructive" size="sm" className="h-7 px-3 text-[13px]" onClick={() => setConfirmDelete(true)}>
                             {t('settings.teamDetail.deleteTeam')}
                         </Button>
                     }

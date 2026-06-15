@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Settings\PasswordController;
 use App\Http\Controllers\Settings\LabelsController;
+use App\Http\Controllers\Settings\PasswordController;
 use App\Http\Controllers\Settings\PreferencesController;
 use App\Http\Controllers\Settings\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -12,7 +12,7 @@ Route::middleware('auth')->group(function () {
     Route::redirect('settings/account', 'settings/account/preferences');
 
     /* -------------------------------------------------------------------- */
-    /* Personal — /settings/account/*                                       */
+    /* Personal — /settings/account/* */
     /* -------------------------------------------------------------------- */
     Route::get('settings/account/preferences', [PreferencesController::class, 'edit'])->name('settings.preferences');
     Route::patch('settings/account/preferences', [PreferencesController::class, 'update'])->name('settings.preferences.update');
@@ -27,20 +27,20 @@ Route::middleware('auth')->group(function () {
     Route::get('settings/account/appearance', fn () => redirect()->route('settings.preferences'))->name('appearance');
 
     /* -------------------------------------------------------------------- */
-    /* Issues — /settings/issues/* (labels are DB-backed via controller)    */
+    /* Issues — /settings/issues/* (labels are DB-backed via controller) */
     /* -------------------------------------------------------------------- */
     Route::get('settings/issues/labels', [LabelsController::class, 'index'])->name('settings.labels');
     Route::post('settings/issues/labels', [LabelsController::class, 'store'])->name('settings.labels.store');
     Route::delete('settings/issues/labels/{label}', [LabelsController::class, 'destroy'])->name('settings.labels.destroy');
 
     /* -------------------------------------------------------------------- */
-    /* Your teams — static team routes declared before any other map        */
+    /* Your teams — static team routes declared before any other map */
     /* -------------------------------------------------------------------- */
     Route::get('settings/teams/new', fn () => Inertia::render('settings/create-team'));
     Route::get('settings/teams/DEV', fn () => Inertia::render('settings/team-detail'));
 
     /* -------------------------------------------------------------------- */
-    /* Remaining pages: url path (grouped) => Inertia component name        */
+    /* Remaining pages: url path (grouped) => Inertia component name */
     /* -------------------------------------------------------------------- */
     $pages = [
         'account/notifications' => 'notifications',

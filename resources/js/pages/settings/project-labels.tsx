@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
     ConfirmDialog,
     EmptyState,
@@ -11,17 +10,12 @@ import {
     SettingsSection,
     TextInput,
 } from '@/components/linear/settings/kit';
-import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
-import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
+import { cn } from '@/lib/utils';
 import { Head } from '@inertiajs/react';
-import { Tag, Plus } from 'lucide-react';
+import { Plus, Tag } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -103,9 +97,7 @@ export default function ProjectLabels() {
                     onClick={() => setScope('workspace')}
                     className={cn(
                         'h-7 rounded-md px-3 text-[13px] transition-colors',
-                        scope === 'workspace'
-                            ? 'bg-accent text-foreground font-medium'
-                            : 'text-muted-foreground hover:text-foreground',
+                        scope === 'workspace' ? 'bg-accent text-foreground font-medium' : 'text-muted-foreground hover:text-foreground',
                     )}
                 >
                     {t('settingsCommon.scopeWorkspace')}
@@ -115,9 +107,7 @@ export default function ProjectLabels() {
                     onClick={() => setScope('team')}
                     className={cn(
                         'h-7 rounded-md px-3 text-[13px] transition-colors',
-                        scope === 'team'
-                            ? 'bg-accent text-foreground font-medium'
-                            : 'text-muted-foreground hover:text-foreground',
+                        scope === 'team' ? 'bg-accent text-foreground font-medium' : 'text-muted-foreground hover:text-foreground',
                     )}
                 >
                     {t('settingsCommon.scopeTeam')}
@@ -146,12 +136,7 @@ export default function ProjectLabels() {
                         {filtered.map((label) => (
                             <SettingsRow
                                 key={label.id}
-                                iconNode={
-                                    <span
-                                        className="size-3 shrink-0 rounded-full"
-                                        style={{ backgroundColor: label.color }}
-                                    />
-                                }
+                                iconNode={<span className="size-3 shrink-0 rounded-full" style={{ backgroundColor: label.color }} />}
                                 title={label.name}
                                 control={
                                     <RowMenu
@@ -196,7 +181,7 @@ export default function ProjectLabels() {
                                         onClick={() => setNewColor(color)}
                                         className={cn(
                                             'size-6 rounded-full transition-all',
-                                            newColor === color && 'ring-2 ring-offset-2 ring-primary',
+                                            newColor === color && 'ring-primary ring-2 ring-offset-2',
                                         )}
                                         style={{ backgroundColor: color }}
                                         aria-label={color}
@@ -219,7 +204,9 @@ export default function ProjectLabels() {
             {/* Delete confirm */}
             <ConfirmDialog
                 open={deleteId !== null}
-                onOpenChange={(open) => { if (!open) setDeleteId(null); }}
+                onOpenChange={(open) => {
+                    if (!open) setDeleteId(null);
+                }}
                 title={t('settings.projectLabels.deleteTitle')}
                 description={t('settings.projectLabels.deleteDesc')}
                 confirmLabel={t('settingsCommon.delete')}

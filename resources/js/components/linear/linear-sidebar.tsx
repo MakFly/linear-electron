@@ -262,7 +262,10 @@ export function LinearSidebar() {
                             </button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="start" sideOffset={6} className="w-52 p-1">
-                            <DropdownMenuItem onSelect={() => router.visit('/settings/account/profile')} className="h-[30px] px-2 text-[13px] font-normal">
+                            <DropdownMenuItem
+                                onSelect={() => router.visit('/settings/account/profile')}
+                                className="h-[30px] px-2 text-[13px] font-normal"
+                            >
                                 {t('sidebar.settings')}
                                 <Shortcut>G then S</Shortcut>
                             </DropdownMenuItem>

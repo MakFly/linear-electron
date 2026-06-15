@@ -23,7 +23,7 @@ function ComingSoonVeil({ children }: { children: ReactNode }) {
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <div className="relative cursor-not-allowed">
-                            <div aria-disabled className="pointer-events-none select-none opacity-50">
+                            <div aria-disabled className="pointer-events-none opacity-50 select-none">
                                 {children}
                             </div>
                             {/* Transparent layer: blocks interaction and carries the tooltip. */}

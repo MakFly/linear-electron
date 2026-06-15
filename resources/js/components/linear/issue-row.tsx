@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { AssigneeAvatar } from '@/components/linear/assignee-avatar';
 import { PriorityIcon } from '@/components/linear/priority-icon';
 import { useShell } from '@/components/linear/shell-context';
@@ -21,6 +20,7 @@ import { cn } from '@/lib/utils';
 import { router } from '@inertiajs/react';
 import { Box, CalendarDays, Check, CircleDot, Flag, Link2, Repeat2, Trash2, User, UserCircle2 } from 'lucide-react';
 import { DragEvent, MouseEvent, PointerEvent, ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export type IssueDisplayProperty =
     | 'id'

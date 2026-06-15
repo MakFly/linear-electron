@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
     EmptyState,
     PlanGate,
@@ -9,15 +8,10 @@ import {
     settingsDivider,
     settingsSurface,
 } from '@/components/linear/settings/kit';
-import { cn } from '@/lib/utils';
-import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
+import { cn } from '@/lib/utils';
 import { Head } from '@inertiajs/react';
 import { Clock, Plus } from 'lucide-react';
 import { useState } from 'react';
@@ -52,7 +46,7 @@ export default function Sla() {
                 description={
                     <>
                         {t('settings.sla.description')}{' '}
-                        <a href="#" className="text-primary underline-offset-2 hover:underline text-[13px]">
+                        <a href="#" className="text-primary text-[13px] underline-offset-2 hover:underline">
                             {t('settingsCommon.docs')}
                         </a>
                     </>
@@ -81,18 +75,11 @@ export default function Sla() {
                 }
             >
                 {rules.length === 0 ? (
-                    <EmptyState
-                        icon={Clock}
-                        title={t('settings.sla.emptyRules')}
-                        description={t('settings.sla.emptyRulesDesc')}
-                    />
+                    <EmptyState icon={Clock} title={t('settings.sla.emptyRules')} description={t('settings.sla.emptyRulesDesc')} />
                 ) : (
                     <ul className={cn(settingsSurface, 'overflow-hidden')}>
                         {rules.map((rule) => (
-                            <li
-                                key={rule.id}
-                                className={cn(settingsDivider, 'flex min-h-[46px] items-center gap-3 border-b px-4 last:border-b-0')}
-                            >
+                            <li key={rule.id} className={cn(settingsDivider, 'flex min-h-[46px] items-center gap-3 border-b px-4 last:border-b-0')}>
                                 <Clock className="text-muted-foreground size-4 shrink-0" />
                                 <span className="text-[13px] font-medium">{rule.name}</span>
                             </li>

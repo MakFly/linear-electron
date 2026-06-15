@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
     EmptyState,
     RowMenu,
@@ -9,13 +8,8 @@ import {
     SettingsSection,
     TextInput,
 } from '@/components/linear/settings/kit';
-import {
-    Dialog,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
 import { FileText, Plus } from 'lucide-react';
@@ -39,10 +33,7 @@ export default function Documents() {
 
     const handleCreate = () => {
         if (!newName.trim()) return;
-        setTemplates((prev) => [
-            ...prev,
-            { id: nextId++, name: newName.trim(), description: newDescription.trim() },
-        ]);
+        setTemplates((prev) => [...prev, { id: nextId++, name: newName.trim(), description: newDescription.trim() }]);
         setNewName('');
         setNewDescription('');
         setDialogOpen(false);
@@ -61,7 +52,7 @@ export default function Documents() {
                 description={
                     <>
                         {t('settings.documents.description')}{' '}
-                        <a href="#" className="text-primary underline-offset-2 hover:underline text-[13px]">
+                        <a href="#" className="text-primary text-[13px] underline-offset-2 hover:underline">
                             {t('settingsCommon.docs')}
                         </a>
                     </>
@@ -118,9 +109,7 @@ export default function Documents() {
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                 <DialogContent className="max-w-md">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.documents.templates.dialogTitle')}
-                        </DialogTitle>
+                        <DialogTitle className="text-[15px]">{t('settings.documents.templates.dialogTitle')}</DialogTitle>
                     </DialogHeader>
                     <div className="space-y-4 py-2">
                         <SettingsField label={t('settings.documents.templates.nameLabel')} htmlFor="doc-tpl-name">

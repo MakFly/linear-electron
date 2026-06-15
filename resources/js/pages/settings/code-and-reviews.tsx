@@ -1,11 +1,4 @@
-import {
-    SettingsHeader,
-    SettingsSection,
-    SettingsList,
-    SettingsRow,
-    ToggleRow,
-    SelectField,
-} from '@/components/linear/settings/kit';
+import { SelectField, SettingsHeader, SettingsList, SettingsRow, SettingsSection, ToggleRow } from '@/components/linear/settings/kit';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
 import { useState } from 'react';
@@ -80,38 +73,17 @@ export default function SettingsCodeAndReviews() {
                     <SettingsRow
                         title={t('settings.codeReviewsPage.editorPreferences.theme.title')}
                         description={t('settings.codeReviewsPage.editorPreferences.theme.description')}
-                        control={
-                            <SelectField
-                                value={theme}
-                                onValueChange={setTheme}
-                                options={themeOptions}
-                                triggerClassName="w-36"
-                            />
-                        }
+                        control={<SelectField value={theme} onValueChange={setTheme} options={themeOptions} triggerClassName="w-36" />}
                     />
                     <SettingsRow
                         title={t('settings.codeReviewsPage.editorPreferences.font.title')}
                         description={t('settings.codeReviewsPage.editorPreferences.font.description')}
-                        control={
-                            <SelectField
-                                value={font}
-                                onValueChange={setFont}
-                                options={fontOptions}
-                                triggerClassName="w-36"
-                            />
-                        }
+                        control={<SelectField value={font} onValueChange={setFont} options={fontOptions} triggerClassName="w-36" />}
                     />
                     <SettingsRow
                         title={t('settings.codeReviewsPage.editorPreferences.language.title')}
                         description={t('settings.codeReviewsPage.editorPreferences.language.description')}
-                        control={
-                            <SelectField
-                                value={language}
-                                onValueChange={setLanguage}
-                                options={languageOptions}
-                                triggerClassName="w-36"
-                            />
-                        }
+                        control={<SelectField value={language} onValueChange={setLanguage} options={languageOptions} triggerClassName="w-36" />}
                     />
                 </SettingsList>
                 <div className="mt-3">
@@ -127,14 +99,7 @@ export default function SettingsCodeAndReviews() {
                     <SettingsRow
                         title={t('settings.codeReviewsPage.externalTools.gitFormat.title')}
                         description={t('settings.codeReviewsPage.externalTools.gitFormat.description')}
-                        control={
-                            <SelectField
-                                value={gitFormat}
-                                onValueChange={setGitFormat}
-                                options={gitFormatOptions}
-                                triggerClassName="w-40"
-                            />
-                        }
+                        control={<SelectField value={gitFormat} onValueChange={setGitFormat} options={gitFormatOptions} triggerClassName="w-40" />}
                     />
                 </SettingsList>
             </SettingsSection>

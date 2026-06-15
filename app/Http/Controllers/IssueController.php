@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Issue;
 use App\Models\Cycle;
+use App\Models\Issue;
 use App\Models\Label;
 use App\Models\Project;
 use Illuminate\Http\Request;
@@ -169,7 +169,7 @@ class IssueController extends Controller
             foreach ($ids as $index => $id) {
                 $issue = $issues->get($id);
 
-                if (!$issue instanceof Issue) {
+                if (! $issue instanceof Issue) {
                     continue;
                 }
 
@@ -234,11 +234,11 @@ class IssueController extends Controller
      */
     private function withStatusTimestamps(Issue $issue, array $fields): array
     {
-        if (($fields['status'] ?? null) === 'in_progress' && !$issue->started_at) {
+        if (($fields['status'] ?? null) === 'in_progress' && ! $issue->started_at) {
             $fields['started_at'] = now();
         }
 
-        if (($fields['status'] ?? null) === 'done' && !$issue->completed_at) {
+        if (($fields['status'] ?? null) === 'done' && ! $issue->completed_at) {
             $fields['completed_at'] = now();
         }
 

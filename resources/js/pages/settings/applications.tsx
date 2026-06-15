@@ -21,7 +21,7 @@ export default function SettingsApplications() {
                 <div className="mb-4">
                     <button
                         type="button"
-                        className="text-primary hover:underline w-fit text-[13px] flex items-center gap-1.5"
+                        className="text-primary flex w-fit items-center gap-1.5 text-[13px] hover:underline"
                         onClick={() => toast.info({ title: t('settings.applications.docsToast') })}
                     >
                         <BookOpen className="size-3.5" />

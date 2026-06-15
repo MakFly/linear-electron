@@ -11,21 +11,8 @@
  */
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { cn } from '@/lib/utils';
 import { Check, MoreHorizontal, Search, type LucideIcon } from 'lucide-react';
@@ -53,9 +40,7 @@ export function SettingsHeader({
             <div className="flex items-start justify-between gap-4">
                 <div>
                     <h1 className="text-[22px] font-medium tracking-normal">{title}</h1>
-                    {description ? (
-                        <p className="text-muted-foreground mt-2 max-w-xl text-[13px] leading-5">{description}</p>
-                    ) : null}
+                    {description ? <p className="text-muted-foreground mt-2 max-w-xl text-[13px] leading-5">{description}</p> : null}
                 </div>
                 {actions ? <div className="flex shrink-0 items-center gap-2">{actions}</div> : null}
             </div>
@@ -86,16 +71,12 @@ export function SettingsSection({
                 <div className="mb-3 flex items-start justify-between gap-4">
                     <div>
                         {title ? <h2 className="text-[15px] font-medium">{title}</h2> : null}
-                        {description ? (
-                            <p className="text-muted-foreground mt-1 max-w-xl text-[13px] leading-5">{description}</p>
-                        ) : null}
+                        {description ? <p className="text-muted-foreground mt-1 max-w-xl text-[13px] leading-5">{description}</p> : null}
                     </div>
                     {actions ? <div className="flex shrink-0 items-center gap-2">{actions}</div> : null}
                 </div>
             )}
-            {!title && description ? (
-                <p className="text-muted-foreground mb-3 max-w-xl text-[13px] leading-5">{description}</p>
-            ) : null}
+            {!title && description ? <p className="text-muted-foreground mb-3 max-w-xl text-[13px] leading-5">{description}</p> : null}
             {children}
         </section>
     );
@@ -149,8 +130,7 @@ export function Switch({
  * 11px radius); light mode falls back to the theme `card` token. Use this on ANY
  * wrapping card / list / panel in the settings pages so they all read identically.
  */
-export const settingsSurface =
-    'border-border/70 bg-card rounded-[11px] border dark:border-[lch(11.99%_1.83_272)] dark:bg-[lch(7.67%_0.75_272)]';
+export const settingsSurface = 'border-border/70 bg-card rounded-[11px] border dark:border-[lch(11.99%_1.83_272)] dark:bg-[lch(7.67%_0.75_272)]';
 
 /** The matching divider color for rows inside a settings surface. */
 export const settingsDivider = 'border-border/70 dark:border-[lch(11.99%_1.83_272)]';
@@ -393,7 +373,7 @@ export function EmptyState({
     return (
         <div
             className={cn(
-                'border-border/70 bg-card dark:border-[lch(11.99%_1.83_272)] dark:bg-[lch(7.67%_0.75_272)] flex flex-col items-center justify-center rounded-[11px] border border-dashed px-6 py-10 text-center',
+                'border-border/70 bg-card flex flex-col items-center justify-center rounded-[11px] border border-dashed px-6 py-10 text-center dark:border-[lch(11.99%_1.83_272)] dark:bg-[lch(7.67%_0.75_272)]',
                 className,
             )}
         >
@@ -451,15 +431,7 @@ export function RowMenu({
  * A neutral card that wraps FieldRow children, matching the Linear profile page style.
  * Optional h2 title above the card.
  */
-export function FieldCard({
-    title,
-    children,
-    className,
-}: {
-    title?: ReactNode;
-    children: ReactNode;
-    className?: string;
-}) {
+export function FieldCard({ title, children, className }: { title?: ReactNode; children: ReactNode; className?: string }) {
     return (
         <section className={cn('mb-8', className)}>
             {title ? <h2 className="mb-3 text-[15px] font-medium">{title}</h2> : null}
@@ -486,7 +458,12 @@ export function FieldRow({
     children: ReactNode;
 }) {
     return (
-        <li className={cn(settingsDivider, 'flex min-h-[60px] list-none flex-col items-stretch justify-between gap-3 border-b px-4 py-4 last:border-b-0 sm:flex-row sm:items-center sm:gap-6')}>
+        <li
+            className={cn(
+                settingsDivider,
+                'flex min-h-[60px] list-none flex-col items-stretch justify-between gap-3 border-b px-4 py-4 last:border-b-0 sm:flex-row sm:items-center sm:gap-6',
+            )}
+        >
             <div className="min-w-0">
                 {htmlFor ? (
                     <label htmlFor={htmlFor} className="text-[13px] leading-5 font-medium">
@@ -518,15 +495,7 @@ export function DangerZone({ title, children }: { title?: ReactNode; children: R
     );
 }
 
-export function DangerRow({
-    title,
-    description,
-    action,
-}: {
-    title: ReactNode;
-    description?: ReactNode;
-    action: ReactNode;
-}) {
+export function DangerRow({ title, description, action }: { title: ReactNode; description?: ReactNode; action: ReactNode }) {
     return (
         <div className="border-destructive/20 flex items-center justify-between gap-4 border-b px-4 py-3 last:border-b-0">
             <div className="min-w-0">
@@ -596,12 +565,7 @@ export function ConfirmDialog({
 export function StatusPill({ on, onLabel, offLabel }: { on: boolean; onLabel?: ReactNode; offLabel?: ReactNode }) {
     const { t } = useTranslation();
     return (
-        <span
-            className={cn(
-                'inline-flex items-center gap-1.5 text-[12px]',
-                on ? 'text-foreground' : 'text-muted-foreground',
-            )}
-        >
+        <span className={cn('inline-flex items-center gap-1.5 text-[12px]', on ? 'text-foreground' : 'text-muted-foreground')}>
             <span className={cn('size-1.5 rounded-full', on ? 'bg-emerald-500' : 'bg-muted-foreground/40')} />
             {on ? (onLabel ?? t('settingsCommon.enabled')) : (offLabel ?? t('settingsCommon.disabled'))}
         </span>

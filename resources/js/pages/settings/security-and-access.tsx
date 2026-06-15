@@ -2,23 +2,16 @@ import {
     ConfirmDialog,
     EmptyState,
     RowMenu,
+    SettingsField,
     SettingsHeader,
-    SettingsSection,
     SettingsList,
     SettingsRow,
-    SettingsField,
+    SettingsSection,
     StatusPill,
     TextInput,
 } from '@/components/linear/settings/kit';
 import { Button } from '@/components/ui/button';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
@@ -46,9 +39,7 @@ const INITIAL_SESSIONS: Session[] = [
     { id: '3', name: 'Safari on iPhone', detail: 'Last seen 5 days ago' },
 ];
 
-const INITIAL_API_KEYS: ApiKey[] = [
-    { id: '1', name: 'My personal key', maskedKey: 'lin_api_••••••••a1b2', createdAt: '2024-01-15' },
-];
+const INITIAL_API_KEYS: ApiKey[] = [{ id: '1', name: 'My personal key', maskedKey: 'lin_api_••••••••a1b2', createdAt: '2024-01-15' }];
 
 export default function SettingsSecurityAndAccess() {
     const { t } = useTranslation();
@@ -127,39 +118,30 @@ export default function SettingsSecurityAndAccess() {
                             control={
                                 session.current ? (
                                     <>
-                                        <StatusPill
-                                            on={true}
-                                            onLabel={t('settings.securityAccessPage.sessions.currentSession')}
-                                        />
-                                        <Button
-                                            variant="outline"
-                                            size="sm"
-                                            className="h-7 px-3 text-[13px]"
-                                        >
+                                        <StatusPill on={true} onLabel={t('settings.securityAccessPage.sessions.currentSession')} />
+                                        <Button variant="outline" size="sm" className="h-7 px-3 text-[13px]">
                                             {t('settings.securityAccessPage.sessions.logOut')}
                                         </Button>
                                     </>
+                                ) : session.id === '3' ? (
+                                    <RowMenu
+                                        items={[
+                                            {
+                                                label: t('settingsCommon.revoke'),
+                                                destructive: true,
+                                                onSelect: () => revokeSession(session.id),
+                                            },
+                                        ]}
+                                    />
                                 ) : (
-                                    session.id === '3' ? (
-                                        <RowMenu
-                                            items={[
-                                                {
-                                                    label: t('settingsCommon.revoke'),
-                                                    destructive: true,
-                                                    onSelect: () => revokeSession(session.id),
-                                                },
-                                            ]}
-                                        />
-                                    ) : (
-                                        <Button
-                                            variant="outline"
-                                            size="sm"
-                                            className="text-destructive border-destructive/40 h-7 px-3 text-[13px]"
-                                            onClick={() => revokeSession(session.id)}
-                                        >
-                                            {t('settingsCommon.revoke')}
-                                        </Button>
-                                    )
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        className="text-destructive border-destructive/40 h-7 px-3 text-[13px]"
+                                        onClick={() => revokeSession(session.id)}
+                                    >
+                                        {t('settingsCommon.revoke')}
+                                    </Button>
                                 )
                             }
                         />
@@ -264,12 +246,8 @@ export default function SettingsSecurityAndAccess() {
             <Dialog open={newKeyOpen} onOpenChange={setNewKeyOpen}>
                 <DialogContent className="max-w-md">
                     <DialogHeader>
-                        <DialogTitle className="text-[15px]">
-                            {t('settings.securityAccessPage.apiKeys.dialogTitle')}
-                        </DialogTitle>
-                        <DialogDescription className="text-[13px]">
-                            {t('settings.securityAccessPage.apiKeys.dialogDescription')}
-                        </DialogDescription>
+                        <DialogTitle className="text-[15px]">{t('settings.securityAccessPage.apiKeys.dialogTitle')}</DialogTitle>
+                        <DialogDescription className="text-[13px]">{t('settings.securityAccessPage.apiKeys.dialogDescription')}</DialogDescription>
                     </DialogHeader>
                     <SettingsField label={t('settings.securityAccessPage.apiKeys.nameLabel')} htmlFor="api-key-name">
                         <TextInput
@@ -277,11 +255,20 @@ export default function SettingsSecurityAndAccess() {
                             value={newKeyName}
                             onChange={(e) => setNewKeyName(e.target.value)}
                             placeholder={t('settings.securityAccessPage.apiKeys.namePlaceholder')}
-                            onKeyDown={(e) => { if (e.key === 'Enter') createApiKey(); }}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') createApiKey();
+                            }}
                         />
                     </SettingsField>
                     <DialogFooter className="mt-2 gap-2">
-                        <Button variant="outline" size="sm" onClick={() => { setNewKeyOpen(false); setNewKeyName(''); }}>
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => {
+                                setNewKeyOpen(false);
+                                setNewKeyName('');
+                            }}
+                        >
                             {t('settingsCommon.cancel')}
                         </Button>
                         <Button size="sm" onClick={createApiKey} disabled={!newKeyName.trim()}>

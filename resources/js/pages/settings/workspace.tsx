@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import {
     ConfirmDialog,
     DangerRow,
@@ -13,6 +12,7 @@ import {
     SettingsSection,
     TextInput,
 } from '@/components/linear/settings/kit';
+import { Button } from '@/components/ui/button';
 import { toast } from '@/components/ui/toast';
 import LinearSettingsLayout from '@/layouts/settings/linear-settings-layout';
 import { Head } from '@inertiajs/react';
@@ -59,9 +59,7 @@ export default function SettingsWorkspace() {
             <SettingsSection title={t('settings.workspace.sectionGeneral')}>
                 {/* Logo upload */}
                 <div className="mb-6 flex items-center gap-4">
-                    <div className="bg-muted text-foreground flex size-12 items-center justify-center rounded-lg text-[20px] font-medium">
-                        D
-                    </div>
+                    <div className="bg-muted text-foreground flex size-12 items-center justify-center rounded-lg text-[20px] font-medium">D</div>
                     <Button variant="outline" size="sm" className="h-7 px-3 text-[13px]">
                         {t('settings.workspace.uploadLogo')}
                     </Button>
@@ -86,7 +84,7 @@ export default function SettingsWorkspace() {
                                 id="workspace-slug"
                                 value={workspaceSlug}
                                 onChange={(e) => setWorkspaceSlug(e.target.value)}
-                                className="rounded-l-none w-full sm:w-[180px]"
+                                className="w-full rounded-l-none sm:w-[180px]"
                             />
                         </div>
                     </FieldRow>
@@ -102,22 +100,11 @@ export default function SettingsWorkspace() {
                 <SettingsList>
                     <SettingsRow
                         title={t('settings.workspace.fiscalMonth')}
-                        control={
-                            <SelectField
-                                value={fiscalMonth}
-                                onValueChange={setFiscalMonth}
-                                options={monthOptions}
-                                triggerClassName="w-36"
-                            />
-                        }
+                        control={<SelectField value={fiscalMonth} onValueChange={setFiscalMonth} options={monthOptions} triggerClassName="w-36" />}
                     />
                     <SettingsRow
                         title={t('settings.workspace.region')}
-                        control={
-                            <span className="text-muted-foreground text-[13px]">
-                                {t('settings.workspace.regionValue')}
-                            </span>
-                        }
+                        control={<span className="text-muted-foreground text-[13px]">{t('settings.workspace.regionValue')}</span>}
                     />
                 </SettingsList>
             </SettingsSection>
