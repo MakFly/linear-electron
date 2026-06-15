@@ -68,6 +68,7 @@
     "header": {
         "issues": "Issues",
         "favoriteView": "Favorite view",
+        "toggleSidebar": "Toggle sidebar",
         "notifications": "Notifications",
         "notificationsEmpty": "You're all caught up"
     },

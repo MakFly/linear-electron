@@ -68,6 +68,7 @@
     "header": {
         "issues": "Tickets",
         "favoriteView": "Ajouter aux favoris",
+        "toggleSidebar": "Afficher/masquer la barre latérale",
         "notifications": "Notifications",
         "notificationsEmpty": "Vous êtes à jour"
     },

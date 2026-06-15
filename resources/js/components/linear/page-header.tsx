@@ -1,4 +1,6 @@
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { SidebarTrigger, useSidebar } from '@/components/ui/sidebar';
+import { cn } from '@/lib/utils';
 import { Bell, Inbox } from 'lucide-react';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -50,9 +52,22 @@ export function NotificationsButton() {
 }
 
 export function PageHeader({ left, right }: { left: ReactNode; right?: ReactNode }) {
+    const { t } = useTranslation();
+    const { state, isMobile } = useSidebar();
+    // When the sidebar is hidden (mobile sheet or collapsed off-canvas) the header
+    // spans the full window width and would slide under the macOS traffic lights,
+    // so we pad the left edge to clear them.
+    const sidebarHidden = isMobile || state === 'collapsed';
+
     return (
-        <header className="app-drag flex h-11 shrink-0 items-center justify-between px-5">
-            <div className="app-no-drag flex items-center gap-2 text-[13px]">{left}</div>
+        <header className={cn('app-drag flex h-11 shrink-0 items-center justify-between pr-5', sidebarHidden ? 'pl-[84px]' : 'pl-3')}>
+            <div className="app-no-drag flex items-center gap-2 text-[13px]">
+                <SidebarTrigger
+                    aria-label={t('header.toggleSidebar')}
+                    className="text-muted-foreground hover:bg-accent hover:text-foreground size-7 shrink-0"
+                />
+                {left}
+            </div>
             <div className="app-no-drag flex items-center gap-0.5">
                 {right}
                 <NotificationsButton />
