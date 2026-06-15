@@ -1,0 +1,10 @@
+{
+    "settings": {
+        "releases": {
+            "title": "Releases",
+            "description": "Track and communicate product releases across your workspace.",
+            "gateTitle": "Releases",
+            "gateDescription": "Releases let you group issues into versioned milestones, generate changelogs, and communicate progress to stakeholders. Available on the Business plan and above."
+        }
+    }
+}

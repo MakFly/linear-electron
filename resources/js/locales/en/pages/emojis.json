@@ -1,0 +1,25 @@
+{
+    "settings": {
+        "emojis": {
+            "title": "Custom emoji",
+            "description": "Add custom emoji to use in issues, comments, and reactions across your workspace.",
+            "uploadButton": "Upload emoji",
+            "searchPlaceholder": "Search emoji",
+            "emptyTitle": "No emojis",
+            "emptyDesc": "Upload your first custom emoji to get started.",
+            "emptyFilterDesc": "No emoji match your search.",
+            "uploadDialogTitle": "Upload custom emoji",
+            "nameLabel": "Name",
+            "namePlaceholder": "e.g. party-blob",
+            "fileLabel": "Image",
+            "filePlaceholder": "Click to select a file",
+            "fileHint": "PNG, GIF or JPEG. Maximum 128 KB.",
+            "renameDialogTitle": "Rename emoji",
+            "deleteDialogTitle": "Delete emoji",
+            "deleteDialogDesc": "This emoji will be removed from your workspace. This cannot be undone.",
+            "toastUploaded": "Emoji :{{name}}: added",
+            "toastRenamed": "Emoji renamed",
+            "toastDeleted": "Emoji deleted"
+        }
+    }
+}

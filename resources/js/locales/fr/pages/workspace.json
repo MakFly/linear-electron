@@ -1,0 +1,40 @@
+{
+    "settings": {
+        "workspace": {
+            "title": "Espace de travail",
+            "description": "Gérez les paramètres et les préférences de votre espace de travail.",
+            "sectionGeneral": "Général",
+            "logoLabel": "Logo",
+            "uploadLogo": "Téléverser un logo",
+            "workspaceName": "Nom de l’espace de travail",
+            "workspaceUrl": "URL de l’espace de travail",
+            "urlPrefix": "linear.app/",
+            "sectionTimeRegion": "Heure et région",
+            "fiscalMonth": "Premier mois fiscal",
+            "region": "Région",
+            "regionValue": "Europe (Allemagne)",
+            "sectionWelcome": "Message de bienvenue",
+            "welcomeTitle": "Message de bienvenue personnalisé",
+            "welcomeDesc": "Affichez un message de bienvenue personnalisé aux nouveaux membres qui rejoignent votre espace de travail. Personnalisez l’expérience d’intégration avec des instructions, des ressources ou un message de votre équipe.",
+            "months": {
+                "january": "Janvier",
+                "february": "Février",
+                "march": "Mars",
+                "april": "Avril",
+                "may": "Mai",
+                "june": "Juin",
+                "july": "Juillet",
+                "august": "Août",
+                "september": "Septembre",
+                "october": "Octobre",
+                "november": "Novembre",
+                "december": "Décembre"
+            },
+            "deleteWorkspace": "Supprimer l’espace de travail",
+            "deleteWorkspaceDesc": "Supprimez définitivement cet espace de travail et toutes ses données. Cette action est irréversible.",
+            "deleteConfirmTitle": "Supprimer l’espace de travail",
+            "deleteConfirmDesc": "Voulez-vous vraiment supprimer cet espace de travail ? Toutes les données, y compris les tickets, les projets et les membres, seront définitivement supprimées. Cette action est irréversible.",
+            "toastSaved": "Paramètres de l’espace de travail enregistrés"
+        }
+    }
+}

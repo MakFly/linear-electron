@@ -1,0 +1,26 @@
+{
+    "settings": {
+        "profilePage": {
+            "title": "Profil",
+            "pictureLabel": "Photo de profil",
+            "changeAvatar": "Changer l’avatar",
+            "avatarHint": "Taille recommandée 256 × 256 px. PNG, JPG ou GIF.",
+            "emailLabel": "E-mail",
+            "changeEmail": "Changer l’e-mail",
+            "fullName": "Nom complet",
+            "jobTitle": "Titre / fonction",
+            "jobTitlePlaceholder": "ex. Designer produit",
+            "username": "Nom d’utilisateur",
+            "workspaceAccess": "Accès à l’espace de travail",
+            "workspaceAccessDesc": "Gérez votre appartenance à cet espace de travail.",
+            "removeYourself": "Vous retirer de l’espace de travail",
+            "removeYourselfDesc": "Vous perdrez l’accès à toutes les équipes et à tous les tickets de cet espace de travail.",
+            "removeConfirm": "Voulez-vous vraiment vous retirer de cet espace de travail ? Cette action est irréversible.",
+            "leaveWorkspace": "Quitter l’espace de travail",
+            "leaveWorkspaceDesc": "Disponible uniquement si vous appartenez à plusieurs espaces de travail.",
+            "toastSaved": "Profil mis à jour",
+            "toastFailed": "Impossible de mettre à jour le profil",
+            "toastRemoved": "Retiré de l’espace de travail"
+        }
+    }
+}

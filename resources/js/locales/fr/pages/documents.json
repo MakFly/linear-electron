@@ -1,0 +1,22 @@
+{
+    "settings": {
+        "documents": {
+            "title": "Documents",
+            "description": "Créez et gérez des modèles de documents pour uniformiser le contenu dans votre espace de travail.",
+            "sections": {
+                "templates": "Modèles de documents"
+            },
+            "templates": {
+                "sectionDesc": "Utilisez des modèles de documents pour offrir à votre équipe une base de départ cohérente pour les pages, spécifications et briefs.",
+                "newBtn": "Nouveau modèle",
+                "dialogTitle": "Nouveau modèle de document",
+                "nameLabel": "Nom du modèle",
+                "namePlaceholder": "ex. Spécification produit",
+                "descLabel": "Description",
+                "descPlaceholder": "Décrivez brièvement l’usage de ce modèle",
+                "emptyTitle": "Aucun modèle de document",
+                "emptyDesc": "Les modèles aident votre équipe à créer des documents cohérents et bien structurés."
+            }
+        }
+    }
+}

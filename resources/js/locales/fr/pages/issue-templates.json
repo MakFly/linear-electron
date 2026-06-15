@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "issueTemplates": {
+            "title": "Modeles de tickets",
+            "description": "Creez des modeles reutilisables pour accelerer la creation de tickets dans votre espace de travail.",
+            "newTemplate": "Nouveau modele",
+            "empty": "Aucun modele de ticket",
+            "emptyDesc": "Les modeles aident votre equipe a creer des tickets coherents et bien structures.",
+            "dialogTitle": "Nouveau modele de ticket",
+            "nameLabel": "Nom du modele",
+            "namePlaceholder": "ex. Rapport de bug",
+            "descLabel": "Description",
+            "descPlaceholder": "Decrivez brievement l’usage de ce modele",
+            "deleteTitle": "Supprimer le modele",
+            "deleteDesc": "Ce modele sera definitivement supprime. Cette action est irreversible."
+        }
+    }
+}

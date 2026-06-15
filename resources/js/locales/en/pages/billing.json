@@ -1,0 +1,30 @@
+{
+    "settings": {
+        "billing": {
+            "title": "Billing",
+            "description": "Manage your subscription, billing details, and invoices.",
+            "currentPlan": "Current plan",
+            "planName": "Free",
+            "seatCount": "5 users",
+            "upgradeNow": "Upgrade now",
+            "manageBilling": "Manage billing",
+            "manageBillingToast": "Opening billing portal...",
+            "plans": "Plans",
+            "planFree": "Free",
+            "planBasic": "Basic",
+            "planBusiness": "Business",
+            "planEnterprise": "Enterprise",
+            "planFreePrice": "$0/mo",
+            "planBasicPrice": "$8/mo",
+            "planBusinessPrice": "$16/mo",
+            "planEnterprisePrice": "Custom",
+            "viewAllPlans": "View all plans",
+            "aiUsage": "AI usage & credits",
+            "aiCreditsUsed": "420 / 1,000 credits used this month",
+            "aiCreditsDescription": "Credits reset at the start of each billing period. Upgrade for more credits.",
+            "invoices": "Recent invoices",
+            "invoicesEmptyTitle": "No invoices yet",
+            "invoicesEmptyDescription": "Your invoices will appear here once you have an active paid subscription."
+        }
+    }
+}

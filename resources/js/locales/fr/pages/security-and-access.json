@@ -1,0 +1,44 @@
+{
+    "settings": {
+        "securityAccessPage": {
+            "title": "Sécurité et accès",
+            "description": "Gérez vos sessions actives, clés d’accès, clés API et applications autorisées.",
+            "sessions": {
+                "title": "Sessions",
+                "currentSession": "Session actuelle",
+                "revokeAll": "Tout révoquer",
+                "revokeAllTitle": "Révoquer toutes les sessions",
+                "revokeAllDescription": "Vous serez déconnecté de tous les appareils sauf celui-ci. Voulez-vous continuer ?",
+                "revokedAll": "Toutes les sessions révoquées",
+                "revokedSession": "Session révoquée",
+                "logOut": "Se déconnecter"
+            },
+            "passkeys": {
+                "title": "Clés d’accès",
+                "newPasskey": "Nouvelle clé d’accès",
+                "emptyTitle": "Aucune clé d’accès configurée",
+                "emptyDescription": "Les clés d’accès vous permettent de vous connecter sans mot de passe via la biométrie ou une clé matérielle.",
+                "createPasskey": "Créer une clé d’accès"
+            },
+            "apiKeys": {
+                "title": "Clés API personnelles",
+                "newApiKey": "Nouvelle clé API",
+                "emptyTitle": "Aucune clé API",
+                "emptyDescription": "Créez une clé API pour accéder à l’API Linear de manière programmatique.",
+                "createApiKey": "Créer une clé API",
+                "dialogTitle": "Créer une clé API",
+                "dialogDescription": "Donnez un nom à votre clé API pour la retrouver facilement.",
+                "namePlaceholder": "ex. Ma clé personnelle",
+                "nameLabel": "Nom",
+                "created": "Clé API créée",
+                "revoked": "Clé API révoquée",
+                "copy": "Copier"
+            },
+            "authorizedApps": {
+                "title": "Applications autorisées",
+                "emptyTitle": "Aucune application autorisée",
+                "emptyDescription": "Les applications que vous autorisez via OAuth apparaissent ici."
+            }
+        }
+    }
+}

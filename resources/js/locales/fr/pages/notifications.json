@@ -1,0 +1,54 @@
+{
+    "settings": {
+        "notificationsPage": {
+            "title": "Notifications",
+            "description": "Contrôlez comment et où vous recevez les notifications de Linear.",
+            "channels": {
+                "title": "Canaux de notification",
+                "desktop": {
+                    "title": "Bureau",
+                    "description": "Recevez des notifications push sur cet ordinateur."
+                },
+                "mobile": {
+                    "title": "Mobile",
+                    "description": "Recevez des notifications push sur votre appareil mobile."
+                },
+                "email": {
+                    "title": "E-mail",
+                    "description": "Recevez des récapitulatifs et des résumés d’activité par e-mail."
+                },
+                "slack": {
+                    "title": "Slack",
+                    "description": "Recevez des notifications directement dans Slack."
+                }
+            },
+            "productUpdates": {
+                "title": "Mises à jour du produit",
+                "changelog": {
+                    "title": "Changelog dans la barre latérale",
+                    "description": "Affiche les nouvelles mises à jour du produit dans le badge de la barre latérale."
+                },
+                "newsletter": {
+                    "title": "Newsletter du changelog",
+                    "description": "Recevez un e-mail mensuel résumant les mises à jour du produit."
+                },
+                "marketing": {
+                    "title": "E-mails marketing et d’intégration",
+                    "description": "Conseils, guides et e-mails d’intégration pour vous aider à démarrer."
+                },
+                "invite": {
+                    "title": "Invitation acceptée",
+                    "description": "Soyez notifié lorsqu’une personne accepte votre invitation."
+                },
+                "privacy": {
+                    "title": "Mises à jour légales et confidentialité",
+                    "description": "Mises à jour importantes concernant notre politique de confidentialité et nos conditions."
+                },
+                "dpa": {
+                    "title": "Mises à jour du DPA",
+                    "description": "Notifications relatives aux modifications du contrat de traitement des données."
+                }
+            }
+        }
+    }
+}

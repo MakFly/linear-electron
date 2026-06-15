@@ -1,0 +1,451 @@
+{
+    "common": {
+        "search": "Rechercher",
+        "settings": "Paramètres",
+        "logout": "Se déconnecter",
+        "more": "Plus",
+        "clear": "Effacer",
+        "save": "Enregistrer",
+        "saving": "Enregistrement",
+        "saved": "Enregistré",
+        "cancel": "Annuler",
+        "noResults": "Aucun résultat"
+    },
+    "sidebar": {
+        "search": "Rechercher",
+        "newIssue": "Nouveau ticket",
+        "inbox": "Boîte de réception",
+        "myIssues": "Mes tickets",
+        "favorites": "Favoris",
+        "workspace": "Espace de travail",
+        "yourTeams": "Vos équipes",
+        "try": "Essayer",
+        "more": "Plus",
+        "members": "Membres",
+        "labels": "Étiquettes",
+        "workspaceSettings": "Paramètres de l’espace",
+        "projects": "Projets",
+        "views": "Vues",
+        "issues": "Tickets",
+        "settings": "Paramètres",
+        "inviteAndManage": "Inviter et gérer les membres",
+        "downloadDesktop": "Télécharger l’app de bureau",
+        "switchWorkspace": "Changer d’espace de travail",
+        "createOrJoin": "Créer ou rejoindre un espace",
+        "addAccount": "Ajouter un compte",
+        "logout": "Se déconnecter",
+        "helpAndSupport": "Aide et support",
+        "whatsNew": "Nouveautés",
+        "minimize": "Réduire",
+        "promoTitle": "Sessions de code",
+        "promoBody": "Linear peut désormais écrire du code avec Claude Code et Codex",
+        "help": {
+            "searchForHelp": "Rechercher de l’aide…",
+            "docs": "Documentation",
+            "contactUs": "Nous contacter",
+            "keyboardShortcuts": "Raccourcis clavier",
+            "linearStatus": "État de Linear",
+            "downloadApps": "Télécharger les apps",
+            "settings": "Paramètres",
+            "slackCommunity": "Communauté Slack"
+        },
+        "tryItems": {
+            "import": "Importer des tickets",
+            "invite": "Inviter des personnes",
+            "github": "Connecter GitHub"
+        },
+        "dialog": {
+            "importTitle": "Importer des tickets",
+            "importBody": "Importez vos tickets existants depuis un autre outil.",
+            "inviteTitle": "Inviter des personnes",
+            "inviteBody": "Invitez des coéquipiers dans l’espace devaubree.",
+            "sendInvite": "Envoyer l’invitation",
+            "githubTitle": "Connecter GitHub",
+            "githubBody": "Liez les pull requests et automatisez votre flux de travail en connectant l’espace devaubree à GitHub.",
+            "connectGithubAccount": "Connecter le compte GitHub"
+        }
+    },
+    "header": {
+        "issues": "Tickets",
+        "favoriteView": "Ajouter aux favoris",
+        "notifications": "Notifications",
+        "notificationsEmpty": "Vous êtes à jour"
+    },
+    "issueRow": {
+        "setPriority": "Définir la priorité",
+        "changeStatus": "Changer le statut",
+        "assign": "Assigner"
+    },
+    "shell": {
+        "askLinear": "Demander à Linear",
+        "chatHistory": "Historique des discussions"
+    },
+    "issues": {
+        "title": "Tickets actifs",
+        "tabs": {
+            "all": "Tous les tickets",
+            "active": "Actifs",
+            "backlog": "Backlog"
+        },
+        "filter": "Filtrer",
+        "displayOptions": "Options d’affichage",
+        "addFilter": "Ajouter un filtre…",
+        "aiFilter": "Filtre IA",
+        "advancedFilter": "Filtre avancé",
+        "addAnotherFilter": "Ajouter un autre filtre",
+        "openDetails": "Ouvrir les détails",
+        "closeDetails": "Fermer les détails",
+        "newIssue": "Nouveau ticket {{group}}",
+        "emptyState": "Aucun ticket ne correspond aux filtres",
+        "clearFilters": "Effacer les filtres",
+        "hiddenByFilters": "masqués par les filtres",
+        "count_one": "{{count}} ticket",
+        "count_other": "{{count}} tickets",
+        "noAssignee": "Aucun responsable",
+        "noProject": "Aucun projet",
+        "noCycle": "Aucun cycle",
+        "cycleLabel": "Cycle {{number}}",
+        "removeFilter": "Retirer le filtre {{label}}",
+        "operator": {
+            "is": "est",
+            "isNot": "n’est pas"
+        },
+        "field": {
+            "status": "Statut",
+            "assignee": "Responsable",
+            "priority": "Priorité",
+            "labels": "Étiquettes",
+            "project": "Projet",
+            "projectProperties": "Propriétés du projet",
+            "cycle": "Cycle",
+            "agent": "Agent",
+            "agentSession": "Session d’agent",
+            "creator": "Créateur",
+            "relations": "Relations",
+            "suggestedLabel": "Étiquette suggérée",
+            "dates": "Dates",
+            "subscribers": "Abonnés",
+            "autoClosed": "Fermé automatiquement",
+            "content": "Contenu",
+            "links": "Liens",
+            "template": "Modèle"
+        },
+        "display": {
+            "list": "Liste",
+            "board": "Tableau",
+            "grouping": "Regroupement",
+            "subGrouping": "Sous-regroupement",
+            "ordering": "Tri",
+            "showSubIssues": "Afficher les sous-tickets",
+            "listOptions": "Options de liste",
+            "nestedSubIssues": "Sous-tickets imbriqués",
+            "showEmptyGroups": "Afficher les groupes vides",
+            "displayProperties": "Propriétés affichées"
+        },
+        "property": {
+            "id": "ID",
+            "status": "Statut",
+            "assignee": "Responsable",
+            "priority": "Priorité",
+            "project": "Projet",
+            "due_date": "Échéance",
+            "milestone": "Jalon",
+            "labels": "Étiquettes",
+            "links": "Liens",
+            "time": "Temps dans le statut",
+            "created": "Créé le",
+            "updated": "Mis à jour le"
+        },
+        "toast": {
+            "reordered": "Tickets réordonnés",
+            "moved": "Ticket déplacé",
+            "reorderFailed": "Échec du réordonnancement"
+        }
+    },
+    "status": {
+        "backlog": "Backlog",
+        "todo": "À faire",
+        "in_progress": "En cours",
+        "done": "Terminé",
+        "canceled": "Annulé"
+    },
+    "priority": {
+        "0": "Aucune priorité",
+        "1": "Urgente",
+        "2": "Élevée",
+        "3": "Moyenne",
+        "4": "Faible"
+    },
+    "grouping": {
+        "none": "Aucun regroupement",
+        "status": "Statut",
+        "priority": "Priorité",
+        "project": "Projet",
+        "cycle": "Cycle",
+        "label": "Étiquette"
+    },
+    "ordering": {
+        "manual": "Manuel",
+        "priority": "Priorité",
+        "created": "Création",
+        "updated": "Mise à jour"
+    },
+    "settings": {
+        "backToApp": "Retour à l’app",
+        "heading": "Paramètres",
+        "subtitle": "Gérez votre profil et les paramètres de votre compte",
+        "comingSoon": {
+            "badge": "Bientôt",
+            "banner": "Aperçu — cette section est une démonstration et n’est pas encore fonctionnelle.",
+            "tooltip": "Bientôt disponible"
+        },
+        "navGroups": {
+            "personal": "Personnel",
+            "issues": "Tickets",
+            "projects": "Projets",
+            "features": "Fonctionnalités",
+            "administration": "Administration",
+            "yourTeams": "Vos équipes"
+        },
+        "nav": {
+            "preferences": "Préférences",
+            "profile": "Profil",
+            "notifications": "Notifications",
+            "codeReviews": "Code et revues",
+            "securityAccess": "Sécurité et accès",
+            "connectedAccounts": "Comptes connectés",
+            "agentPersonalization": "Personnalisation de l’agent",
+            "labels": "Étiquettes",
+            "templates": "Modèles",
+            "slas": "SLA",
+            "statuses": "Statuts",
+            "updates": "Mises à jour",
+            "aiAgents": "IA et agents",
+            "initiatives": "Initiatives",
+            "documents": "Documents",
+            "customerRequests": "Demandes clients",
+            "releases": "Versions",
+            "pulse": "Pulse",
+            "asks": "Demandes",
+            "emojis": "Emojis",
+            "integrations": "Intégrations",
+            "workspace": "Espace de travail",
+            "teams": "Équipes",
+            "members": "Membres",
+            "security": "Sécurité",
+            "api": "API",
+            "applications": "Applications",
+            "billing": "Facturation",
+            "importExport": "Import et export",
+            "createTeam": "Créer une équipe"
+        },
+        "starterNav": {
+            "profile": "Profil",
+            "password": "Mot de passe",
+            "appearance": "Apparence"
+        },
+        "placeholder": {
+            "eyebrow": "Paramètres",
+            "comingSoon": "Bientôt disponible. Cette section est reliée à la navigation des paramètres de Linear et prête pour la prochaine étape d’implémentation.",
+            "headTitle": "Paramètres – {{name}}"
+        },
+        "profile": {
+            "breadcrumb": "Paramètres du profil",
+            "heading": "Informations du profil",
+            "description": "Mettez à jour votre nom et votre adresse e-mail",
+            "name": "Nom",
+            "fullName": "Nom complet",
+            "email": "Adresse e-mail",
+            "emailUnverified": "Votre adresse e-mail n’est pas vérifiée.",
+            "resend": "Cliquez ici pour renvoyer l’e-mail de vérification.",
+            "verificationSent": "Un nouveau lien de vérification a été envoyé à votre adresse e-mail.",
+            "toastSaved": "Profil enregistré",
+            "toastFailed": "Échec de la mise à jour du profil"
+        },
+        "password": {
+            "breadcrumb": "Paramètres du mot de passe",
+            "heading": "Mettre à jour le mot de passe",
+            "description": "Assurez-vous que votre compte utilise un mot de passe long et aléatoire pour rester sécurisé",
+            "current": "Mot de passe actuel",
+            "new": "Nouveau mot de passe",
+            "confirm": "Confirmer le mot de passe",
+            "save": "Enregistrer le mot de passe",
+            "toastUpdated": "Mot de passe mis à jour",
+            "toastFailed": "Échec de la mise à jour du mot de passe"
+        },
+        "appearance": {
+            "breadcrumb": "Paramètres d’apparence",
+            "title": "Paramètres d’apparence",
+            "description": "Mettez à jour les paramètres d’apparence de votre compte",
+            "light": "Clair",
+            "dark": "Sombre",
+            "system": "Système"
+        },
+        "deleteUser": {
+            "heading": "Supprimer le compte",
+            "description": "Supprimez votre compte et toutes ses ressources",
+            "warning": "Avertissement",
+            "warningText": "Veuillez procéder avec prudence, cette action est irréversible.",
+            "button": "Supprimer le compte",
+            "dialogTitle": "Voulez-vous vraiment supprimer votre compte ?",
+            "dialogDescription": "Une fois votre compte supprimé, toutes ses ressources et données seront également supprimées définitivement. Veuillez saisir votre mot de passe pour confirmer la suppression définitive de votre compte.",
+            "password": "Mot de passe",
+            "deleting": "Suppression",
+            "toastDeleted": "Compte supprimé",
+            "toastFailed": "Échec de la suppression du compte"
+        },
+        "labels": {
+            "eyebrow": "Tickets",
+            "title": "Étiquettes",
+            "namePlaceholder": "Nom de l’étiquette",
+            "useColor": "Utiliser {{color}}",
+            "create": "Créer",
+            "creating": "Création",
+            "issuesCount_one": "{{count}} ticket",
+            "issuesCount_other": "{{count}} tickets",
+            "deleteLabel": "Supprimer {{name}}",
+            "toastCreated": "Étiquette créée",
+            "toastCreateFailed": "Échec de la création de l’étiquette",
+            "toastDeleted": "Étiquette supprimée",
+            "toastDeleteFailed": "Échec de la suppression de l’étiquette"
+        }
+    },
+    "preferences": {
+        "eyebrow": "Paramètres",
+        "title": "Préférences",
+        "backToApp": "Retour à l’app",
+        "toastSaved": "Préférences enregistrées",
+        "toastFailed": "Échec de la mise à jour des préférences",
+        "language": "Langue",
+        "languageDescription": "Choisissez la langue utilisée dans l’interface.",
+        "english": "English",
+        "french": "Français",
+        "customize": "Personnaliser",
+        "customizeSidebarTitle": "Personnaliser la barre latérale",
+        "customizeSidebarDescription": "La personnalisation de la barre latérale sera reliée à l’ordre des éléments enregistré lors d’une prochaine étape.",
+        "sections": {
+            "general": "Général",
+            "interfaceTheme": "Interface et thème",
+            "desktop": "Application de bureau"
+        },
+        "rows": {
+            "defaultHomeView": {
+                "label": "Vue d’accueil par défaut",
+                "description": "Sélectionnez la vue à afficher au lancement de Linear"
+            },
+            "displayNames": {
+                "label": "Affichage des noms",
+                "description": "Choisissez comment les noms sont affichés dans l’interface de Linear"
+            },
+            "firstDayOfWeek": {
+                "label": "Premier jour de la semaine",
+                "description": "Utilisé pour les sélecteurs de date"
+            },
+            "convertEmoticons": {
+                "label": "Convertir les émoticônes en emojis",
+                "description": "Les suites comme :) seront converties en 🙂"
+            },
+            "sendCommentOn": {
+                "label": "Envoyer un commentaire avec…",
+                "description": "Choisissez la touche utilisée pour envoyer un commentaire"
+            },
+            "appSidebar": {
+                "label": "Barre latérale de l’app",
+                "description": "Personnalisez la visibilité, l’ordre et le style des badges des éléments de la barre latérale"
+            },
+            "fontSize": {
+                "label": "Taille de police",
+                "description": "Ajustez la taille du texte dans toute l’application"
+            },
+            "pointerCursors": {
+                "label": "Utiliser les curseurs pointeurs",
+                "description": "Affiche un curseur en forme de main au survol des éléments interactifs"
+            },
+            "interfaceTheme": {
+                "label": "Thème de l’interface",
+                "description": "Sélectionnez ou personnalisez le thème de couleurs de votre interface"
+            },
+            "openInDesktop": {
+                "label": "Ouvrir dans l’app de bureau",
+                "description": "Ouvrir automatiquement les liens dans l’app de bureau lorsque c’est possible"
+            }
+        },
+        "options": {
+            "home": {
+                "active": "Tickets actifs",
+                "myIssues": "Mes tickets",
+                "inbox": "Boîte de réception"
+            },
+            "displayNames": {
+                "full": "Nom complet",
+                "short": "Nom court",
+                "username": "Nom d’utilisateur"
+            },
+            "week": {
+                "sunday": "Dimanche",
+                "monday": "Lundi"
+            },
+            "comment": {
+                "enter": "Entrée",
+                "modEnter": "⌘+Entrée"
+            },
+            "font": {
+                "small": "Petite",
+                "default": "Par défaut",
+                "large": "Grande"
+            },
+            "theme": {
+                "light": "Clair",
+                "dark": "Sombre",
+                "system": "Système"
+            }
+        }
+    },
+    "settingsCommon": {
+        "plan": {
+            "business": "Business",
+            "enterprise": "Enterprise",
+            "plus": "Plus"
+        },
+        "startTrial": "Démarrer l’essai gratuit",
+        "viewPlans": "Voir les forfaits",
+        "upgrade": "Mettre à niveau",
+        "dangerZone": "Zone de danger",
+        "cancel": "Annuler",
+        "confirm": "Confirmer",
+        "save": "Enregistrer",
+        "saveChanges": "Enregistrer les modifications",
+        "update": "Mettre à jour",
+        "edit": "Modifier",
+        "create": "Créer",
+        "new": "Nouveau",
+        "add": "Ajouter",
+        "remove": "Retirer",
+        "delete": "Supprimer",
+        "revoke": "Révoquer",
+        "revokeAll": "Tout révoquer",
+        "connect": "Connecter",
+        "connected": "Connecté",
+        "disconnect": "Déconnecter",
+        "configure": "Configurer",
+        "manage": "Gérer",
+        "enable": "Activer",
+        "disable": "Désactiver",
+        "enabled": "Activé",
+        "disabled": "Désactivé",
+        "on": "Activé",
+        "off": "Désactivé",
+        "learnMore": "En savoir plus",
+        "docs": "En savoir plus dans la documentation",
+        "search": "Rechercher",
+        "noResults": "Aucun résultat",
+        "comingSoon": "Bientôt disponible",
+        "copy": "Copier",
+        "copied": "Copié",
+        "logOut": "Se déconnecter",
+        "rename": "Renommer",
+        "scopeWorkspace": "Espace de travail",
+        "scopeTeam": "Équipe",
+        "filterByName": "Filtrer par nom"
+    }
+}

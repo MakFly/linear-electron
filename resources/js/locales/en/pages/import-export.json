@@ -1,0 +1,28 @@
+{
+    "settings": {
+        "importExport": {
+            "title": "Import / Export",
+            "description": "Import issues from other project management tools or export your data.",
+            "importSection": "Import",
+            "importDescription": "Import your existing issues, projects, and workflows from another tool. The import assistant will guide you through the process.",
+            "importAsana": "Import from Asana",
+            "importShortcut": "Import from Shortcut",
+            "importGitHub": "Import from GitHub",
+            "importJira": "Import from Jira",
+            "importLinear": "Import from Linear",
+            "importButton": "Import",
+            "importToast": "Starting import from {{provider}}...",
+            "cliImport": "CLI import",
+            "cliImportDescription": "Use the Linear CLI importer to migrate large datasets from the command line. Supports batch imports and custom field mapping.",
+            "cliImportLink": "View CLI importer documentation",
+            "cliImportToast": "Opening CLI importer documentation...",
+            "exportSection": "Export issue data",
+            "exportDescription": "Export all issues in this workspace as a CSV file. The export includes issue titles, descriptions, statuses, assignees, priorities, and labels.",
+            "includePrivateTeams": "Include private teams",
+            "includePrivateTeamsYes": "Yes",
+            "includePrivateTeamsNo": "No",
+            "exportButton": "Export",
+            "exportToast": "Preparing your export... You will receive an email when it is ready."
+        }
+    }
+}

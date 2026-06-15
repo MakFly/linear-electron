@@ -1,0 +1,79 @@
+{
+    "settings": {
+        "customerRequests": {
+            "title": "Demandes clients",
+            "description": "Suivez et gérez les demandes de fonctionnalités des clients, liez-les à des tickets et orientez-les vers la bonne équipe.",
+            "enable": {
+                "title": "Activer les demandes clients",
+                "desc": "Permettez aux clients de soumettre des demandes de fonctionnalités pouvant être liées à des tickets et des projets."
+            },
+            "sections": {
+                "manageCustomers": "Gérer les clients",
+                "issueRouting": "Routage des tickets",
+                "customerStatuses": "Statuts des clients",
+                "customerTiers": "Niveaux clients",
+                "displayOptions": "Options d’affichage",
+                "customerAttributes": "Attributs clients",
+                "excludedDomains": "Domaines/e-mails exclus",
+                "genericDomains": "Domaines/e-mails génériques"
+            },
+            "customers": {
+                "emptyTitle": "Aucun client pour l’instant",
+                "emptyDesc": "Ajoutez des clients pour commencer à suivre leurs demandes de fonctionnalités et à les lier à vos tickets.",
+                "addBtn": "Ajouter des clients"
+            },
+            "routing": {
+                "defaultTeam": "Equipe par défaut",
+                "engineering": "Ingénierie",
+                "design": "Design",
+                "product": "Produit"
+            },
+            "statuses": {
+                "active": "Actif",
+                "prospect": "Prospect",
+                "churned": "Résilié",
+                "lost": "Perdu",
+                "createBtn": "Créer un statut client",
+                "dialogTitle": "Créer un statut client",
+                "namePlaceholder": "Nom du statut",
+                "deleteTitle": "Supprimer le statut",
+                "deleteDesc": "Ce statut sera supprimé définitivement. Les clients ayant ce statut devront être réassignés."
+            },
+            "tiers": {
+                "emptyTitle": "Aucun niveau défini",
+                "emptyDesc": "Créez des niveaux pour segmenter vos clients par offre, taille ou valeur.",
+                "createBtn": "Créer un niveau",
+                "dialogTitle": "Créer un niveau client",
+                "namePlaceholder": "Nom du niveau"
+            },
+            "display": {
+                "revenueFormat": "Format du chiffre d’affaires",
+                "compact": "Compact",
+                "full": "Complet",
+                "currency": "Devise du chiffre d’affaires",
+                "usd": "USD",
+                "eur": "EUR",
+                "gbp": "GBP"
+            },
+            "attributes": {
+                "dataSource": "Source de données",
+                "externalSource": "Source externe",
+                "manual": "Manuel",
+                "allowManualEdits": "Autoriser les modifications manuelles",
+                "allowManualEditsDesc": "Permettre aux membres de l’espace de travail de modifier les attributs clients directement depuis la vue du ticket."
+            },
+            "excludedDomains": {
+                "emptyTitle": "Aucun domaine exclu",
+                "addBtn": "Ajouter",
+                "dialogTitle": "Ajouter un domaine ou e-mail exclu",
+                "placeholder": "Ex. exemple.com ou utilisateur@exemple.com"
+            },
+            "genericDomains": {
+                "emptyTitle": "Aucun domaine générique",
+                "addBtn": "Ajouter",
+                "dialogTitle": "Ajouter un domaine ou e-mail générique",
+                "placeholder": "Ex. gmail.com ou yahoo.com"
+            }
+        }
+    }
+}

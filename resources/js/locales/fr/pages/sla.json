@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "sla": {
+            "title": "SLA",
+            "description": "Definissez des accords de niveau de service pour garantir la resolution des tickets dans les delais cibles.",
+            "planGateTitle": "Politiques SLA",
+            "planGateDesc": "Les politiques SLA sont disponibles avec les offres Business et Enterprise. Passez a un plan superieur pour definir des objectifs de reponse et de resolution, et recevoir des alertes en cas de depassement.",
+            "automationTitle": "Regles d’automatisation",
+            "automationDesc": "Declenchez des actions automatiquement lorsque les seuils SLA sont atteints ou depasses.",
+            "addRule": "Ajouter une regle",
+            "emptyRules": "Aucune regle SLA",
+            "emptyRulesDesc": "Ajoutez une regle d’automatisation pour agir sur les evenements SLA.",
+            "dialogTitle": "Nouvelle regle d’automatisation",
+            "ruleNameLabel": "Nom de la regle",
+            "ruleNamePlaceholder": "ex. Notifier en cas de depassement"
+        }
+    }
+}

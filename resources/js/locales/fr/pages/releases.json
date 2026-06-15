@@ -1,0 +1,10 @@
+{
+    "settings": {
+        "releases": {
+            "title": "Releases",
+            "description": "Suivez et communiquez les sorties de versions dans votre espace de travail.",
+            "gateTitle": "Releases",
+            "gateDescription": "Les releases vous permettent de regrouper des tickets en jalons versionnés, de générer des journaux de modifications et de communiquer l’avancement aux parties prenantes. Disponible avec le forfait Business et supérieur."
+        }
+    }
+}

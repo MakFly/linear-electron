@@ -1,0 +1,36 @@
+{
+    "settings": {
+        "members": {
+            "title": "Membres",
+            "description": "Gérez les membres de votre espace de travail, invitez de nouvelles personnes et contrôlez leurs niveaux d’accès.",
+            "statusAll": "Tous les membres",
+            "statusActive": "Actifs",
+            "statusSuspended": "Suspendus",
+            "exportCsv": "Exporter en CSV",
+            "invite": "Inviter",
+            "columnName": "Nom",
+            "columnEmail": "E-mail",
+            "columnStatus": "Statut",
+            "columnTeams": "Équipes",
+            "columnRole": "Rôle",
+            "roleAdmin": "Admin",
+            "roleMember": "Membre",
+            "roleGuest": "Invité",
+            "statusPillActive": "Actif",
+            "statusPillInvited": "Invité",
+            "statusPillSuspended": "Suspendu",
+            "menuSuspend": "Suspendre",
+            "menuRemove": "Retirer",
+            "menuRevoke": "Révoquer l’invitation",
+            "menuReactivate": "Réactiver",
+            "dialogTitle": "Inviter un membre",
+            "emailLabel": "Adresse e-mail",
+            "roleLabel": "Rôle",
+            "emptyTitle": "Aucun membre trouvé",
+            "emptyDesc": "Aucun membre ne correspond à vos filtres actuels.",
+            "toastExported": "Liste des membres exportée",
+            "toastInvited": "Invitation envoyée",
+            "toastRemoved": "Membre retiré"
+        }
+    }
+}

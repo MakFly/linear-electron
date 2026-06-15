@@ -1,0 +1,158 @@
+{
+    "settings": {
+        "integrations": {
+            "title": "Integrations",
+            "description": "Connect your favourite tools to keep your workflow in sync.",
+            "searchPlaceholder": "Search integrations",
+            "noResults": "No integrations match your search.",
+            "categories": {
+                "essentials": "Essentials",
+                "agents": "Agents",
+                "aiClients": "AI clients",
+                "engineering": "Engineering",
+                "linearCrafted": "Linear crafted",
+                "bugReporting": "Bug Reporting",
+                "automations": "Automations",
+                "customerExperience": "Customer Experience",
+                "collaboration": "Collaboration",
+                "mediaDesign": "Media & Design",
+                "analytics": "Analytics",
+                "securityCompliance": "Security & Compliance"
+            },
+            "integrations": {
+                "slack": {
+                    "name": "Slack",
+                    "description": "Send issue updates and notifications to channels."
+                },
+                "linearAsksForSlack": {
+                    "name": "Linear Asks for Slack",
+                    "description": "Capture and track requests directly from Slack."
+                },
+                "github": {
+                    "name": "GitHub",
+                    "description": "Link pull requests and automate workflows."
+                },
+                "figma": {
+                    "name": "Figma",
+                    "description": "Sync designs and embed live previews in issues."
+                },
+                "intercom": {
+                    "name": "Intercom",
+                    "description": "Create issues from customer conversations."
+                },
+                "gitlab": {
+                    "name": "GitLab",
+                    "description": "Link merge requests and track deployments."
+                },
+                "zapier": {
+                    "name": "Zapier",
+                    "description": "Automate tasks between Linear and thousands of apps."
+                },
+                "jira": {
+                    "name": "Jira",
+                    "description": "Migrate issues and sync project status with Jira."
+                },
+                "googleSheets": {
+                    "name": "Google Sheets",
+                    "description": "Export issue data to spreadsheets automatically."
+                },
+                "codex": {
+                    "name": "Codex",
+                    "description": "Let Codex resolve issues autonomously."
+                },
+                "cursor": {
+                    "name": "Cursor",
+                    "description": "Open and work on issues directly inside Cursor."
+                },
+                "githubCopilot": {
+                    "name": "GitHub Copilot",
+                    "description": "Bring Copilot agent tasks into your Linear workflow."
+                },
+                "factory": {
+                    "name": "Factory",
+                    "description": "Automate code reviews and pull request workflows."
+                },
+                "sentryAgent": {
+                    "name": "Sentry Agent",
+                    "description": "Automatically triage and fix Sentry errors."
+                },
+                "devin": {
+                    "name": "Devin",
+                    "description": "Assign issues to Devin for autonomous implementation."
+                },
+                "chatPRD": {
+                    "name": "ChatPRD",
+                    "description": "Generate product specs from issue descriptions."
+                },
+                "charlie": {
+                    "name": "Charlie",
+                    "description": "AI assistant integrated into your Linear workspace."
+                },
+                "cursorMCP": {
+                    "name": "Cursor MCP",
+                    "description": "Access Linear context inside Cursor via MCP."
+                },
+                "chatGPT": {
+                    "name": "ChatGPT",
+                    "description": "Create and search issues from ChatGPT."
+                },
+                "claude": {
+                    "name": "Claude",
+                    "description": "Use Claude to draft, refine and summarise issues."
+                },
+                "v0": {
+                    "name": "v0",
+                    "description": "Generate UI components from issue requirements."
+                },
+                "windsurf": {
+                    "name": "Windsurf",
+                    "description": "Resolve Linear issues inside the Windsurf editor."
+                },
+                "replit": {
+                    "name": "Replit",
+                    "description": "Build and iterate on issues directly in Replit."
+                },
+                "dust": {
+                    "name": "Dust",
+                    "description": "Deploy AI assistants connected to your Linear data."
+                },
+                "adk": {
+                    "name": "ADK",
+                    "description": "Build custom agents with Google's Agent Development Kit."
+                },
+                "pagerDuty": {
+                    "name": "PagerDuty",
+                    "description": "Create incidents and link on-call alerts to issues."
+                },
+                "sentry": {
+                    "name": "Sentry",
+                    "description": "Attach error reports to issues and track fixes."
+                },
+                "vsCode": {
+                    "name": "VS Code",
+                    "description": "Manage issues without leaving your editor."
+                },
+                "datadog": {
+                    "name": "Datadog",
+                    "description": "Link monitoring alerts to Linear issues automatically."
+                },
+                "incidentIo": {
+                    "name": "incident.io",
+                    "description": "Connect incidents to issues and track resolution."
+                },
+                "raycast": {
+                    "name": "Raycast",
+                    "description": "Search, create and update issues from Raycast."
+                },
+                "notion": {
+                    "name": "Notion",
+                    "description": "Embed Linear views and sync projects with Notion."
+                }
+            },
+            "connect": "Connect",
+            "open": "Open",
+            "toastConnected": "{{name}} connected",
+            "toastDisconnected": "{{name}} disconnected"
+        }
+    }
+}

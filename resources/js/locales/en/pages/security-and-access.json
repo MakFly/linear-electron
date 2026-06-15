@@ -1,0 +1,44 @@
+{
+    "settings": {
+        "securityAccessPage": {
+            "title": "Security & access",
+            "description": "Manage your active sessions, passkeys, API keys and authorized applications.",
+            "sessions": {
+                "title": "Sessions",
+                "currentSession": "Current session",
+                "revokeAll": "Revoke all",
+                "revokeAllTitle": "Revoke all sessions",
+                "revokeAllDescription": "This will log you out of all devices except this one. Are you sure?",
+                "revokedAll": "All sessions revoked",
+                "revokedSession": "Session revoked",
+                "logOut": "Log out"
+            },
+            "passkeys": {
+                "title": "Passkeys",
+                "newPasskey": "New passkey",
+                "emptyTitle": "No passkeys configured",
+                "emptyDescription": "Passkeys let you sign in without a password using biometrics or a hardware key.",
+                "createPasskey": "Create passkey"
+            },
+            "apiKeys": {
+                "title": "Personal API keys",
+                "newApiKey": "New API key",
+                "emptyTitle": "No API keys",
+                "emptyDescription": "Create an API key to access the Linear API programmatically.",
+                "createApiKey": "Create API key",
+                "dialogTitle": "Create API key",
+                "dialogDescription": "Give your API key a name to identify it later.",
+                "namePlaceholder": "e.g. My personal key",
+                "nameLabel": "Name",
+                "created": "API key created",
+                "revoked": "API key revoked",
+                "copy": "Copy"
+            },
+            "authorizedApps": {
+                "title": "Authorized applications",
+                "emptyTitle": "No authorized applications",
+                "emptyDescription": "Applications you authorize via OAuth will appear here."
+            }
+        }
+    }
+}

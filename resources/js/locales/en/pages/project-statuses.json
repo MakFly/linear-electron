@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "projectStatuses": {
+            "title": "Project statuses",
+            "description": "Customize the statuses used to track the progress of projects across your workspace.",
+            "create": "Create new project status",
+            "projectCount": "{{count}} projects",
+            "rename": "Rename",
+            "dialogTitle": "New project status",
+            "renameTitle": "Rename status",
+            "nameLabel": "Status name",
+            "namePlaceholder": "e.g. On hold",
+            "colorLabel": "Color",
+            "deleteTitle": "Delete status",
+            "deleteDesc": "This status will be permanently deleted. Projects using it will be moved to Backlog."
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "projectLabels": {
+            "title": "Etiquettes de projet",
+            "description": "Organisez vos projets avec des etiquettes personnalisees. Les etiquettes peuvent etre limitees a l’espace de travail ou a une equipe specifique.",
+            "newGroup": "Nouveau groupe",
+            "newLabel": "Nouvelle etiquette",
+            "empty": "Aucune etiquette trouvee",
+            "emptyDesc": "Creez une etiquette pour organiser vos projets.",
+            "dialogTitle": "Nouvelle etiquette de projet",
+            "nameLabel": "Nom de l’etiquette",
+            "namePlaceholder": "ex. Marketing",
+            "colorLabel": "Couleur",
+            "deleteTitle": "Supprimer l’etiquette",
+            "deleteDesc": "Cette etiquette sera definitivement supprimee. Cette action est irreversible."
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "settings": {
+        "connectedAccountsPage": {
+            "title": "Connected accounts",
+            "description": "Connect third-party services to enhance your Linear experience.",
+            "providers": {
+                "slack": {
+                    "title": "Slack",
+                    "description": "Get notified in Slack when issues are updated."
+                },
+                "googleCalendar": {
+                    "title": "Google Calendar",
+                    "description": "See your calendar events alongside your Linear issues."
+                },
+                "notion": {
+                    "title": "Notion",
+                    "description": "Link Notion pages directly to Linear issues."
+                },
+                "github": {
+                    "title": "GitHub",
+                    "description": "Link pull requests and automate your workflow."
+                }
+            },
+            "workspaceConnection": {
+                "title": "GitHub workspace connection",
+                "description": "Manage the GitHub connection for your entire workspace.",
+                "toastRedirect": "Redirecting to workspace security settings"
+            }
+        }
+    }
+}

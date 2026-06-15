@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "issueTemplates": {
+            "title": "Issue templates",
+            "description": "Create reusable templates to speed up issue creation across your workspace.",
+            "newTemplate": "New template",
+            "empty": "No issue templates",
+            "emptyDesc": "Templates help your team create consistent, well-structured issues.",
+            "dialogTitle": "New issue template",
+            "nameLabel": "Template name",
+            "namePlaceholder": "e.g. Bug report",
+            "descLabel": "Description",
+            "descPlaceholder": "Briefly describe what this template is for",
+            "deleteTitle": "Delete template",
+            "deleteDesc": "This template will be permanently deleted. This action cannot be undone."
+        }
+    }
+}

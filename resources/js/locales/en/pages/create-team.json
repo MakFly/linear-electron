@@ -1,0 +1,20 @@
+{
+    "settings": {
+        "createTeam": {
+            "title": "Create team",
+            "description": "Teams help you organize your work and manage access to issues, projects, and settings.",
+            "teamNameLabel": "Team name",
+            "teamNamePlaceholder": "e.g. Engineering",
+            "identifierLabel": "Identifier",
+            "identifierDescription": "Used as a prefix for all issues in this team (e.g. ENG-123).",
+            "visibilityLabel": "Visibility",
+            "visibilityPublic": "Public",
+            "visibilityPrivate": "Private",
+            "copySettingsLabel": "Copy settings from",
+            "copySettingsNone": "None",
+            "copySettingsDevaubree": "Devaubree",
+            "createButton": "Create team",
+            "createToast": "Team created successfully."
+        }
+    }
+}

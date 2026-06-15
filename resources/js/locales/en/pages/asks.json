@@ -1,0 +1,10 @@
+{
+    "settings": {
+        "asks": {
+            "title": "Asks",
+            "description": "Collect, prioritise and track requests from teammates and stakeholders.",
+            "gateTitle": "Asks",
+            "gateDescription": "Asks lets your team capture requests directly from Slack or email, convert them into issues, and keep requesters informed of progress. Available on Business and Enterprise plans."
+        }
+    }
+}

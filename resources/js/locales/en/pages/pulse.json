@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "pulse": {
+            "title": "Pulse",
+            "description": "Get periodic summaries of activity across your workspace.",
+            "enablePulse": "Enable Pulse",
+            "enablePulseDesc": "Receive digest emails summarising workspace activity.",
+            "summaryNotifications": "Summary notifications",
+            "summaryNotificationsDesc": "Configure how often you receive Pulse summary emails.",
+            "workspaceScheduleLabel": "Default workspace schedule",
+            "personalScheduleLabel": "Personal schedule",
+            "scheduleDaily": "Daily",
+            "scheduleWeekly": "Weekly",
+            "scheduleOff": "Off",
+            "scheduleFollowWorkspace": "Follow workspace"
+        }
+    }
+}

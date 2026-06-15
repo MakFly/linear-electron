@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "projectTemplates": {
+            "title": "Project templates",
+            "description": "Create reusable project templates to standardize how new projects are set up across your workspace.",
+            "newTemplate": "New template",
+            "empty": "No project templates",
+            "emptyDesc": "Templates let your team start new projects with a consistent structure.",
+            "dialogTitle": "New project template",
+            "nameLabel": "Template name",
+            "namePlaceholder": "e.g. Product launch",
+            "descLabel": "Description",
+            "descPlaceholder": "Briefly describe what this template is for",
+            "deleteTitle": "Delete template",
+            "deleteDesc": "This template will be permanently deleted. This action cannot be undone."
+        }
+    }
+}

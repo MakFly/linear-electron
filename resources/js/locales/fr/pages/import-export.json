@@ -1,0 +1,28 @@
+{
+    "settings": {
+        "importExport": {
+            "title": "Import / Export",
+            "description": "Importez des tickets depuis d’autres outils de gestion de projet ou exportez vos données.",
+            "importSection": "Import",
+            "importDescription": "Importez vos tickets, projets et flux de travail existants depuis un autre outil. L’assistant d’import vous guidera tout au long du processus.",
+            "importAsana": "Importer depuis Asana",
+            "importShortcut": "Importer depuis Shortcut",
+            "importGitHub": "Importer depuis GitHub",
+            "importJira": "Importer depuis Jira",
+            "importLinear": "Importer depuis Linear",
+            "importButton": "Importer",
+            "importToast": "Démarrage de l’import depuis {{provider}}...",
+            "cliImport": "Import CLI",
+            "cliImportDescription": "Utilisez l’outil d’import CLI de Linear pour migrer de grands volumes de données en ligne de commande. Prend en charge les imports par lots et le mappage de champs personnalisés.",
+            "cliImportLink": "Voir la documentation de l’outil d’import CLI",
+            "cliImportToast": "Ouverture de la documentation de l’outil d’import CLI...",
+            "exportSection": "Exporter les données des tickets",
+            "exportDescription": "Exportez tous les tickets de cet espace de travail au format CSV. L’export inclut les titres, descriptions, statuts, responsables, priorités et étiquettes des tickets.",
+            "includePrivateTeams": "Inclure les équipes privées",
+            "includePrivateTeamsYes": "Oui",
+            "includePrivateTeamsNo": "Non",
+            "exportButton": "Exporter",
+            "exportToast": "Préparation de votre export en cours... Vous recevrez un e-mail une fois qu’il sera prêt."
+        }
+    }
+}

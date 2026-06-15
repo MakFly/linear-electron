@@ -1,0 +1,44 @@
+{
+    "settings": {
+        "aiAgents": {
+            "title": "IA et agents",
+            "description": "Gérez les fonctionnalités IA, les capacités de l’agent Linear et les intégrations avec des agents tiers.",
+            "sections": {
+                "usageCredits": "Utilisation et crédits IA",
+                "linearAgent": "Agent Linear",
+                "capabilities": "Capacités",
+                "agentIntegrations": "Intégrations d’agents",
+                "installedAgents": "Agents installés",
+                "threadSummaries": "Résumés de fils"
+            },
+            "planGate": {
+                "description": "Le suivi de l’utilisation et des crédits IA est disponible avec le forfait Business. Passez au forfait supérieur pour accéder aux tableaux de bord de consommation, aux recharges de crédits et aux limites de dépenses par équipe."
+            },
+            "agent": {
+                "enabledDesc": "Autorisez l’agent Linear à agir sur les tickets, écrire du code et exécuter des automatisations au nom de votre équipe.",
+                "configureBtnLabel": "Configurer l’agent"
+            },
+            "capabilities": {
+                "codingSessions": "Sessions de code",
+                "agentAutomations": "Automatisations de l’agent",
+                "agentAutomationsDesc": "Laissez l’agent trier, assigner et mettre à jour automatiquement les tickets selon des règles configurées.",
+                "codeIntelligence": "Code Intelligence",
+                "codeIntelligenceDesc": "Analysez votre base de code pour faire remonter le contexte pertinent lors du traitement des tickets.",
+                "triageIntelligence": "Triage Intelligence",
+                "triageIntelligenceDesc": "Catégorisez et priorisez automatiquement les tickets entrants grâce à l’IA."
+            },
+            "integrations": {
+                "availabilityNote": "Les intégrations d’agents sont déployées progressivement. Certaines intégrations peuvent ne pas encore être disponibles pour votre espace de travail."
+            },
+            "installedAgents": {
+                "emptyTitle": "Parcourir les intégrations",
+                "emptyDesc": "Connectez des agents tiers pour automatiser vos flux de travail directement depuis Linear. Retrouvez les agents disponibles dans le répertoire des intégrations.",
+                "browseBtn": "Parcourir les intégrations"
+            },
+            "threadSummaries": {
+                "title": "Résumés de fils résolus par l’IA",
+                "desc": "Générez automatiquement un résumé lorsqu’un fil de ticket est résolu par l’agent IA."
+            }
+        }
+    }
+}

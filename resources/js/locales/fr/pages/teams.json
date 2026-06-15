@@ -1,0 +1,31 @@
+{
+    "settings": {
+        "teams": {
+            "title": "Équipes",
+            "description": "Gérez les équipes de votre espace de travail, leurs membres et leur visibilité.",
+            "statusActive": "Actives",
+            "statusArchived": "Archivées",
+            "statusAll": "Toutes",
+            "createTeam": "Créer une équipe",
+            "columnName": "Nom",
+            "columnVisibility": "Visibilité",
+            "columnMembers": "Membres",
+            "columnIssues": "Tickets",
+            "columnCreated": "Créée le",
+            "visibilityPublic": "Publique",
+            "visibilityPrivate": "Privée",
+            "dialogTitle": "Créer une nouvelle équipe",
+            "dialogDesc": "Ajoutez une nouvelle équipe à votre espace de travail.",
+            "teamName": "Nom de l’équipe",
+            "identifier": "Identifiant",
+            "menuSettings": "Paramètres",
+            "menuLeave": "Quitter",
+            "menuDelete": "Supprimer",
+            "deleteTitle": "Supprimer l’équipe",
+            "deleteDesc": "Cette action est irréversible. Tous les tickets et données associés à cette équipe seront définitivement supprimés.",
+            "emptyTitle": "Aucune équipe trouvée",
+            "emptyDesc": "Aucune équipe ne correspond aux filtres actuels. Essayez d’ajuster votre recherche ou le filtre de statut.",
+            "toastDeleted": "Équipe supprimée"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "settings": {
+        "initiatives": {
+            "title": "Initiatives",
+            "description": "Initiatives let you group projects around high-level goals and track progress across teams.",
+            "enable": {
+                "title": "Enable Initiatives",
+                "desc": "When disabled, initiatives are hidden for all workspace members."
+            },
+            "sections": {
+                "updates": "Initiative updates",
+                "slack": "Slack notifications"
+            },
+            "updateSchedule": {
+                "label": "Update schedule",
+                "dialogTitle": "Update schedule",
+                "noExpectation": "No expectation",
+                "weekly": "Weekly",
+                "monthly": "Monthly"
+            },
+            "slack": {
+                "desc": "Receive Slack notifications when initiative health or progress changes. Connect a channel to get started.",
+                "connectBtn": "Connect channel",
+                "toastSuccess": "Slack channel connected successfully."
+            }
+        }
+    }
+}

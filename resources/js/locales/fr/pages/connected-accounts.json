@@ -1,0 +1,31 @@
+{
+    "settings": {
+        "connectedAccountsPage": {
+            "title": "Comptes connectés",
+            "description": "Connectez des services tiers pour enrichir votre expérience Linear.",
+            "providers": {
+                "slack": {
+                    "title": "Slack",
+                    "description": "Recevez des notifications dans Slack lorsque des tickets sont mis à jour."
+                },
+                "googleCalendar": {
+                    "title": "Google Calendar",
+                    "description": "Consultez vos événements de calendrier aux côtés de vos tickets Linear."
+                },
+                "notion": {
+                    "title": "Notion",
+                    "description": "Associez des pages Notion directement à des tickets Linear."
+                },
+                "github": {
+                    "title": "GitHub",
+                    "description": "Associez des pull requests et automatisez votre flux de travail."
+                }
+            },
+            "workspaceConnection": {
+                "title": "Connexion GitHub de l’espace de travail",
+                "description": "Gérez la connexion GitHub pour l’ensemble de votre espace de travail.",
+                "toastRedirect": "Redirection vers les paramètres de sécurité de l’espace de travail"
+            }
+        }
+    }
+}

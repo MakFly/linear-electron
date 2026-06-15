@@ -1,0 +1,63 @@
+{
+    "settings": {
+        "security": {
+            "title": "Security",
+            "description": "Manage authentication, access controls, and compliance settings for your workspace.",
+
+            "sectionAccess": "Workspace access",
+            "inviteLinks": "Invite links",
+            "inviteLinksDesc": "Allow members to invite others via a shared link.",
+            "approvedDomains": "Approved email domains",
+            "approvedDomainsDesc": "Automatically grant access to users who sign up with an approved email domain.",
+            "addDomain": "+ Add domain",
+            "domainPlaceholder": "e.g. acme.com",
+            "removeDomain": "Remove domain",
+
+            "sectionAuth": "Authentication methods",
+            "authGoogle": "Google",
+            "authGoogleDesc": "Allow members to sign in with their Google account.",
+            "authPasskey": "Email & passkey",
+            "authPasskeyDesc": "Allow members to sign in with their email address and a passkey.",
+            "authSaml": "SAML / SCIM",
+            "authSamlDesc": "Single sign-on and directory sync for enterprise identity providers.",
+
+            "sectionPermissions": "Workspace management permissions",
+            "permissionsDesc": "Control who can perform administrative actions across your workspace.",
+            "permInvitations": "Invitations",
+            "permTeamCreation": "Team creation",
+            "permWorkspaceLabels": "Workspace labels",
+            "permWorkspaceTemplates": "Workspace templates",
+            "permApiKeys": "API key creation",
+            "permAgentGuidance": "Modify agent guidance",
+            "permFileUploads": "File uploads",
+            "optionAdmins": "Admins",
+            "optionMembers": "Members",
+            "optionEveryone": "Everyone",
+
+            "sectionIntegrations": "Integrations & applications",
+            "thirdPartyReview": "Third-party application review",
+            "thirdPartyReviewDesc": "Require admin approval before members can install third-party OAuth applications.",
+            "reducePersonalInfo": "Reduce personal info from support integrations",
+            "reducePersonalInfoDesc": "Minimize the personal data shared with third-party support tools.",
+            "preventGuestsAgents": "Prevent guests from using agents",
+            "preventGuestsAgentsDesc": "Restrict guest accounts from accessing AI agent features.",
+
+            "sectionAi": "AI & Agents",
+            "aiTelemetry": "AI telemetry",
+            "aiTelemetryDesc": "Share anonymized usage data to help improve AI features.",
+            "agentWebSearch": "Linear Agent web search",
+            "agentWebSearchDesc": "Allow Linear Agent to search the web when resolving issues.",
+            "mcpServers": "MCP servers",
+            "mcpServersDesc": "Allow members to connect external MCP servers to Linear Agent.",
+
+            "sectionCompliance": "Compliance",
+            "hipaaTitle": "HIPAA compliance",
+            "hipaaDesc": "HIPAA Business Associate Agreements (BAA) are available on the Enterprise plan. Upgrade to enable HIPAA-compliant data handling and sign a BAA with Anthropic.",
+
+            "dialogAddDomain": "Add approved domain",
+            "domainLabel": "Domain",
+            "toastDomainAdded": "Domain added",
+            "toastDomainRemoved": "Domain removed"
+        }
+    }
+}

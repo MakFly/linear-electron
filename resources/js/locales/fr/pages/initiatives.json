@@ -1,0 +1,28 @@
+{
+    "settings": {
+        "initiatives": {
+            "title": "Initiatives",
+            "description": "Les initiatives permettent de regrouper des projets autour d’objectifs de haut niveau et de suivre l’avancement par équipe.",
+            "enable": {
+                "title": "Activer les initiatives",
+                "desc": "Lorsque cette option est désactivée, les initiatives sont masquées pour tous les membres de l’espace de travail."
+            },
+            "sections": {
+                "updates": "Mises à jour des initiatives",
+                "slack": "Notifications Slack"
+            },
+            "updateSchedule": {
+                "label": "Fréquence des mises à jour",
+                "dialogTitle": "Fréquence des mises à jour",
+                "noExpectation": "Aucune attente",
+                "weekly": "Hebdomadaire",
+                "monthly": "Mensuelle"
+            },
+            "slack": {
+                "desc": "Recevez des notifications Slack lorsque l’état ou la progression d’une initiative change. Connectez un canal pour commencer.",
+                "connectBtn": "Connecter un canal",
+                "toastSuccess": "Canal Slack connecté avec succès."
+            }
+        }
+    }
+}

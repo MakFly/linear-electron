@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "projectLabels": {
+            "title": "Project labels",
+            "description": "Organize projects with custom labels. Labels can be scoped to the whole workspace or to a specific team.",
+            "newGroup": "New group",
+            "newLabel": "New label",
+            "empty": "No labels found",
+            "emptyDesc": "Create a label to organize your projects.",
+            "dialogTitle": "New project label",
+            "nameLabel": "Label name",
+            "namePlaceholder": "e.g. Marketing",
+            "colorLabel": "Color",
+            "deleteTitle": "Delete label",
+            "deleteDesc": "This label will be permanently deleted. This action cannot be undone."
+        }
+    }
+}

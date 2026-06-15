@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "projectTemplates": {
+            "title": "Modeles de projet",
+            "description": "Creez des modeles de projet reutilisables pour standardiser la creation de nouveaux projets dans votre espace de travail.",
+            "newTemplate": "Nouveau modele",
+            "empty": "Aucun modele de projet",
+            "emptyDesc": "Les modeles permettent a votre equipe de demarrer de nouveaux projets avec une structure coherente.",
+            "dialogTitle": "Nouveau modele de projet",
+            "nameLabel": "Nom du modele",
+            "namePlaceholder": "ex. Lancement produit",
+            "descLabel": "Description",
+            "descPlaceholder": "Decrivez brievement l’usage de ce modele",
+            "deleteTitle": "Supprimer le modele",
+            "deleteDesc": "Ce modele sera definitivement supprime. Cette action est irreversible."
+        }
+    }
+}

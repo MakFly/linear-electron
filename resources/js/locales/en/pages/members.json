@@ -1,0 +1,36 @@
+{
+    "settings": {
+        "members": {
+            "title": "Members",
+            "description": "Manage your workspace members, invite new people, and control their access levels.",
+            "statusAll": "All members",
+            "statusActive": "Active",
+            "statusSuspended": "Suspended",
+            "exportCsv": "Export CSV",
+            "invite": "Invite",
+            "columnName": "Name",
+            "columnEmail": "Email",
+            "columnStatus": "Status",
+            "columnTeams": "Teams",
+            "columnRole": "Role",
+            "roleAdmin": "Admin",
+            "roleMember": "Member",
+            "roleGuest": "Guest",
+            "statusPillActive": "Active",
+            "statusPillInvited": "Invited",
+            "statusPillSuspended": "Suspended",
+            "menuSuspend": "Suspend",
+            "menuRemove": "Remove",
+            "menuRevoke": "Revoke invitation",
+            "menuReactivate": "Reactivate",
+            "dialogTitle": "Invite a member",
+            "emailLabel": "Email address",
+            "roleLabel": "Role",
+            "emptyTitle": "No members found",
+            "emptyDesc": "No members match your current filters.",
+            "toastExported": "Member list exported",
+            "toastInvited": "Invitation sent",
+            "toastRemoved": "Member removed"
+        }
+    }
+}

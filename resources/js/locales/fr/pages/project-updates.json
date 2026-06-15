@@ -1,0 +1,21 @@
+{
+    "settings": {
+        "projectUpdates": {
+            "title": "Mises a jour de projet",
+            "description": "Configurez comment et quand les mises a jour de sante des projets sont attendues, et connectez des canaux de notification.",
+            "scheduleTitle": "Calendrier de mise a jour",
+            "scheduleDesc": "Definissez une frequence attendue pour que les responsables de projet publient un point de statut.",
+            "currentSchedule": "Frequence de mise a jour",
+            "scheduleNone": "Aucune attente de mise a jour",
+            "scheduleWeekly": "Hebdomadaire",
+            "scheduleBiweekly": "Bimensuel",
+            "scheduleMonthly": "Mensuel",
+            "scheduleDialogTitle": "Modifier le calendrier",
+            "scheduleLabel": "Frequence de mise a jour",
+            "slackTitle": "Notifications Slack",
+            "slackDesc": "Envoyez les notifications de mise a jour de projet vers un canal Slack pour tenir votre equipe informee.",
+            "slackConnect": "Connecter un canal Slack",
+            "slackToast": "La connexion Slack sera bientot disponible"
+        }
+    }
+}

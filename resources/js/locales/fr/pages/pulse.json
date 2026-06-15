@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "pulse": {
+            "title": "Pulse",
+            "description": "Recevez des résumés périodiques de l’activité dans votre espace de travail.",
+            "enablePulse": "Activer Pulse",
+            "enablePulseDesc": "Recevez des e-mails de synthèse résumant l’activité de l’espace de travail.",
+            "summaryNotifications": "Notifications de résumé",
+            "summaryNotificationsDesc": "Configurez la fréquence de réception des e-mails de résumé Pulse.",
+            "workspaceScheduleLabel": "Fréquence par défaut de l’espace de travail",
+            "personalScheduleLabel": "Fréquence personnelle",
+            "scheduleDaily": "Quotidien",
+            "scheduleWeekly": "Hebdomadaire",
+            "scheduleOff": "Désactivé",
+            "scheduleFollowWorkspace": "Suivre l’espace de travail"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "settings": {
+        "billing": {
+            "title": "Facturation",
+            "description": "Gérez votre abonnement, vos informations de facturation et vos factures.",
+            "currentPlan": "Forfait actuel",
+            "planName": "Gratuit",
+            "seatCount": "5 utilisateurs",
+            "upgradeNow": "Passer à la version supérieure",
+            "manageBilling": "Gérer la facturation",
+            "manageBillingToast": "Ouverture du portail de facturation...",
+            "plans": "Forfaits",
+            "planFree": "Gratuit",
+            "planBasic": "Basique",
+            "planBusiness": "Business",
+            "planEnterprise": "Entreprise",
+            "planFreePrice": "0 $/mois",
+            "planBasicPrice": "8 $/mois",
+            "planBusinessPrice": "16 $/mois",
+            "planEnterprisePrice": "Sur devis",
+            "viewAllPlans": "Voir tous les forfaits",
+            "aiUsage": "Utilisation de l’IA et crédits",
+            "aiCreditsUsed": "420 / 1 000 crédits utilisés ce mois-ci",
+            "aiCreditsDescription": "Les crédits sont réinitialisés au début de chaque période de facturation. Passez à la version supérieure pour obtenir plus de crédits.",
+            "invoices": "Factures récentes",
+            "invoicesEmptyTitle": "Aucune facture pour l’instant",
+            "invoicesEmptyDescription": "Vos factures apparaîtront ici une fois que vous aurez un abonnement payant actif."
+        }
+    }
+}

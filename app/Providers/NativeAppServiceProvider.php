@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Providers;
+
+use Native\Laravel\Facades\Window;
+use Native\Laravel\Contracts\ProvidesPhpIni;
+
+class NativeAppServiceProvider implements ProvidesPhpIni
+{
+    /**
+     * Executed once the native application has been booted.
+     * Use this method to open windows, register global shortcuts, etc.
+     */
+    public function boot(): void
+    {
+        Window::open()
+            ->title('Linear')
+            ->width(1440)
+            ->height(860)
+            ->minWidth(1024)
+            ->minHeight(600)
+            ->titleBarHiddenInset()
+            ->backgroundColor('#0F1011');
+    }
+
+    /**
+     * Return an array of php.ini directives to be set.
+     */
+    public function phpIni(): array
+    {
+        return [
+        ];
+    }
+}

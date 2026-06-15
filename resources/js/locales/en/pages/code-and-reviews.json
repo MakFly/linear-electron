@@ -1,0 +1,60 @@
+{
+    "settings": {
+        "codeReviewsPage": {
+            "title": "Code & reviews",
+            "description": "Configure your code review integrations, editor preferences and workflow automations.",
+            "enableReviews": {
+                "title": "Enable code reviews",
+                "description": "Sync GitHub pull requests with Linear issues and track review status automatically."
+            },
+            "editorPreferences": {
+                "title": "Editor preferences",
+                "theme": {
+                    "title": "Code theme",
+                    "description": "Color scheme used for code blocks and inline snippets.",
+                    "github": "GitHub",
+                    "dracula": "Dracula",
+                    "monokai": "Monokai",
+                    "solarized": "Solarized"
+                },
+                "font": {
+                    "title": "Font",
+                    "description": "Typeface used in code editors and snippet previews.",
+                    "default": "Default",
+                    "mono": "Monospace",
+                    "serif": "Serif"
+                },
+                "language": {
+                    "title": "Language",
+                    "description": "Default programming language for new code snippets.",
+                    "javascript": "JavaScript",
+                    "typescript": "TypeScript",
+                    "python": "Python",
+                    "rust": "Rust"
+                }
+            },
+            "externalTools": {
+                "title": "External coding tools",
+                "gitFormat": {
+                    "title": "Git attachment format",
+                    "description": "How Git references are displayed when attached to an issue.",
+                    "branch": "Branch name",
+                    "url": "URL",
+                    "markdown": "Markdown link"
+                }
+            },
+            "workflow": {
+                "title": "Workflow",
+                "moveToBranchCopy": {
+                    "title": "Move issue to Started when copying git branch",
+                    "description": "Automatically change the issue status when you copy the branch name."
+                },
+                "moveToOpenTool": {
+                    "title": "Move issue to Started when opening in coding tool",
+                    "description": "Automatically change the issue status when you open it in your IDE."
+                }
+            },
+            "codePreview": "Code preview"
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "settings": {
+        "codeReviewsPage": {
+            "title": "Code et révisions",
+            "description": "Configurez vos intégrations de révision de code, vos préférences d’éditeur et vos automatisations de flux de travail.",
+            "enableReviews": {
+                "title": "Activer les révisions de code",
+                "description": "Synchronisez les pull requests GitHub avec les tickets Linear et suivez automatiquement le statut des révisions."
+            },
+            "editorPreferences": {
+                "title": "Préférences d’éditeur",
+                "theme": {
+                    "title": "Thème de code",
+                    "description": "Schéma de couleurs utilisé pour les blocs de code et les extraits.",
+                    "github": "GitHub",
+                    "dracula": "Dracula",
+                    "monokai": "Monokai",
+                    "solarized": "Solarized"
+                },
+                "font": {
+                    "title": "Police",
+                    "description": "Police de caractères utilisée dans les éditeurs de code et les aperçus.",
+                    "default": "Par défaut",
+                    "mono": "Monospace",
+                    "serif": "Serif"
+                },
+                "language": {
+                    "title": "Langage",
+                    "description": "Langage de programmation par défaut pour les nouveaux extraits de code.",
+                    "javascript": "JavaScript",
+                    "typescript": "TypeScript",
+                    "python": "Python",
+                    "rust": "Rust"
+                }
+            },
+            "externalTools": {
+                "title": "Outils de développement externes",
+                "gitFormat": {
+                    "title": "Format d’attache Git",
+                    "description": "Comment les références Git sont affichées lorsqu’elles sont associées à un ticket.",
+                    "branch": "Nom de branche",
+                    "url": "URL",
+                    "markdown": "Lien Markdown"
+                }
+            },
+            "workflow": {
+                "title": "Flux de travail",
+                "moveToBranchCopy": {
+                    "title": "Passer le ticket à « En cours » lors de la copie de la branche Git",
+                    "description": "Change automatiquement le statut du ticket lorsque vous copiez le nom de la branche."
+                },
+                "moveToOpenTool": {
+                    "title": "Passer le ticket à « En cours » lors de l’ouverture dans un outil de développement",
+                    "description": "Change automatiquement le statut du ticket lorsque vous l’ouvrez dans votre IDE."
+                }
+            },
+            "codePreview": "Aperçu du code"
+        }
+    }
+}

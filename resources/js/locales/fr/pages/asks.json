@@ -1,0 +1,10 @@
+{
+    "settings": {
+        "asks": {
+            "title": "Asks",
+            "description": "Collectez, priorisez et suivez les demandes de vos coéquipiers et parties prenantes.",
+            "gateTitle": "Asks",
+            "gateDescription": "Asks permet à votre équipe de capturer des demandes directement depuis Slack ou par e-mail, de les convertir en tickets et de tenir les demandeurs informés de l’avancement. Disponible avec les forfaits Business et Enterprise."
+        }
+    }
+}

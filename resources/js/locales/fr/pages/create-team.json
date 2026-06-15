@@ -1,0 +1,20 @@
+{
+    "settings": {
+        "createTeam": {
+            "title": "Créer une équipe",
+            "description": "Les équipes vous aident à organiser votre travail et à gérer l’accès aux tickets, projets et paramètres.",
+            "teamNameLabel": "Nom de l’équipe",
+            "teamNamePlaceholder": "ex. Ingénierie",
+            "identifierLabel": "Identifiant",
+            "identifierDescription": "Utilisé comme préfixe pour tous les tickets de cette équipe (ex. ING-123).",
+            "visibilityLabel": "Visibilité",
+            "visibilityPublic": "Publique",
+            "visibilityPrivate": "Privée",
+            "copySettingsLabel": "Copier les paramètres de",
+            "copySettingsNone": "Aucun",
+            "copySettingsDevaubree": "Devaubree",
+            "createButton": "Créer l’équipe",
+            "createToast": "L’équipe a été créée avec succès."
+        }
+    }
+}

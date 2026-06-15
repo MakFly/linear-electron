@@ -1,0 +1,25 @@
+{
+    "settings": {
+        "emojis": {
+            "title": "Emoji personnalisés",
+            "description": "Ajoutez des emoji personnalisés à utiliser dans les tickets, commentaires et réactions de votre espace de travail.",
+            "uploadButton": "Importer un emoji",
+            "searchPlaceholder": "Rechercher un emoji",
+            "emptyTitle": "Aucun emoji",
+            "emptyDesc": "Importez votre premier emoji personnalisé pour commencer.",
+            "emptyFilterDesc": "Aucun emoji ne correspond à votre recherche.",
+            "uploadDialogTitle": "Importer un emoji personnalisé",
+            "nameLabel": "Nom",
+            "namePlaceholder": "ex. confetti-blob",
+            "fileLabel": "Image",
+            "filePlaceholder": "Cliquez pour sélectionner un fichier",
+            "fileHint": "PNG, GIF ou JPEG. 128 Ko maximum.",
+            "renameDialogTitle": "Renommer l’emoji",
+            "deleteDialogTitle": "Supprimer l’emoji",
+            "deleteDialogDesc": "Cet emoji sera supprimé de votre espace de travail. Cette action est irréversible.",
+            "toastUploaded": "Emoji :{{name}} : ajouté",
+            "toastRenamed": "Emoji renommé",
+            "toastDeleted": "Emoji supprimé"
+        }
+    }
+}

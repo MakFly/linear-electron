@@ -1,0 +1,31 @@
+{
+    "settings": {
+        "teams": {
+            "title": "Teams",
+            "description": "Manage the teams in your workspace, their members and visibility.",
+            "statusActive": "Active",
+            "statusArchived": "Archived",
+            "statusAll": "All",
+            "createTeam": "Create team",
+            "columnName": "Name",
+            "columnVisibility": "Visibility",
+            "columnMembers": "Members",
+            "columnIssues": "Issues",
+            "columnCreated": "Created",
+            "visibilityPublic": "Public",
+            "visibilityPrivate": "Private",
+            "dialogTitle": "Create a new team",
+            "dialogDesc": "Add a new team to your workspace.",
+            "teamName": "Team name",
+            "identifier": "Identifier",
+            "menuSettings": "Settings",
+            "menuLeave": "Leave",
+            "menuDelete": "Delete",
+            "deleteTitle": "Delete team",
+            "deleteDesc": "This action cannot be undone. All issues and data associated with this team will be permanently deleted.",
+            "emptyTitle": "No teams found",
+            "emptyDesc": "No teams match your current filters. Try adjusting your search or status filter.",
+            "toastDeleted": "Team deleted"
+        }
+    }
+}

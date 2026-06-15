@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "projectStatuses": {
+            "title": "Statuts de projet",
+            "description": "Personnalisez les statuts utilises pour suivre l’avancement des projets dans votre espace de travail.",
+            "create": "Creer un statut de projet",
+            "projectCount": "{{count}} projets",
+            "rename": "Renommer",
+            "dialogTitle": "Nouveau statut de projet",
+            "renameTitle": "Renommer le statut",
+            "nameLabel": "Nom du statut",
+            "namePlaceholder": "ex. En attente",
+            "colorLabel": "Couleur",
+            "deleteTitle": "Supprimer le statut",
+            "deleteDesc": "Ce statut sera definitivement supprime. Les projets qui l’utilisent seront deplaces vers Backlog."
+        }
+    }
+}

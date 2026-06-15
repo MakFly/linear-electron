@@ -1,0 +1,54 @@
+{
+    "settings": {
+        "notificationsPage": {
+            "title": "Notifications",
+            "description": "Control how and where you receive notifications from Linear.",
+            "channels": {
+                "title": "Notification channels",
+                "desktop": {
+                    "title": "Desktop",
+                    "description": "Receive push notifications on this computer."
+                },
+                "mobile": {
+                    "title": "Mobile",
+                    "description": "Receive push notifications on your mobile device."
+                },
+                "email": {
+                    "title": "Email",
+                    "description": "Receive email digests and activity summaries."
+                },
+                "slack": {
+                    "title": "Slack",
+                    "description": "Receive notifications directly in Slack."
+                }
+            },
+            "productUpdates": {
+                "title": "Updates from product",
+                "changelog": {
+                    "title": "Changelog in sidebar",
+                    "description": "Show new product updates in the sidebar badge."
+                },
+                "newsletter": {
+                    "title": "Changelog newsletter",
+                    "description": "Receive a monthly email summarizing product updates."
+                },
+                "marketing": {
+                    "title": "Marketing & onboarding emails",
+                    "description": "Tips, guides and onboarding emails to help you get started."
+                },
+                "invite": {
+                    "title": "Invite accepted",
+                    "description": "Get notified when someone accepts your invitation."
+                },
+                "privacy": {
+                    "title": "Privacy & legal updates",
+                    "description": "Important updates about our privacy policy and terms."
+                },
+                "dpa": {
+                    "title": "DPA updates",
+                    "description": "Notifications about data processing agreement changes."
+                }
+            }
+        }
+    }
+}

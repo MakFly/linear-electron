@@ -1,0 +1,21 @@
+{
+    "settings": {
+        "projectUpdates": {
+            "title": "Project updates",
+            "description": "Configure how and when project health updates are expected, and connect notification channels.",
+            "scheduleTitle": "Update schedule",
+            "scheduleDesc": "Set an expectation for how often project leads should post a status update.",
+            "currentSchedule": "Update frequency",
+            "scheduleNone": "No expectation for updates",
+            "scheduleWeekly": "Weekly",
+            "scheduleBiweekly": "Bi-weekly",
+            "scheduleMonthly": "Monthly",
+            "scheduleDialogTitle": "Edit update schedule",
+            "scheduleLabel": "Update frequency",
+            "slackTitle": "Slack notifications",
+            "slackDesc": "Send project update notifications to a Slack channel so your team stays informed.",
+            "slackConnect": "Connect Slack channel",
+            "slackToast": "Slack connection flow coming soon"
+        }
+    }
+}

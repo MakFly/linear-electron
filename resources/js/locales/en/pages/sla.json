@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "sla": {
+            "title": "SLAs",
+            "description": "Define service level agreements to ensure issues are resolved within target timeframes.",
+            "planGateTitle": "SLA policies",
+            "planGateDesc": "SLA policies are available on the Business and Enterprise plans. Upgrade to set response and resolution targets, and get alerts when they are breached.",
+            "automationTitle": "Automation rules",
+            "automationDesc": "Trigger actions automatically when SLA thresholds are reached or breached.",
+            "addRule": "Add rule",
+            "emptyRules": "No SLA rules",
+            "emptyRulesDesc": "Add an automation rule to act on SLA events.",
+            "dialogTitle": "New automation rule",
+            "ruleNameLabel": "Rule name",
+            "ruleNamePlaceholder": "e.g. Notify on breach"
+        }
+    }
+}

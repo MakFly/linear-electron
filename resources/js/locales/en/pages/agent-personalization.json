@@ -1,0 +1,37 @@
+{
+    "settings": {
+        "agentPersonalizationPage": {
+            "title": "Agent",
+            "description": "Personalize your Linear Agent to match the way you work.",
+            "guidance": {
+                "title": "Guidance",
+                "description": "Write instructions to guide the Agent's behaviour. It will follow these guidelines when working on your behalf.",
+                "label": "Custom instructions",
+                "placeholder": "e.g. Always write issue descriptions in bullet points. Prefer short titles. Tag issues with the appropriate team label.",
+                "saved": "Instructions saved"
+            },
+            "skills": {
+                "title": "Skills",
+                "description": "Teach the Agent reusable skills it can apply across issues and projects.",
+                "createSkill": "Create skill",
+                "emptyTitle": "No skills yet",
+                "emptyDescription": "Skills let you define reusable actions the Agent can perform on demand.",
+                "dialogTitle": "Create skill",
+                "dialogDescription": "Define a new reusable skill for your Linear Agent.",
+                "nameLabel": "Name",
+                "namePlaceholder": "e.g. Write release notes",
+                "descriptionLabel": "Description",
+                "descriptionPlaceholder": "Describe what this skill does and when to use it.",
+                "created": "Skill created"
+            },
+            "mcpServers": {
+                "title": "MCP servers",
+                "description": "Connect Model Context Protocol servers to extend the Agent's capabilities.",
+                "planTitle": "MCP servers",
+                "planDescription": "MCP servers are configured at the workspace level by administrators. Contact your workspace admin to add or manage MCP servers.",
+                "workspaceOnly": "Workspace only",
+                "toastConfigure": "MCP servers are managed by your workspace administrator."
+            }
+        }
+    }
+}

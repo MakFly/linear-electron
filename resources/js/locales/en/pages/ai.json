@@ -1,0 +1,44 @@
+{
+    "settings": {
+        "aiAgents": {
+            "title": "AI & Agents",
+            "description": "Manage AI-powered features, Linear Agent capabilities, and integrations with third-party agents.",
+            "sections": {
+                "usageCredits": "AI usage & credits",
+                "linearAgent": "Linear Agent",
+                "capabilities": "Capabilities",
+                "agentIntegrations": "Agent integrations",
+                "installedAgents": "Installed Agents",
+                "threadSummaries": "Thread summaries"
+            },
+            "planGate": {
+                "description": "AI credits and usage tracking are available on the Business plan. Upgrade to access consumption dashboards, credit top-ups, and per-team spend limits."
+            },
+            "agent": {
+                "enabledDesc": "Allow Linear Agent to act on issues, write code, and run automations on behalf of your team.",
+                "configureBtnLabel": "Configure agent"
+            },
+            "capabilities": {
+                "codingSessions": "Coding sessions",
+                "agentAutomations": "Agent automations",
+                "agentAutomationsDesc": "Let the agent automatically triage, assign, and update issues based on configured rules.",
+                "codeIntelligence": "Code Intelligence",
+                "codeIntelligenceDesc": "Analyze your codebase to surface relevant context when working on issues.",
+                "triageIntelligence": "Triage Intelligence",
+                "triageIntelligenceDesc": "Automatically categorize and prioritize incoming issues using AI."
+            },
+            "integrations": {
+                "availabilityNote": "Agent integrations are rolled out progressively. Some integrations may not yet be available for your workspace."
+            },
+            "installedAgents": {
+                "emptyTitle": "Browse integrations",
+                "emptyDesc": "Connect third-party agents to automate workflows directly from Linear. Find available agents in the integrations directory.",
+                "browseBtn": "Browse integrations"
+            },
+            "threadSummaries": {
+                "title": "AI resolved thread summaries",
+                "desc": "Automatically generate a summary when an issue thread is resolved by the AI agent."
+            }
+        }
+    }
+}

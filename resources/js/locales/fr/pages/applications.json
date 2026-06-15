@@ -1,0 +1,12 @@
+{
+    "settings": {
+        "applications": {
+            "title": "Applications",
+            "description": "Les applications externes qui ont été autorisées à accéder à votre compte Linear. Révoquer l’accès empêchera l’application d’accéder à vos données.",
+            "docsLink": "En savoir plus sur les applications OAuth",
+            "docsToast": "Ouverture de la documentation sur les applications OAuth...",
+            "emptyTitle": "Aucune application externe autorisée",
+            "emptyDescription": "Lorsque vous autorisez une application tierce à accéder à votre compte Linear, elle apparaîtra ici."
+        }
+    }
+}

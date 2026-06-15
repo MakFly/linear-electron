@@ -1,0 +1,451 @@
+{
+    "common": {
+        "search": "Search",
+        "settings": "Settings",
+        "logout": "Log out",
+        "more": "More",
+        "clear": "Clear",
+        "save": "Save",
+        "saving": "Saving",
+        "saved": "Saved",
+        "cancel": "Cancel",
+        "noResults": "No results"
+    },
+    "sidebar": {
+        "search": "Search",
+        "newIssue": "New issue",
+        "inbox": "Inbox",
+        "myIssues": "My issues",
+        "favorites": "Favorites",
+        "workspace": "Workspace",
+        "yourTeams": "Your teams",
+        "try": "Try",
+        "more": "More",
+        "members": "Members",
+        "labels": "Labels",
+        "workspaceSettings": "Workspace settings",
+        "projects": "Projects",
+        "views": "Views",
+        "issues": "Issues",
+        "settings": "Settings",
+        "inviteAndManage": "Invite and manage members",
+        "downloadDesktop": "Download desktop app",
+        "switchWorkspace": "Switch workspace",
+        "createOrJoin": "Create or join a workspace",
+        "addAccount": "Add an account",
+        "logout": "Log out",
+        "helpAndSupport": "Help & support",
+        "whatsNew": "What's new",
+        "minimize": "Minimize",
+        "promoTitle": "Coding sessions",
+        "promoBody": "Linear can now write code using Claude Code and Codex",
+        "help": {
+            "searchForHelp": "Search for help...",
+            "docs": "Docs",
+            "contactUs": "Contact us",
+            "keyboardShortcuts": "Keyboard shortcuts",
+            "linearStatus": "Linear status",
+            "downloadApps": "Download apps",
+            "settings": "Settings",
+            "slackCommunity": "Slack community"
+        },
+        "tryItems": {
+            "import": "Import issues",
+            "invite": "Invite people",
+            "github": "Connect GitHub"
+        },
+        "dialog": {
+            "importTitle": "Import issues",
+            "importBody": "Import your existing issues from another tool.",
+            "inviteTitle": "Invite people",
+            "inviteBody": "Invite teammates to the devaubree workspace.",
+            "sendInvite": "Send invite",
+            "githubTitle": "Connect GitHub",
+            "githubBody": "Link pull requests and automate your workflow by connecting the devaubree workspace to GitHub.",
+            "connectGithubAccount": "Connect GitHub account"
+        }
+    },
+    "header": {
+        "issues": "Issues",
+        "favoriteView": "Favorite view",
+        "notifications": "Notifications",
+        "notificationsEmpty": "You're all caught up"
+    },
+    "issueRow": {
+        "setPriority": "Set priority",
+        "changeStatus": "Change status",
+        "assign": "Assign"
+    },
+    "shell": {
+        "askLinear": "Ask Linear",
+        "chatHistory": "Chat history"
+    },
+    "issues": {
+        "title": "Active issues",
+        "tabs": {
+            "all": "All issues",
+            "active": "Active",
+            "backlog": "Backlog"
+        },
+        "filter": "Filter",
+        "displayOptions": "Display options",
+        "addFilter": "Add Filter...",
+        "aiFilter": "AI filter",
+        "advancedFilter": "Advanced filter",
+        "addAnotherFilter": "Add another filter",
+        "openDetails": "Open details",
+        "closeDetails": "Close details",
+        "newIssue": "New {{group}} issue",
+        "emptyState": "No issues matching the filters",
+        "clearFilters": "Clear filters",
+        "hiddenByFilters": "hidden by filters",
+        "count_one": "{{count}} issue",
+        "count_other": "{{count}} issues",
+        "noAssignee": "No assignee",
+        "noProject": "No project",
+        "noCycle": "No cycle",
+        "cycleLabel": "Cycle {{number}}",
+        "removeFilter": "Remove {{label}} filter",
+        "operator": {
+            "is": "is",
+            "isNot": "is not"
+        },
+        "field": {
+            "status": "Status",
+            "assignee": "Assignee",
+            "priority": "Priority",
+            "labels": "Labels",
+            "project": "Project",
+            "projectProperties": "Project properties",
+            "cycle": "Cycle",
+            "agent": "Agent",
+            "agentSession": "Agent Session",
+            "creator": "Creator",
+            "relations": "Relations",
+            "suggestedLabel": "Suggested label",
+            "dates": "Dates",
+            "subscribers": "Subscribers",
+            "autoClosed": "Auto-closed",
+            "content": "Content",
+            "links": "Links",
+            "template": "Template"
+        },
+        "display": {
+            "list": "List",
+            "board": "Board",
+            "grouping": "Grouping",
+            "subGrouping": "Sub-grouping",
+            "ordering": "Ordering",
+            "showSubIssues": "Show sub-issues",
+            "listOptions": "List options",
+            "nestedSubIssues": "Nested sub-issues",
+            "showEmptyGroups": "Show empty groups",
+            "displayProperties": "Display properties"
+        },
+        "property": {
+            "id": "ID",
+            "status": "Status",
+            "assignee": "Assignee",
+            "priority": "Priority",
+            "project": "Project",
+            "due_date": "Due date",
+            "milestone": "Milestone",
+            "labels": "Labels",
+            "links": "Links",
+            "time": "Time in status",
+            "created": "Created",
+            "updated": "Updated"
+        },
+        "toast": {
+            "reordered": "Issues reordered",
+            "moved": "Issue moved",
+            "reorderFailed": "Issue reorder failed"
+        }
+    },
+    "status": {
+        "backlog": "Backlog",
+        "todo": "Todo",
+        "in_progress": "In Progress",
+        "done": "Done",
+        "canceled": "Canceled"
+    },
+    "priority": {
+        "0": "No priority",
+        "1": "Urgent",
+        "2": "High",
+        "3": "Medium",
+        "4": "Low"
+    },
+    "grouping": {
+        "none": "No grouping",
+        "status": "Status",
+        "priority": "Priority",
+        "project": "Project",
+        "cycle": "Cycle",
+        "label": "Label"
+    },
+    "ordering": {
+        "manual": "Manual",
+        "priority": "Priority",
+        "created": "Created",
+        "updated": "Updated"
+    },
+    "settings": {
+        "backToApp": "Back to app",
+        "heading": "Settings",
+        "subtitle": "Manage your profile and account settings",
+        "comingSoon": {
+            "badge": "Soon",
+            "banner": "Preview — this section is a demo and isn’t functional yet.",
+            "tooltip": "Coming soon"
+        },
+        "navGroups": {
+            "personal": "Personal",
+            "issues": "Issues",
+            "projects": "Projects",
+            "features": "Features",
+            "administration": "Administration",
+            "yourTeams": "Your teams"
+        },
+        "nav": {
+            "preferences": "Preferences",
+            "profile": "Profile",
+            "notifications": "Notifications",
+            "codeReviews": "Code & reviews",
+            "securityAccess": "Security & access",
+            "connectedAccounts": "Connected accounts",
+            "agentPersonalization": "Agent personalization",
+            "labels": "Labels",
+            "templates": "Templates",
+            "slas": "SLAs",
+            "statuses": "Statuses",
+            "updates": "Updates",
+            "aiAgents": "AI & Agents",
+            "initiatives": "Initiatives",
+            "documents": "Documents",
+            "customerRequests": "Customer requests",
+            "releases": "Releases",
+            "pulse": "Pulse",
+            "asks": "Asks",
+            "emojis": "Emojis",
+            "integrations": "Integrations",
+            "workspace": "Workspace",
+            "teams": "Teams",
+            "members": "Members",
+            "security": "Security",
+            "api": "API",
+            "applications": "Applications",
+            "billing": "Billing",
+            "importExport": "Import & export",
+            "createTeam": "Create a team"
+        },
+        "starterNav": {
+            "profile": "Profile",
+            "password": "Password",
+            "appearance": "Appearance"
+        },
+        "placeholder": {
+            "eyebrow": "Settings",
+            "comingSoon": "Coming soon. This section is wired into the Linear settings navigation and ready for the next implementation pass.",
+            "headTitle": "{{name}} settings"
+        },
+        "profile": {
+            "breadcrumb": "Profile settings",
+            "heading": "Profile information",
+            "description": "Update your name and email address",
+            "name": "Name",
+            "fullName": "Full name",
+            "email": "Email address",
+            "emailUnverified": "Your email address is unverified.",
+            "resend": "Click here to re-send the verification email.",
+            "verificationSent": "A new verification link has been sent to your email address.",
+            "toastSaved": "Profile saved",
+            "toastFailed": "Profile update failed"
+        },
+        "password": {
+            "breadcrumb": "Password settings",
+            "heading": "Update password",
+            "description": "Ensure your account is using a long, random password to stay secure",
+            "current": "Current password",
+            "new": "New password",
+            "confirm": "Confirm password",
+            "save": "Save password",
+            "toastUpdated": "Password updated",
+            "toastFailed": "Password update failed"
+        },
+        "appearance": {
+            "breadcrumb": "Appearance settings",
+            "title": "Appearance settings",
+            "description": "Update your account's appearance settings",
+            "light": "Light",
+            "dark": "Dark",
+            "system": "System"
+        },
+        "deleteUser": {
+            "heading": "Delete account",
+            "description": "Delete your account and all of its resources",
+            "warning": "Warning",
+            "warningText": "Please proceed with caution, this cannot be undone.",
+            "button": "Delete account",
+            "dialogTitle": "Are you sure you want to delete your account?",
+            "dialogDescription": "Once your account is deleted, all of its resources and data will also be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.",
+            "password": "Password",
+            "deleting": "Deleting",
+            "toastDeleted": "Account deleted",
+            "toastFailed": "Account deletion failed"
+        },
+        "labels": {
+            "eyebrow": "Issues",
+            "title": "Labels",
+            "namePlaceholder": "Label name",
+            "useColor": "Use {{color}}",
+            "create": "Create",
+            "creating": "Creating",
+            "issuesCount_one": "{{count}} issue",
+            "issuesCount_other": "{{count}} issues",
+            "deleteLabel": "Delete {{name}}",
+            "toastCreated": "Label created",
+            "toastCreateFailed": "Label creation failed",
+            "toastDeleted": "Label deleted",
+            "toastDeleteFailed": "Label deletion failed"
+        }
+    },
+    "preferences": {
+        "eyebrow": "Settings",
+        "title": "Preferences",
+        "backToApp": "Back to app",
+        "toastSaved": "Preferences saved",
+        "toastFailed": "Preference update failed",
+        "language": "Language",
+        "languageDescription": "Choose the language used across the interface.",
+        "english": "English",
+        "french": "Français",
+        "customize": "Customize",
+        "customizeSidebarTitle": "Customize sidebar",
+        "customizeSidebarDescription": "Sidebar customization is ready to be wired to saved item ordering in a later phase.",
+        "sections": {
+            "general": "General",
+            "interfaceTheme": "Interface and theme",
+            "desktop": "Desktop application"
+        },
+        "rows": {
+            "defaultHomeView": {
+                "label": "Default home view",
+                "description": "Select which view to display when launching Linear"
+            },
+            "displayNames": {
+                "label": "Display names",
+                "description": "Select how names are displayed in the Linear interface"
+            },
+            "firstDayOfWeek": {
+                "label": "First day of the week",
+                "description": "Used for date pickers"
+            },
+            "convertEmoticons": {
+                "label": "Convert text emoticons into emojis",
+                "description": "Strings like :) will be converted to 🙂"
+            },
+            "sendCommentOn": {
+                "label": "Send comment on...",
+                "description": "Choose which key press is used to submit a comment"
+            },
+            "appSidebar": {
+                "label": "App sidebar",
+                "description": "Customize sidebar item visibility, ordering, and badge style"
+            },
+            "fontSize": {
+                "label": "Font size",
+                "description": "Adjust the size of text across the app"
+            },
+            "pointerCursors": {
+                "label": "Use pointer cursors",
+                "description": "Change the cursor to a pointer when hovering over any interactive elements"
+            },
+            "interfaceTheme": {
+                "label": "Interface theme",
+                "description": "Select or customize your interface color scheme"
+            },
+            "openInDesktop": {
+                "label": "Open in desktop app",
+                "description": "Automatically open links in desktop app when possible"
+            }
+        },
+        "options": {
+            "home": {
+                "active": "Active issues",
+                "myIssues": "My issues",
+                "inbox": "Inbox"
+            },
+            "displayNames": {
+                "full": "Full name",
+                "short": "Short name",
+                "username": "Username"
+            },
+            "week": {
+                "sunday": "Sunday",
+                "monday": "Monday"
+            },
+            "comment": {
+                "enter": "Enter",
+                "modEnter": "⌘+Enter"
+            },
+            "font": {
+                "small": "Small",
+                "default": "Default",
+                "large": "Large"
+            },
+            "theme": {
+                "light": "Light",
+                "dark": "Dark",
+                "system": "System"
+            }
+        }
+    },
+    "settingsCommon": {
+        "plan": {
+            "business": "Business",
+            "enterprise": "Enterprise",
+            "plus": "Plus"
+        },
+        "startTrial": "Start free trial",
+        "viewPlans": "View plans",
+        "upgrade": "Upgrade",
+        "dangerZone": "Danger zone",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "save": "Save",
+        "saveChanges": "Save changes",
+        "update": "Update",
+        "edit": "Edit",
+        "create": "Create",
+        "new": "New",
+        "add": "Add",
+        "remove": "Remove",
+        "delete": "Delete",
+        "revoke": "Revoke",
+        "revokeAll": "Revoke all",
+        "connect": "Connect",
+        "connected": "Connected",
+        "disconnect": "Disconnect",
+        "configure": "Configure",
+        "manage": "Manage",
+        "enable": "Enable",
+        "disable": "Disable",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "on": "On",
+        "off": "Off",
+        "learnMore": "Learn more",
+        "docs": "Learn more in the documentation",
+        "search": "Search",
+        "noResults": "No results found",
+        "comingSoon": "Coming soon",
+        "copy": "Copy",
+        "copied": "Copied",
+        "logOut": "Log out",
+        "rename": "Rename",
+        "scopeWorkspace": "Workspace",
+        "scopeTeam": "Team",
+        "filterByName": "Filter by name"
+    }
+}

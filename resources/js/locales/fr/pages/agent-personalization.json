@@ -1,0 +1,37 @@
+{
+    "settings": {
+        "agentPersonalizationPage": {
+            "title": "Agent",
+            "description": "Personnalisez votre Agent Linear pour qu’il corresponde à votre façon de travailler.",
+            "guidance": {
+                "title": "Instructions",
+                "description": "Rédigez des instructions pour guider le comportement de l’Agent. Il suivra ces directives lorsqu’il agit en votre nom.",
+                "label": "Instructions personnalisées",
+                "placeholder": "ex. Toujours rédiger les descriptions de tickets sous forme de listes. Préférer des titres courts. Associer les tickets à l’étiquette d’équipe appropriée.",
+                "saved": "Instructions enregistrées"
+            },
+            "skills": {
+                "title": "Compétences",
+                "description": "Enseignez à l’Agent des compétences réutilisables qu’il peut appliquer sur les tickets et les projets.",
+                "createSkill": "Créer une compétence",
+                "emptyTitle": "Aucune compétence",
+                "emptyDescription": "Les compétences vous permettent de définir des actions réutilisables que l’Agent peut effectuer à la demande.",
+                "dialogTitle": "Créer une compétence",
+                "dialogDescription": "Définissez une nouvelle compétence réutilisable pour votre Agent Linear.",
+                "nameLabel": "Nom",
+                "namePlaceholder": "ex. Rédiger des notes de version",
+                "descriptionLabel": "Description",
+                "descriptionPlaceholder": "Décrivez ce que fait cette compétence et quand l’utiliser.",
+                "created": "Compétence créée"
+            },
+            "mcpServers": {
+                "title": "Serveurs MCP",
+                "description": "Connectez des serveurs Model Context Protocol pour étendre les capacités de l’Agent.",
+                "planTitle": "Serveurs MCP",
+                "planDescription": "Les serveurs MCP sont configurés au niveau de l’espace de travail par les administrateurs. Contactez l’administrateur de votre espace de travail pour ajouter ou gérer des serveurs MCP.",
+                "workspaceOnly": "Espace de travail uniquement",
+                "toastConfigure": "Les serveurs MCP sont gérés par l’administrateur de votre espace de travail."
+            }
+        }
+    }
+}

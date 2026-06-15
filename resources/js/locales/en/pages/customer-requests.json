@@ -1,0 +1,79 @@
+{
+    "settings": {
+        "customerRequests": {
+            "title": "Customer requests",
+            "description": "Track and manage customer feature requests, link them to issues, and route them to the right team.",
+            "enable": {
+                "title": "Enable Customer requests",
+                "desc": "Allow customers to submit feature requests that can be linked to issues and projects."
+            },
+            "sections": {
+                "manageCustomers": "Manage customers",
+                "issueRouting": "Issue routing",
+                "customerStatuses": "Customer statuses",
+                "customerTiers": "Customer tiers",
+                "displayOptions": "Display options",
+                "customerAttributes": "Customer attributes",
+                "excludedDomains": "Excluded domains/emails",
+                "genericDomains": "Generic domains/emails"
+            },
+            "customers": {
+                "emptyTitle": "No customers yet",
+                "emptyDesc": "Add customers to start tracking their feature requests and linking them to your issues.",
+                "addBtn": "Add customers"
+            },
+            "routing": {
+                "defaultTeam": "Default team",
+                "engineering": "Engineering",
+                "design": "Design",
+                "product": "Product"
+            },
+            "statuses": {
+                "active": "Active",
+                "prospect": "Prospect",
+                "churned": "Churned",
+                "lost": "Lost",
+                "createBtn": "Create new customer status",
+                "dialogTitle": "Create customer status",
+                "namePlaceholder": "Status name",
+                "deleteTitle": "Delete status",
+                "deleteDesc": "This status will be permanently deleted. Customers with this status will need to be reassigned."
+            },
+            "tiers": {
+                "emptyTitle": "No tiers defined",
+                "emptyDesc": "Create tiers to segment customers by plan, size, or value.",
+                "createBtn": "Create tier",
+                "dialogTitle": "Create customer tier",
+                "namePlaceholder": "Tier name"
+            },
+            "display": {
+                "revenueFormat": "Revenue format",
+                "compact": "Compact",
+                "full": "Full",
+                "currency": "Revenue currency",
+                "usd": "USD",
+                "eur": "EUR",
+                "gbp": "GBP"
+            },
+            "attributes": {
+                "dataSource": "Data source",
+                "externalSource": "External source",
+                "manual": "Manual",
+                "allowManualEdits": "Allow manual edits",
+                "allowManualEditsDesc": "Let workspace members edit customer attributes directly from the issue view."
+            },
+            "excludedDomains": {
+                "emptyTitle": "No excluded domains",
+                "addBtn": "Add",
+                "dialogTitle": "Add excluded domain or email",
+                "placeholder": "e.g. example.com or user@example.com"
+            },
+            "genericDomains": {
+                "emptyTitle": "No generic domains",
+                "addBtn": "Add",
+                "dialogTitle": "Add generic domain or email",
+                "placeholder": "e.g. gmail.com or yahoo.com"
+            }
+        }
+    }
+}

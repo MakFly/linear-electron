@@ -1,0 +1,22 @@
+{
+    "settings": {
+        "documents": {
+            "title": "Documents",
+            "description": "Create and manage document templates to standardize content across your workspace.",
+            "sections": {
+                "templates": "Document templates"
+            },
+            "templates": {
+                "sectionDesc": "Use document templates to give your team a consistent starting point for pages, specs, and briefs.",
+                "newBtn": "New template",
+                "dialogTitle": "New document template",
+                "nameLabel": "Template name",
+                "namePlaceholder": "e.g. Product spec",
+                "descLabel": "Description",
+                "descPlaceholder": "Briefly describe what this template is for",
+                "emptyTitle": "No document templates",
+                "emptyDesc": "Templates help your team create consistent, well-structured documents."
+            }
+        }
+    }
+}

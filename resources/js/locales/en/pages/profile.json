@@ -1,0 +1,26 @@
+{
+    "settings": {
+        "profilePage": {
+            "title": "Profile",
+            "pictureLabel": "Profile picture",
+            "changeAvatar": "Change avatar",
+            "avatarHint": "Recommended size 256×256px. PNG, JPG or GIF.",
+            "emailLabel": "Email",
+            "changeEmail": "Change email",
+            "fullName": "Full name",
+            "jobTitle": "Title / job role",
+            "jobTitlePlaceholder": "e.g. Product Designer",
+            "username": "Username",
+            "workspaceAccess": "Workspace access",
+            "workspaceAccessDesc": "Manage your membership of this workspace.",
+            "removeYourself": "Remove yourself from workspace",
+            "removeYourselfDesc": "You will lose access to all teams and issues in this workspace.",
+            "removeConfirm": "Are you sure you want to remove yourself from this workspace? This cannot be undone.",
+            "leaveWorkspace": "Leave workspace",
+            "leaveWorkspaceDesc": "Only available when you belong to more than one workspace.",
+            "toastSaved": "Profile updated",
+            "toastFailed": "Could not update profile",
+            "toastRemoved": "Removed from workspace"
+        }
+    }
+}

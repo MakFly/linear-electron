@@ -1,0 +1,158 @@
+{
+    "settings": {
+        "integrations": {
+            "title": "Intégrations",
+            "description": "Connectez vos outils favoris pour garder votre flux de travail synchronisé.",
+            "searchPlaceholder": "Rechercher des intégrations",
+            "noResults": "Aucune intégration ne correspond à votre recherche.",
+            "categories": {
+                "essentials": "Essentiels",
+                "agents": "Agents",
+                "aiClients": "Clients IA",
+                "engineering": "Ingénierie",
+                "linearCrafted": "Conçu par Linear",
+                "bugReporting": "Rapport de bugs",
+                "automations": "Automatisations",
+                "customerExperience": "Expérience client",
+                "collaboration": "Collaboration",
+                "mediaDesign": "Médias et design",
+                "analytics": "Analytique",
+                "securityCompliance": "Sécurité et conformité"
+            },
+            "integrations": {
+                "slack": {
+                    "name": "Slack",
+                    "description": "Envoyez les mises à jour de tickets et notifications vers des canaux."
+                },
+                "linearAsksForSlack": {
+                    "name": "Linear Asks for Slack",
+                    "description": "Capturez et suivez les demandes directement depuis Slack."
+                },
+                "github": {
+                    "name": "GitHub",
+                    "description": "Liez les pull requests et automatisez les flux de travail."
+                },
+                "figma": {
+                    "name": "Figma",
+                    "description": "Synchronisez les designs et intégrez des aperçus dans les tickets."
+                },
+                "intercom": {
+                    "name": "Intercom",
+                    "description": "Créez des tickets à partir des conversations clients."
+                },
+                "gitlab": {
+                    "name": "GitLab",
+                    "description": "Liez les merge requests et suivez les déploiements."
+                },
+                "zapier": {
+                    "name": "Zapier",
+                    "description": "Automatisez des tâches entre Linear et des milliers d’applications."
+                },
+                "jira": {
+                    "name": "Jira",
+                    "description": "Migrez des tickets et synchronisez l’état des projets avec Jira."
+                },
+                "googleSheets": {
+                    "name": "Google Sheets",
+                    "description": "Exportez automatiquement les données de tickets vers des feuilles de calcul."
+                },
+                "codex": {
+                    "name": "Codex",
+                    "description": "Laissez Codex résoudre des tickets de manière autonome."
+                },
+                "cursor": {
+                    "name": "Cursor",
+                    "description": "Ouvrez et travaillez sur des tickets directement dans Cursor."
+                },
+                "githubCopilot": {
+                    "name": "GitHub Copilot",
+                    "description": "Intégrez les tâches de l’agent Copilot dans votre flux Linear."
+                },
+                "factory": {
+                    "name": "Factory",
+                    "description": "Automatisez les revues de code et les flux de pull requests."
+                },
+                "sentryAgent": {
+                    "name": "Sentry Agent",
+                    "description": "Triez et corrigez automatiquement les erreurs Sentry."
+                },
+                "devin": {
+                    "name": "Devin",
+                    "description": "Assignez des tickets à Devin pour une implémentation autonome."
+                },
+                "chatPRD": {
+                    "name": "ChatPRD",
+                    "description": "Générez des spécifications produit à partir des descriptions de tickets."
+                },
+                "charlie": {
+                    "name": "Charlie",
+                    "description": "Assistant IA intégré dans votre espace de travail Linear."
+                },
+                "cursorMCP": {
+                    "name": "Cursor MCP",
+                    "description": "Accédez au contexte Linear dans Cursor via MCP."
+                },
+                "chatGPT": {
+                    "name": "ChatGPT",
+                    "description": "Créez et recherchez des tickets depuis ChatGPT."
+                },
+                "claude": {
+                    "name": "Claude",
+                    "description": "Utilisez Claude pour rédiger, affiner et résumer des tickets."
+                },
+                "v0": {
+                    "name": "v0",
+                    "description": "Générez des composants UI à partir des exigences des tickets."
+                },
+                "windsurf": {
+                    "name": "Windsurf",
+                    "description": "Résolvez des tickets Linear dans l’éditeur Windsurf."
+                },
+                "replit": {
+                    "name": "Replit",
+                    "description": "Construisez et itérez sur des tickets directement dans Replit."
+                },
+                "dust": {
+                    "name": "Dust",
+                    "description": "Déployez des assistants IA connectés à vos données Linear."
+                },
+                "adk": {
+                    "name": "ADK",
+                    "description": "Créez des agents personnalisés avec le kit de développement d’agents de Google."
+                },
+                "pagerDuty": {
+                    "name": "PagerDuty",
+                    "description": "Créez des incidents et liez les alertes d’astreinte aux tickets."
+                },
+                "sentry": {
+                    "name": "Sentry",
+                    "description": "Associez les rapports d’erreurs aux tickets et suivez les corrections."
+                },
+                "vsCode": {
+                    "name": "VS Code",
+                    "description": "Gérez des tickets sans quitter votre éditeur."
+                },
+                "datadog": {
+                    "name": "Datadog",
+                    "description": "Liez automatiquement les alertes de monitoring aux tickets Linear."
+                },
+                "incidentIo": {
+                    "name": "incident.io",
+                    "description": "Connectez les incidents aux tickets et suivez la résolution."
+                },
+                "raycast": {
+                    "name": "Raycast",
+                    "description": "Recherchez, créez et mettez à jour des tickets depuis Raycast."
+                },
+                "notion": {
+                    "name": "Notion",
+                    "description": "Intégrez des vues Linear et synchronisez des projets avec Notion."
+                }
+            },
+            "connect": "Connecter",
+            "open": "Ouvrir",
+            "toastConnected": "{{name}} connecté",
+            "toastDisconnected": "{{name}} déconnecté"
+        }
+    }
+}
