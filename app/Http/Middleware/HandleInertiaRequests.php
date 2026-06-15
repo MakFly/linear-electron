@@ -43,6 +43,10 @@ class HandleInertiaRequests extends Middleware
         return array_merge(parent::share($request), [
             ...parent::share($request),
             'name' => config('app.name'),
+            // True when served inside the native (NativePHP/Electron) window, which sets
+            // the `_php_native` security cookie. Used by the UI to reserve space for the
+            // macOS traffic lights, absent in a plain browser.
+            'isNative' => $request->cookies->has('_php_native'),
             'quote' => ['message' => trim($message), 'author' => trim($author)],
             'auth' => [
                 'user' => $user ? [
