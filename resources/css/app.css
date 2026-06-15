@@ -222,3 +222,14 @@ html.linear-dnd-active * {
 .app-no-drag {
     -webkit-app-region: no-drag;
 }
+
+@layer utilities {
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+}

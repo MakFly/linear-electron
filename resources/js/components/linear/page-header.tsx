@@ -65,12 +65,7 @@ export function PageHeader({ left, right }: { left: ReactNode; right?: ReactNode
     const clearTrafficLights = isNative && sidebarHidden;
 
     return (
-        <header
-            className={cn(
-                'app-drag flex shrink-0 items-center justify-between pr-5 pl-3',
-                clearTrafficLights ? 'min-h-11 pt-8 pb-2' : 'h-11',
-            )}
-        >
+        <header className={cn('app-drag mt-4 flex shrink-0 items-center justify-between pr-5 pl-3', clearTrafficLights ? 'min-h-12 pt-9 pb-2' : 'h-11')}>
             <div className="app-no-drag flex items-center gap-2 text-[13px]">
                 <SidebarTrigger
                     aria-label={t('header.toggleSidebar')}

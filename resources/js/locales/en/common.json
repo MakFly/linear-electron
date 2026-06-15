@@ -9,7 +9,8 @@
         "saving": "Saving",
         "saved": "Saved",
         "cancel": "Cancel",
-        "noResults": "No results"
+        "noResults": "No results",
+        "scrollMore": "See more"
     },
     "sidebar": {
         "search": "Search",

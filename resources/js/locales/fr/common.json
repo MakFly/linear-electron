@@ -9,7 +9,8 @@
         "saving": "Enregistrement",
         "saved": "Enregistré",
         "cancel": "Annuler",
-        "noResults": "Aucun résultat"
+        "noResults": "Aucun résultat",
+        "scrollMore": "Voir plus"
     },
     "sidebar": {
         "search": "Rechercher",

@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import { ScrollWithHint } from '@/components/ui/scroll-with-hint';
 import { cn } from '@/lib/utils';
 import { Link, usePage } from '@inertiajs/react';
 import {
@@ -128,7 +129,7 @@ export function SettingsSidebar() {
     const { url } = usePage();
     const currentPath = url.split('?')[0];
 
-    const navRef = useRef<HTMLElement>(null);
+    const navRef = useRef<HTMLDivElement>(null);
 
     useLayoutEffect(() => {
         const nav = navRef.current;
@@ -143,9 +144,11 @@ export function SettingsSidebar() {
     }, []);
 
     return (
-        <nav
-            ref={navRef}
-            className="border-border/70 bg-sidebar text-sidebar-foreground hidden h-full w-[219px] shrink-0 overflow-y-auto border-r px-3 pt-11 pb-3 md:block"
+        <ScrollWithHint
+            scrollRef={navRef}
+            className="border-border/70 bg-sidebar text-sidebar-foreground hidden h-full w-[219px] shrink-0 border-r md:block"
+            contentClassName="px-3 pt-11 pb-10"
+            fadeClassName="from-sidebar"
         >
             <Link
                 href="/"
@@ -191,6 +194,6 @@ export function SettingsSidebar() {
                     </section>
                 ))}
             </div>
-        </nav>
+        </ScrollWithHint>
     );
 }
