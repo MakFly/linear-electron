@@ -58,13 +58,19 @@ export function PageHeader({ left, right }: { left: ReactNode; right?: ReactNode
     const { state, isMobile } = useSidebar();
     const sidebarHidden = isMobile || state === 'collapsed';
     // The macOS traffic lights only exist in the native window. When the sidebar is
-    // hidden there, the header spans the full width and would slide under them, so we
-    // pad the left edge to clear them. In a plain browser there are no traffic lights,
-    // so the header stays flush-left.
+    // hidden there, the header sits in the title-bar strip, so we push the content
+    // DOWN below the traffic lights (which keeps the breadcrumb flush-left, since it
+    // now clears them vertically rather than horizontally). In a plain browser there
+    // are no traffic lights, so the header keeps its normal height.
     const clearTrafficLights = isNative && sidebarHidden;
 
     return (
-        <header className={cn('app-drag flex h-11 shrink-0 items-center justify-between pr-5', clearTrafficLights ? 'pl-[104px]' : 'pl-3')}>
+        <header
+            className={cn(
+                'app-drag flex shrink-0 items-center justify-between pr-5 pl-3',
+                clearTrafficLights ? 'min-h-11 pt-8 pb-2' : 'h-11',
+            )}
+        >
             <div className="app-no-drag flex items-center gap-2 text-[13px]">
                 <SidebarTrigger
                     aria-label={t('header.toggleSidebar')}
